@@ -1,8 +1,9 @@
-import NavBar from "@/components/organisms/NavBar/NavBar"
+import NavBar from "@/components/organisms/Header/Header"
 import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { navPrimary, navSecondary } from "@/constants"
+import { GoFundMe } from "@/components/atoms/Logos/Logos"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar navPrimary={navPrimary} navSecondary={navSecondary} />
+        <NavBar
+          navPrimary={navPrimary}
+          navSecondary={navSecondary}
+          logo={<GoFundMe />}
+        />
         {children}
       </body>
     </html>
