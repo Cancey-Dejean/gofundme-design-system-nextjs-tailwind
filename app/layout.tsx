@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { navPrimary, navSecondary } from "@/constants"
 import { GoFundMe } from "@/components/atoms/Logos/Logos"
+import Providers from "@/constants/provider"
+import ThemeButton from "@/components/utilities/ThemeButton"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,14 +20,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="light"
+      style={{
+        colorScheme: "light",
+      }}
+    >
       <body>
-        <NavBar
-          navPrimary={navPrimary}
-          navSecondary={navSecondary}
-          logo={<GoFundMe />}
-        />
-        {children}
+        <Providers>
+          <NavBar
+            navPrimary={navPrimary}
+            navSecondary={navSecondary}
+            logo={<GoFundMe />}
+          />
+          {children}
+
+          <ThemeButton />
+        </Providers>
       </body>
     </html>
   )

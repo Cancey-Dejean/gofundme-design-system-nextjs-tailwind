@@ -6,6 +6,7 @@ import {
   SearchIcon,
   SunIcon,
 } from "../Icons/Icons"
+import { ChevronDownIcon } from "@heroicons/react/20/solid"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -15,9 +16,8 @@ const meta = {
   args: {
     size: "base",
     intent: "primary",
-    linkable: false,
     reverseIcon: false,
-    linkUrl: "#",
+    linkUrl: "",
     className: "",
     shadow: false,
     onClick: () => {
@@ -225,7 +225,7 @@ export const TextGroup: Story = {
 export const NavText: Story = {
   render: (args) => {
     return (
-      <Button {...args} intent="navText" linkable>
+      <Button {...args} intent="navText">
         NavText
       </Button>
     )
@@ -244,7 +244,7 @@ export const NavTextGroup: Story = {
             <SearchIcon className="!w-[16px]" /> Button
           </Button>
           <Button {...args} size="large" intent="navText">
-            Button <DropdownIcon className="!w-[16px]" />
+            Button <ChevronDownIcon className="!w-[16px]" />
           </Button>
         </div>
       </div>

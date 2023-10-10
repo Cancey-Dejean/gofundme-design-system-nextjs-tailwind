@@ -7,12 +7,19 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./stories/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
         body: "var(--font-body)",
       },
       colors: {
+        accent: {
+          1: "hsl(var(--color-accent1) / <alpha-value>)",
+          2: "hsl(var(--color-accent2) / <alpha-value>)",
+        },
+        bkg: "hsl(var(--color-bkg) / <alpha-value>)",
+        content: "hsl(var(--color-content) / <alpha-value>)",
         primary: {
           100: "var(--color-primary-100)",
           200: "var(--color-primary-200)",

@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import Header from "./Header"
 import { navPrimary, navSecondary } from "../../../constants"
-import {
-  primaryMenuDefault,
-  secondaryMenuDefault,
-} from "../../../constants/defaultData"
+import { GoFundMe } from "../../atoms/Logos/Logos"
 
 const meta = {
   title: "Components/Header",
@@ -24,8 +21,9 @@ export const Navigation: Story = {
   render: (args) => {
     return (
       <Header
-        navPrimary={primaryMenuDefault}
-        navSecondary={secondaryMenuDefault}
+        navPrimary={navPrimary}
+        navSecondary={navSecondary}
+        logo={<GoFundMe />}
         {...args}
       />
     )

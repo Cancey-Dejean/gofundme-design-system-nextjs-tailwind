@@ -2,33 +2,10 @@ import { cva } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 import "../../../app/globals.css"
 import Link from "next/link"
-
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  intent?: "primary" | "secondary" | "tertiary" | "border" | "text" | "navText"
-  className?: string
-  linkUrl?: string
-  linkable?: boolean
-  reverseIcon?: boolean
-  shadow?: boolean
-  /**
-   * How large should the button be?
-   */
-  size?: "base" | "small" | "large"
-  /**
-   * Button contents
-   */
-  children?: React.ReactNode
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void
-}
+import { ButtonProps } from "@/types"
 
 const button = cva(
-  "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-[24px] py-[12px] hover:shadow-btn [&_svg]:w-[24px]",
+  "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-[24px] py-[12px] hover:shadow-btn",
   {
     variants: {
       intent: {
@@ -92,14 +69,13 @@ export const Button = ({
   className = "",
   intent = "primary",
   size = "base",
-  linkable = false,
-  linkUrl = "#",
+  linkUrl = "",
   shadow = false,
   reverseIcon = false,
   children,
   ...props
 }: ButtonProps) => {
-  return linkable ? (
+  return linkUrl !== "" ? (
     <Link
       href={linkUrl}
       className={twMerge(

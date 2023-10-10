@@ -3,79 +3,77 @@ import { Container } from "../../atoms/Container"
 import Link from "next/link"
 import { Button } from "../../atoms/Button/Button"
 import { twMerge } from "tailwind-merge"
+import { HeaderProps } from "@/types"
 
-type NavItem = {
-  label: string
-  linkable: boolean
-  icon?: React.ReactNode
-}
-
-type NavBarProps = {
-  className?: string
-  logo?: React.ReactNode
-  navPrimary?: NavItem[]
-  navSecondary?: NavItem[]
-}
-
-const NavBar = ({ className, navPrimary, navSecondary, logo }: NavBarProps) => {
+const Header = ({
+  className,
+  navPrimary,
+  navSecondary,
+  logo,
+  logoLeft,
+}: HeaderProps) => {
   return (
-    <Container className="h-16 flex items-center bg-white">
-      <nav
-        className={twMerge(
-          "w-full ",
-          navPrimary || navSecondary
-            ? "grid menu-grid"
-            : "flex items-center justify-between",
+    <header>
+      <Container className="h-16 flex items-center bg-white px-0">
+        <nav
+          className={twMerge(
+            "w-full items-center ",
+            navPrimary && navSecondary && !logoLeft
+              ? "grid menu-grid"
+              : "flex justify-between",
+            className
+          )}
+        >
+          {navPrimary ? (
+            <ul
+              className={twMerge(
+                "flex flex-1 [grid-area:primaryMenu] justify-start",
+                logoLeft ? "order-last justify-end" : null
+              )}
+            >
+              {navPrimary?.map((item, i) => (
+                <li key={i}>
+                  <Button intent="navText" size="small" className="px-2">
+                    {item.icon ? <span>{item.icon}</span> : null}
 
-          className
-        )}
-      >
-        {navPrimary && (
-          <ul className="flex flex-1 [grid-area:primaryMenu] justify-start">
-            {navPrimary?.map((item, i) => (
-              <li key={i}>
-                <Button
-                  intent="navText"
-                  size="small"
-                  linkable={item.linkable}
-                  className="px-2"
-                >
-                  <span className="max-w-[24px]">
-                    {item.icon ? item.icon : null}
-                  </span>
-                  {item.label}
-                </Button>
-              </li>
-            ))}
-          </ul>
-        )}
+                    {item.label}
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          ) : null}
 
-        <Link href="/" className="[grid-area:logo]">
-          {logo ? logo : <span>Company Name</span>}
-        </Link>
+          <Link
+            href="/"
+            className={twMerge(
+              "[grid-area:logo]",
+              logoLeft ? "order-first" : null
+            )}
+          >
+            {logo ? logo : <span>Company Name</span>}
+          </Link>
 
-        {navSecondary && (
-          <ul className="flex [grid-area:secondaryMenu] justify-end">
-            {navSecondary?.map((item, i) => (
-              <li key={i}>
-                <Button
-                  intent="navText"
-                  size="small"
-                  linkable={item.linkable}
-                  className="px-2"
-                >
-                  <span className="max-w-[24px]">
-                    {item.icon ? item.icon : null}
-                  </span>
-                  {item.label}
-                </Button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </nav>
-    </Container>
+          {/* Optional */}
+          {navSecondary && !logoLeft ? (
+            <ul
+              className={twMerge("flex [grid-area:secondaryMenu] justify-end")}
+            >
+              {navSecondary?.map((item, i) => (
+                <li key={i}>
+                  <Button intent="navText" size="small" className="px-2">
+                    <span className="max-w-[24px]">
+                      {item.icon ? item.icon : null}
+                    </span>
+                    {item.label}
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </nav>
+      </Container>
+    </header>
   )
 }
 
-export default NavBar
+export default Header
