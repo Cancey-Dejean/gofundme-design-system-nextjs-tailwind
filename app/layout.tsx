@@ -30,8 +30,8 @@ export default function RootLayout({
       <body>
         <Providers>
           <NavBar
-            navPrimary={navPrimary}
-            navSecondary={navSecondary}
+            navPrimary={navPrimary as any}
+            navSecondary={navSecondary as any}
             logo={<GoFundMe />}
           />
           {children}

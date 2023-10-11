@@ -1,33 +1,62 @@
 import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
 
+export const companyName: string = "Company Name"
+
 export const navPrimary = [
   {
     label: "Search",
-    url: "/",
-    icon: <MagnifyingGlassIcon className="w-4 h-4" />,
+    linkUrl: "",
+    icon: <MagnifyingGlassIcon className="w-5 h-5 text-black" />,
+    reverseIcon: false,
+    intent: "navText",
   },
   {
     label: "For individuals",
-    url: "/",
+    linkUrl: "",
     icon: <ChevronDownIcon className="w-5 h-6" />,
     reverseIcon: true,
+    intent: "navText",
   },
   {
     label: "For charities",
-    url: "/",
+    linkUrl: "/",
     icon: false,
+    reverseIcon: false,
+    intent: "navText",
   },
 ]
 
 export const navSecondary = [
   {
     label: "How it works",
-    url: "/",
+    linkUrl: "/",
     icon: false,
+    reverseIcon: false,
+    intent: "navText",
   },
   {
     label: "Sign in",
-    url: "/",
+    linkUrl: "/",
     icon: false,
+    reverseIcon: false,
+    intent: "navText",
   },
+  {
+    label: "Start a GoFundMe",
+    linkUrl: "/",
+    icon: false,
+    reverseIcon: false,
+    intent: "border-primary",
+    className: "px-[16px]",
+  },
+]
+
+export const buttonOptions = [
+  "primary",
+  "secondary",
+  "tertiary",
+  "border",
+  "border-primary",
+  "text",
+  "navText",
 ]

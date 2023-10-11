@@ -14,6 +14,7 @@ const config: Config = {
         body: "var(--font-body)",
       },
       colors: {
+        black: "hsl(var(--color-black) / <alpha-value>)",
         accent: {
           1: "hsl(var(--color-accent1) / <alpha-value>)",
           2: "hsl(var(--color-accent2) / <alpha-value>)",

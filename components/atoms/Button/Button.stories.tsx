@@ -1,12 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { Button } from "./Button"
-import {
-  AngleRightSmallIcon,
-  DropdownIcon,
-  SearchIcon,
-  SunIcon,
-} from "../Icons/Icons"
-import { ChevronDownIcon } from "@heroicons/react/20/solid"
+import { AngleRightSmallIcon } from "../Icons/Icons"
+import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
+import { buttonOptions } from "../../../constants"
+import { SunIcon } from "@heroicons/react/24/outline"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -19,6 +16,7 @@ const meta = {
     reverseIcon: false,
     linkUrl: "",
     className: "",
+    label: "Button",
     shadow: false,
     onClick: () => {
       console.log("clicked")
@@ -34,14 +32,7 @@ const meta = {
   argTypes: {
     intent: {
       control: { type: "select" },
-      options: [
-        "primary",
-        "secondary",
-        "tertiary",
-        "border",
-        "text",
-        "navText",
-      ],
+      options: buttonOptions,
     },
     size: {
       control: { type: "select" },
@@ -56,7 +47,7 @@ type Story = StoryObj<typeof meta>
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   render: (args) => {
-    return <Button {...args}>Button</Button>
+    return <Button label="Primary" {...args} />
   },
 }
 
@@ -65,8 +56,8 @@ export const PrimaryGroup: Story = {
     return (
       <div className="flex flex-col gap-8">
         <div className="flex gap-4 items-center">
-          <Button {...args} size="small">
-            Button
+          <Button {...args} size="small" label="Primary">
+            Primary
           </Button>
           <Button {...args} size="base">
             Button
@@ -78,14 +69,14 @@ export const PrimaryGroup: Story = {
 
         <div className="flex gap-4 items-center">
           <Button {...args} size="small">
-            <SunIcon className="[&_path]:fill-white" /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
 
           <Button {...args} size="base">
-            <SunIcon className="[&_path]:fill-white" /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
           <Button {...args} size="large">
-            <SunIcon className="[&_path]:fill-white" /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
         </div>
       </div>
@@ -121,14 +112,14 @@ export const SecondaryGroup: Story = {
 
         <div className="flex gap-4 items-center">
           <Button {...args} size="small" intent="secondary">
-            <SunIcon /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
 
           <Button {...args} size="base" intent="secondary">
-            <SunIcon /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
           <Button {...args} size="large" intent="secondary">
-            <SunIcon /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
         </div>
       </div>
@@ -164,14 +155,14 @@ export const TertiaryGroup: Story = {
 
         <div className="flex gap-4 items-center">
           <Button {...args} size="small" intent="tertiary">
-            <SunIcon /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
 
           <Button {...args} size="base" intent="tertiary">
-            <SunIcon /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
           <Button {...args} size="large" intent="tertiary">
-            <SunIcon /> Button
+            <SunIcon className="w-6 h-6" /> Button
           </Button>
         </div>
       </div>
@@ -241,7 +232,7 @@ export const NavTextGroup: Story = {
             Button
           </Button>
           <Button {...args} size="base" intent="navText">
-            <SearchIcon className="!w-[16px]" /> Button
+            <MagnifyingGlassIcon className="!w-[16px]" /> Button
           </Button>
           <Button {...args} size="large" intent="navText">
             Button <ChevronDownIcon className="!w-[16px]" />

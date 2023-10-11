@@ -2,7 +2,47 @@ import { cva } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 import "../../../app/globals.css"
 import Link from "next/link"
-import { ButtonProps } from "@/types"
+
+export type ButtonProps = {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  intent?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "border"
+    | "border-primary"
+    | "text"
+    | "navText"
+
+  className?: string
+  linkUrl?: string
+  reverseIcon?: boolean
+  shadow?: boolean
+  /**
+   * How large should the button be?
+   */
+  size?: "base" | "small" | "large"
+  /**
+   * Button contents
+   */
+  children?: React.ReactNode
+  label?: string
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void
+}
+
+export type NavItem = {
+  label: ButtonProps["children"]
+  linkUrl?: ButtonProps["linkUrl"]
+  intent?: ButtonProps["intent"]
+  reverseIcon?: ButtonProps["reverseIcon"]
+  icon?: React.ReactNode
+  className?: ButtonProps["className"]
+}
 
 const button = cva(
   "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-[24px] py-[12px] hover:shadow-btn",
@@ -28,11 +68,17 @@ const button = cva(
           "border-neutral-200",
           "hover:bg-opacity-30 hover:shadow-none",
         ],
+        "border-primary": [
+          "bg-transparent hover:bg-primary-100",
+          "text-primary-200",
+          "border-primary-200",
+          "hover:shadow-none",
+        ],
         text: [
           "bg-transparent hover:bg-gray-300",
           "text-black",
           "text-[14px]",
-          "!pl-0  hover:!pl-[16px]",
+          "!pl-0 hover:!pl-[16px]",
           "rounded-[8px]",
           "hover:bg-opacity-30 hover:shadow-none",
         ],
@@ -46,7 +92,7 @@ const button = cva(
         ],
       },
       size: {
-        small: ["h-[34px]", "py-[4px]", "px-[16px]"],
+        small: ["h-[34px]", "py-[4px]", "px-[8px]"],
         base: ["h-[48px]"],
         large: ["h-[56px]", "py-[8px]"],
       },
@@ -69,30 +115,33 @@ export const Button = ({
   className = "",
   intent = "primary",
   size = "base",
+  label = "Button",
   linkUrl = "",
   shadow = false,
   reverseIcon = false,
   children,
   ...props
 }: ButtonProps) => {
+  const content = children ? children : label
+
   return linkUrl !== "" ? (
     <Link
       href={linkUrl}
       className={twMerge(
-        button({ intent, size, className, shadow, reverseIcon })
+        button({ intent, size, shadow, reverseIcon, className })
       )}
       {...props}
     >
-      {children}
+      {content}
     </Link>
   ) : (
     <button
       className={twMerge(
-        button({ intent, size, className, shadow, reverseIcon })
+        button({ intent, size, shadow, reverseIcon, className })
       )}
       {...props}
     >
-      {children}
+      {content}
     </button>
   )
 }
