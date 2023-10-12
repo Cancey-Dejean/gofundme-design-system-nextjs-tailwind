@@ -36,11 +36,10 @@ export type ButtonProps = {
 }
 
 export type NavItem = {
-  label: ButtonProps["children"]
+  label: ButtonProps["label"]
   linkUrl?: ButtonProps["linkUrl"]
   intent?: ButtonProps["intent"]
   reverseIcon?: ButtonProps["reverseIcon"]
-  icon?: React.ReactNode
   className?: ButtonProps["className"]
 }
 
@@ -57,16 +56,10 @@ const button = cva(
           "shadow-btn",
         ],
         tertiary: [
-          "bg-transparent hover:bg-gray-300",
-          "text-black",
-          "border-neutral-200",
-          "hover:bg-opacity-30 hover:shadow-none",
-        ],
-        border: [
-          "bg-transparent hover:bg-gray-300",
-          "text-black",
-          "border-neutral-200",
-          "hover:bg-opacity-30 hover:shadow-none",
+          "bg-transparent hover:bg-gray-300 hover:bg-opacity-30 dark:hover:bg-white",
+          "text-black dark:text-white dark:hover:text-black",
+          "border-neutral-200 dark:border-white",
+          "hover:shadow-none",
         ],
         "border-primary": [
           "bg-transparent hover:bg-primary-100",
@@ -76,7 +69,7 @@ const button = cva(
         ],
         text: [
           "bg-transparent hover:bg-gray-300",
-          "text-black",
+          "text-black dark:text-white",
           "text-[14px]",
           "!pl-0 hover:!pl-[16px]",
           "rounded-[8px]",
@@ -92,7 +85,7 @@ const button = cva(
         ],
       },
       size: {
-        small: ["h-[34px]", "py-[4px]", "px-[8px]"],
+        small: ["h-[34px]", "py-1", "px-[8px]"],
         base: ["h-[48px]"],
         large: ["h-[56px]", "py-[8px]"],
       },

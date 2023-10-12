@@ -2,7 +2,7 @@ import Link from "next/link"
 import { twMerge } from "tailwind-merge"
 
 import { Container } from "../../atoms/Container"
-import { Button } from "../../atoms/Button/Button"
+import { Button, NavItem } from "../../atoms/Button/Button"
 import { HeaderProps } from "@/types"
 import { companyName } from "../../../constants"
 import NavMenuItem from "../../atoms/NavMenuItem"
@@ -11,24 +11,30 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid"
 import { SunIcon } from "@heroicons/react/24/outline"
+import {
+  primaryMenuDefault,
+  secondaryMenuDefault,
+} from "../../../constants/mockData"
 
 const Header = ({
-  className,
-  navPrimary,
-  navSecondary,
+  navPrimary = primaryMenuDefault as Array<NavItem>,
+  navSecondary = secondaryMenuDefault as Array<NavItem>,
   logo,
   logoLeft,
 }: HeaderProps) => {
   return (
-    <header className="py-6 px-4 bg-white lg:bg-transparent">
+    <header
+      className={twMerge(
+        "fixed top-0 left-0 w-full py-6 bg-white lg:bg-transparent"
+      )}
+    >
       <Container className="h-14 lg:h-16 flex items-center bg-white rounded-[58px]">
         <nav
           className={twMerge(
             "w-full items-center ",
             navPrimary && navSecondary && !logoLeft
               ? "grid menu-grid"
-              : "flex justify-between",
-            className
+              : "flex justify-between"
           )}
         >
           <div className="flex justify-start lg:hidden">

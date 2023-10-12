@@ -46,7 +46,7 @@
     --color-grey-200: #c8c8c8;
     --color-grey-300: #767676;
 
-    --color-black: #333;
+    /* --color-black: #333; */
 
     --gradient-design: linear-gradient(
       86.3deg,
@@ -64,7 +64,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-bkg: 217deg 32.6% 17.5%;
+      --color-bkg: var(--color-black);
       --color-content: 210deg 40% 98%;
       --color-accent1: 288deg 95.8% 60.6%;
       --color-accent2: 168deg 83.8% 48.2%;
@@ -72,7 +72,7 @@
   }
 
   body {
-    @apply font-body font-normal h-screen flex flex-col;
+    @apply font-body font-normal h-screen flex flex-col dark:bg-black;
   }
 
   a {

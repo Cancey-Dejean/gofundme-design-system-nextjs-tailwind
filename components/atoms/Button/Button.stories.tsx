@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { Button } from "./Button"
 import { AngleRightSmallIcon } from "../Icons/Icons"
 import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
-import { buttonOptions } from "../../../constants"
+import { buttonIntents, buttonSizes } from "../../../constants/storiesData"
 import { SunIcon } from "@heroicons/react/24/outline"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -32,11 +32,11 @@ const meta = {
   argTypes: {
     intent: {
       control: { type: "select" },
-      options: buttonOptions,
+      options: buttonIntents,
     },
     size: {
       control: { type: "select" },
-      options: ["base", "small", "large"],
+      options: buttonSizes,
     },
   },
 } satisfies Meta<typeof Button>

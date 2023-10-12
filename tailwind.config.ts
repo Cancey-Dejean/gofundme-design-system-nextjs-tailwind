@@ -14,13 +14,11 @@ const config: Config = {
         body: "var(--font-body)",
       },
       colors: {
-        black: "hsl(var(--color-black) / <alpha-value>)",
-        accent: {
-          1: "hsl(var(--color-accent1) / <alpha-value>)",
-          2: "hsl(var(--color-accent2) / <alpha-value>)",
-        },
-        bkg: "hsl(var(--color-bkg) / <alpha-value>)",
-        content: "hsl(var(--color-content) / <alpha-value>)",
+        black: "var(--color-black)",
+        // accent: {
+        //   1: "hsl(var(--color-accent1) / <alpha-value>)",
+        //   2: "hsl(var(--color-accent2) / <alpha-value>)",
+        // },
         primary: {
           100: "var(--color-primary-100)",
           200: "var(--color-primary-200)",
@@ -44,7 +42,6 @@ const config: Config = {
           900: "#180f2c",
         },
         navy: "#01485C",
-        black: "#333",
       },
       fontSize: {},
       backgroundImage: {

@@ -47,16 +47,6 @@ export const navSecondary = [
     icon: false,
     reverseIcon: false,
     intent: "border-primary",
-    className: "px-[16px]",
+    className: "px-4",
   },
-]
-
-export const buttonOptions = [
-  "primary",
-  "secondary",
-  "tertiary",
-  "border",
-  "border-primary",
-  "text",
-  "navText",
 ]

@@ -1,6 +1,11 @@
 import { Button } from "@/components/atoms/Button/Button"
+import Hero from "@/components/organisms/Hero"
 import Image from "next/image"
 
 export default function Home() {
-  return <main className="flex-1"></main>
+  return (
+    <main className="flex-1">
+      <Hero />
+    </main>
+  )
 }

@@ -6,6 +6,7 @@ import { navPrimary, navSecondary } from "@/constants"
 import { GoFundMe } from "@/components/atoms/Logos/Logos"
 import Providers from "@/constants/provider"
 import ThemeButton from "@/components/utilities/ThemeButton"
+import { NavItem } from "@/components/atoms/Button/Button"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -30,8 +31,8 @@ export default function RootLayout({
       <body>
         <Providers>
           <NavBar
-            navPrimary={navPrimary as any}
-            navSecondary={navSecondary as any}
+            navPrimary={navPrimary as Array<NavItem>}
+            navSecondary={navSecondary as Array<NavItem>}
             logo={<GoFundMe />}
           />
           {children}
