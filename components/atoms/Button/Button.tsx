@@ -52,7 +52,7 @@ const button = cva(
         secondary: [
           "bg-white hover:bg-primary-100",
           "rounded-[28px]",
-          "text-[18px]",
+          "text-[18px] text-primary-200",
           "shadow-btn",
         ],
         tertiary: [

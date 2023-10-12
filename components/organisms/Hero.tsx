@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Container } from "../atoms/Container"
+import { Button } from "../atoms/Button/Button"
 
 type HeroProps = {
   heroHeight?: number
@@ -23,8 +24,11 @@ const Hero = ({
         alt="hero"
         className="object-cover h-full w-full"
       />
-      <Container className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-        Hero
+      <Container className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center flex-col items-center">
+        <h1>Hero</h1>
+        <Button className="" intent="secondary" linkUrl="/">
+          Start a GoFundMe
+        </Button>
       </Container>
     </section>
   )
