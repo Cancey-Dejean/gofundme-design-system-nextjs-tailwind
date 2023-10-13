@@ -11,7 +11,6 @@ export type ButtonProps = {
     | "primary"
     | "secondary"
     | "tertiary"
-    | "border"
     | "border-primary"
     | "text"
     | "navText"
@@ -41,6 +40,7 @@ export type NavItem = {
   intent?: ButtonProps["intent"]
   reverseIcon?: ButtonProps["reverseIcon"]
   className?: ButtonProps["className"]
+  icon?: React.ReactNode
 }
 
 const button = cva(

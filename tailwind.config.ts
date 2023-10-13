@@ -13,6 +13,7 @@ const config: Config = {
       fontFamily: {
         body: "var(--font-body)",
       },
+
       colors: {
         black: "var(--color-black)",
         // accent: {
@@ -43,13 +44,19 @@ const config: Config = {
         },
         navy: "#01485C",
       },
-      fontSize: {},
+      fontSize: {
+        "display-one": "var(--text-display-one)",
+        "display-two": "var(--text-display-two)",
+        "heading-one": "var(--text-heading-one)",
+        "heading-two": "var(--text-heading-two)",
+        "heading-three": "var(--text-heading-three)",
+      },
       backgroundImage: {
         "gradient-design": "var(--gradient-design)",
       },
       borderRadius: {
         16: "var(--border-radius-16)",
-        56: "var(--border-radius-6)",
+        56: "var(--border-radius-56)",
       },
       boxShadow: {
         btn: "var(--shadow-btn)",

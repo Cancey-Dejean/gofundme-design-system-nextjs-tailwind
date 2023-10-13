@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { twMerge } from "tailwind-merge"
-
 import { Container } from "../../atoms/Container"
 import { Button, NavItem } from "../../atoms/Button/Button"
 import { HeaderProps } from "@/types"
@@ -25,10 +24,10 @@ const Header = ({
   return (
     <header
       className={twMerge(
-        "fixed top-0 left-0 w-full py-6 bg-white lg:bg-transparent"
+        "fixed top-0 left-0 w-full z-50 py-6 bg-white lg:bg-transparent px-4"
       )}
     >
-      <Container className="h-14 lg:h-16 flex items-center bg-white rounded-[58px]">
+      <Container className="h-14 lg:h-16 flex items-center max-lg:px-0 bg-white rounded-[58px]">
         <nav
           className={twMerge(
             "w-full items-center ",
