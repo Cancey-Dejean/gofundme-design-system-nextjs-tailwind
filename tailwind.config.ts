@@ -16,19 +16,15 @@ const config: Config = {
 
       colors: {
         black: "var(--color-black)",
-        // accent: {
-        //   1: "hsl(var(--color-accent1) / <alpha-value>)",
-        //   2: "hsl(var(--color-accent2) / <alpha-value>)",
-        // },
         primary: {
           100: "var(--color-primary-100)",
           200: "var(--color-primary-200)",
           300: "var(--color-primary-300)",
         },
         neutral: {
-          100: "var(--color-grey-100)",
-          200: "var(--color-grey-200)",
-          300: "var(--color-grey-300)",
+          100: "var(--color-neutral-grey-100)",
+          200: "var(--color-neutral-grey-200)",
+          300: "var(--color-neutral-grey-300)",
         },
         violet: {
           50: "#ebe9f0",
@@ -46,10 +42,10 @@ const config: Config = {
       },
       fontSize: {
         "display-one": ["var(--text-display-one)", "1.1"],
-        "display-two": "var(--text-display-two)",
+        "display-two": ["var(--text-display-two)", "1.1"],
         "heading-one": "var(--text-heading-one)",
         "heading-two": "var(--text-heading-two)",
-        "heading-three": "var(--text-heading-three)",
+        body: "var(--text-body)",
       },
       backgroundImage: {
         "gradient-design": "var(--gradient-design)",

@@ -1,23 +1,23 @@
 import {
-  sectionTitleHeadingLevels,
-  sectionTitleIntents,
-  sectionTitleSizes,
+  TextHeadingLevels,
+  TextIntents,
+  TextSizes,
 } from "@/constants/storiesData"
 import { cva } from "class-variance-authority"
-import { twMerge } from "tailwind-merge"
+import classNames from "classnames"
 
-export type SectionTitleProps = {
-  as: (typeof sectionTitleHeadingLevels)[number]
+export type TextProps = {
+  as: (typeof TextHeadingLevels)[number]
   /**
    * Is this the principal call to action on the page?
    */
-  intent?: (typeof sectionTitleIntents)[number]
+  intent?: (typeof TextIntents)[number]
 
   className?: string
   /**
    * How large should the button be?
    */
-  size?: (typeof sectionTitleSizes)[number]
+  size?: (typeof TextSizes)[number]
   /**
    * Button contents
    */
@@ -25,11 +25,11 @@ export type SectionTitleProps = {
   // label?: string
 }
 
-const heading = cva("font-normal", {
+const heading = cva("", {
   variants: {
     intent: {
       normal: ["font-normal"],
-      semibold: ["font-semibold"],
+      semibold: ["font-medium"],
       bold: ["font-bold"],
     },
     size: {
@@ -37,24 +37,24 @@ const heading = cva("font-normal", {
       "display-two": ["text-display-two"],
       "heading-one": ["text-heading-one"],
       "heading-two": ["text-heading-two"],
-      "heading-three": ["text-heading-three"],
+      body: ["text-body"],
     },
   },
 })
 
-const SectionTitle = ({
-  intent = "semibold",
+const Text = ({
+  intent = "normal",
   size = "heading-one",
   as = "h1",
   children = "Heading goes here",
   className = "",
-}: SectionTitleProps) => {
+}: TextProps) => {
   const Element = as
   return (
-    <Element className={twMerge(heading({ intent, size, className }))}>
+    <Element className={classNames(heading({ intent, size, className }))}>
       {children}
     </Element>
   )
 }
 
-export default SectionTitle
+export default Text

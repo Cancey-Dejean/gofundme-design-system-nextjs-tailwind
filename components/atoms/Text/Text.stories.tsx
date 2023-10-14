@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import {
-  sectionTitleHeadingLevels,
-  sectionTitleIntents,
-  sectionTitleSizes,
+  TextHeadingLevels,
+  TextIntents,
+  TextSizes,
 } from "../../../constants/storiesData"
-import SectionTitle from "./SectionTitle"
+import Text from "./Text"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   tags: ["autodocs"],
-  title: "Typography/Heading",
-  component: SectionTitle,
+  title: "Design System/Typography",
+  component: Text,
   args: {
     as: "h1",
     intent: "semibold",
@@ -26,28 +26,28 @@ const meta = {
   argTypes: {
     as: {
       control: { type: "select" },
-      options: sectionTitleHeadingLevels,
+      options: TextHeadingLevels,
     },
     intent: {
       control: { type: "select" },
-      options: sectionTitleIntents,
+      options: TextIntents,
     },
     size: {
       control: { type: "select" },
-      options: sectionTitleSizes,
+      options: TextSizes,
     },
   },
-} satisfies Meta<typeof SectionTitle>
+} satisfies Meta<typeof Text>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Heading: Story = {
+export const Typography: Story = {
   render: (args) => {
     return (
       <div className="flex flex-col gap-3">
-        <SectionTitle {...args} />
+        <Text {...args} />
       </div>
     )
   },

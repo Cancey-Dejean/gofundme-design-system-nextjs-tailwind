@@ -1,8 +1,9 @@
 import { cva } from "class-variance-authority"
-import { twMerge } from "tailwind-merge"
+// import { twMerge } from "tailwind-merge"
 import "../../../app/globals.css"
 import Link from "next/link"
 import { buttonIntents, buttonSizes } from "@/constants/storiesData"
+import classNames from "classnames"
 
 export type ButtonProps = {
   /**
@@ -115,7 +116,7 @@ export const Button = ({
   return linkUrl !== "" ? (
     <Link
       href={linkUrl}
-      className={twMerge(
+      className={classNames(
         button({ intent, size, shadow, reverseIcon, className })
       )}
       {...props}
@@ -124,7 +125,7 @@ export const Button = ({
     </Link>
   ) : (
     <button
-      className={twMerge(
+      className={classNames(
         button({ intent, size, shadow, reverseIcon, className })
       )}
       {...props}

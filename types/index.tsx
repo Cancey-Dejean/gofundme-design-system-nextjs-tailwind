@@ -7,3 +7,8 @@ export type HeaderProps = {
   navPrimary?: NavItem[]
   navSecondary?: NavItem[]
 }
+
+export type SectionHeaderProps = {
+  topText?: string
+  title?: string
+}

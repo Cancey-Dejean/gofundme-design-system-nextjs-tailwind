@@ -42,9 +42,9 @@
     --color-primary-200: #02a95c;
     --color-primary-300: #008748;
 
-    --color-grey-100: #f8f8f8;
-    --color-grey-200: #c8c8c8;
-    --color-grey-300: #767676;
+    --color-neutral-grey-100: #f8f8f8;
+    --color-neutral-grey-200: #c8c8c8;
+    --color-neutral-grey-300: #767676;
 
     /* Font-size: 48px/60px */
     --text-display-one: clamp(3rem, 2.8328rem + 0.7643vw, 3.75rem);
@@ -55,7 +55,7 @@
     /* Font-size: 20px/24px */
     --text-heading-two: clamp(1.25rem, 1.1943rem + 0.2548vw, 1.5rem);
     /* Font-size: 16px */
-    --text-heading-three: clamp(1rem, 1rem + 0vw, 1rem);
+    --text-body: clamp(1rem, 1rem + 0vw, 1rem);
 
     --gradient-design: linear-gradient(
       86.3deg,
