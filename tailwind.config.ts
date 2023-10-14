@@ -45,7 +45,7 @@ const config: Config = {
         navy: "#01485C",
       },
       fontSize: {
-        "display-one": "var(--text-display-one)",
+        "display-one": ["var(--text-display-one)", "1.1"],
         "display-two": "var(--text-display-two)",
         "heading-one": "var(--text-heading-one)",
         "heading-two": "var(--text-heading-two)",

@@ -28,11 +28,16 @@ const Hero = ({
         className="object-cover h-full w-full"
       />
       <Container className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center flex-col items-center">
-        <SectionTitle as="h1">GoFundMe</SectionTitle>
-        {/* <h1 className="text-display-one">Hero</h1> */}
-        <Button className="" intent="secondary" linkUrl="/">
-          Start a GoFundMe
-        </Button>
+        <SectionTitle as="h1" size="display-one">
+          Your home <br />
+          for help
+        </SectionTitle>
+
+        <div className="mt-8">
+          <Button className="" intent="secondary" linkUrl="/">
+            Start a GoFundMe
+          </Button>
+        </div>
       </Container>
     </section>
   )
