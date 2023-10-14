@@ -39,7 +39,7 @@ export type NavItem = {
 }
 
 const button = cva(
-  "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-[24px] py-[12px] hover:shadow-btn",
+  "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-4 py-[12px] hover:shadow-btn",
   {
     variants: {
       intent: {
@@ -80,7 +80,7 @@ const button = cva(
         ],
       },
       size: {
-        small: ["h-[34px]", "py-1", "px-[8px]"],
+        small: ["h-[34px]", "py-1"],
         base: ["h-[48px]"],
         large: ["h-[56px]", "py-[8px]"],
       },

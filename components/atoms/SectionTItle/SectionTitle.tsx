@@ -1,28 +1,23 @@
-// import {
-//   sectionTitleHeadingLevels,
-//   sectionTitleIntents,
-//   sectionTitleSizes,
-// } from "@/constants/storiesData"
 import {
   sectionTitleHeadingLevels,
   sectionTitleIntents,
   sectionTitleSizes,
-} from "@/types"
+} from "@/constants/storiesData"
 import { cva } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 
 export type SectionTitleProps = {
-  as: sectionTitleHeadingLevels[]
+  as: (typeof sectionTitleHeadingLevels)[number]
   /**
    * Is this the principal call to action on the page?
    */
-  intent?: sectionTitleIntents[]
+  intent?: (typeof sectionTitleIntents)[number]
 
   className?: string
   /**
    * How large should the button be?
    */
-  size?: sectionTitleSizes[]
+  size?: (typeof sectionTitleSizes)[number]
   /**
    * Button contents
    */
