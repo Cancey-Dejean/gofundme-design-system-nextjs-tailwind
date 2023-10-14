@@ -1,23 +1,28 @@
+// import {
+//   sectionTitleHeadingLevels,
+//   sectionTitleIntents,
+//   sectionTitleSizes,
+// } from "@/constants/storiesData"
 import {
   sectionTitleHeadingLevels,
   sectionTitleIntents,
   sectionTitleSizes,
-} from "@/constants/storiesData"
+} from "@/types"
 import { cva } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 
 export type SectionTitleProps = {
-  as: (typeof sectionTitleHeadingLevels)[number]
+  as: sectionTitleHeadingLevels[]
   /**
    * Is this the principal call to action on the page?
    */
-  intent?: (typeof sectionTitleIntents)[number]
+  intent?: sectionTitleIntents[]
 
   className?: string
   /**
    * How large should the button be?
    */
-  size?: (typeof sectionTitleSizes)[number]
+  size?: sectionTitleSizes[]
   /**
    * Button contents
    */
@@ -43,18 +48,15 @@ const heading = cva("font-normal", {
 })
 
 const SectionTitle = ({
-  // intent = "semibold",
-  // size = "heading-one",
-  as: Element = "h1",
-  children = <p>Heading goes here</p>,
+  intent = "semibold",
+  size = "heading-one",
+  as = "h1",
+  children = "Heading goes here",
   className = "",
 }: SectionTitleProps) => {
+  const Element = as
   return (
-    <Element
-      className={twMerge(
-        heading({ intent: "semibold", size: "heading-one", className })
-      )}
-    >
+    <Element className={twMerge(heading({ intent, size, className }))}>
       {children}
     </Element>
   )

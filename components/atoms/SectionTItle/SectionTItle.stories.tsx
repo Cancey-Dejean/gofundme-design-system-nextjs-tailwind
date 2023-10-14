@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import {
-  buttonIntents,
-  buttonSizes,
   sectionTitleHeadingLevels,
   sectionTitleIntents,
   sectionTitleSizes,
@@ -14,16 +12,9 @@ const meta = {
   title: "Typography/Heading",
   component: SectionTitle,
   args: {
-    // size: "base",
-    // intent: "primary",
-    // reverseIcon: false,
-    // linkUrl: "",
-    // className: "",
-    // label: "Button",
-    // shadow: false,
-    // onClick: () => {
-    //   console.log("clicked")
-    // },
+    as: "h1",
+    intent: "semibold",
+    size: "heading-one",
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -52,8 +43,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const DisplayOne: Story = {
+export const Heading: Story = {
   render: (args) => {
-    return <SectionTitle {...args} />
+    return (
+      <div className="flex flex-col gap-3">
+        <SectionTitle {...args} />
+      </div>
+    )
   },
 }

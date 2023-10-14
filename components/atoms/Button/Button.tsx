@@ -2,18 +2,13 @@ import { cva } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 import "../../../app/globals.css"
 import Link from "next/link"
+import { buttonIntents, buttonSizes } from "@/constants/storiesData"
 
 export type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
-  intent?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "border-primary"
-    | "text"
-    | "navText"
+  intent?: (typeof buttonIntents)[number]
 
   className?: string
   linkUrl?: string
@@ -22,7 +17,7 @@ export type ButtonProps = {
   /**
    * How large should the button be?
    */
-  size?: "base" | "small" | "large"
+  size?: (typeof buttonSizes)[number]
   /**
    * Button contents
    */
