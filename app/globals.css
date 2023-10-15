@@ -81,7 +81,7 @@
   }
 
   body {
-    @apply font-body font-normal h-screen flex flex-col dark:bg-black;
+    @apply flex h-screen flex-col font-body font-normal dark:bg-black;
   }
 
   a {

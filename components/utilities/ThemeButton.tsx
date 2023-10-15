@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import { MoonIcon, SunIcon } from "@heroicons/react/20/solid"
-import { useTheme } from "next-themes"
-import { use, useEffect, useState } from "react"
+import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
+import { useTheme } from "next-themes";
+import { use, useEffect, useState } from "react";
 
-type Props = {}
+type Props = {};
 
 const ThemeButton = ({}: Props) => {
-  const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
-    <div className="absolute bottom-4 right-4">
+    <div className="fixed bottom-4 right-4">
       <button
         type="button"
         aria-label="Toggle Dark Mode"
@@ -24,13 +24,13 @@ const ThemeButton = ({}: Props) => {
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         {resolvedTheme === "dark" ? (
-          <SunIcon className="w-5 h-5 text-white" />
+          <SunIcon className="h-5 w-5 text-white" />
         ) : (
-          <MoonIcon className="w-5 h-5 text-black" />
+          <MoonIcon className="h-5 w-5 text-black" />
         )}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default ThemeButton
+export default ThemeButton;
