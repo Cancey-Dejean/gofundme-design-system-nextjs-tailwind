@@ -1,3 +1,8 @@
+import {
+  StepArchOneIcon,
+  StepArchThreeIcon,
+  StepArchTwoIcon,
+} from "@/components/atoms/Icons/Icons"
 import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
 
 export const companyName: string = "Company Name"

@@ -1,19 +1,19 @@
-import Link from "next/link"
-import { twMerge } from "tailwind-merge"
-import { Container } from "../../atoms/Container"
-import { Button, NavItem } from "../../atoms/Button/Button"
-import { HeaderProps } from "@/types"
-import { companyName } from "../../../constants"
-import NavMenuItem from "../../atoms/NavMenuItem"
+import Link from "next/link";
+import { twMerge } from "tailwind-merge";
+import { Container } from "../../atoms/Container";
+import { Button, NavItem } from "../../atoms/Button/Button";
+import { HeaderProps } from "@/types";
+import { companyName } from "../../../constants";
+import NavMenuItem from "../../atoms/NavMenuItem";
 import {
   Bars3BottomRightIcon,
   MagnifyingGlassIcon,
-} from "@heroicons/react/20/solid"
-import { SunIcon } from "@heroicons/react/24/outline"
+} from "@heroicons/react/20/solid";
+import { SunIcon } from "@heroicons/react/24/outline";
 import {
   primaryMenuDefault,
   secondaryMenuDefault,
-} from "../../../constants/mockData"
+} from "../../../constants/mockData";
 
 const Header = ({
   navPrimary = primaryMenuDefault as Array<NavItem>,
@@ -24,27 +24,27 @@ const Header = ({
   return (
     <header
       className={twMerge(
-        "fixed top-0 left-0 w-full z-50 py-6 bg-white lg:bg-transparent px-4"
+        "fixed left-0 top-0 z-50 w-full bg-white px-4 py-6 lg:bg-transparent",
       )}
     >
-      <Container className="h-14 lg:h-16 flex items-center max-lg:px-0 bg-white rounded-[58px]">
+      <Container className="flex h-14 items-center rounded-[58px] bg-white max-lg:px-0 lg:h-16">
         <nav
           className={twMerge(
             "w-full items-center ",
             navPrimary && navSecondary && !logoLeft
-              ? "grid menu-grid"
-              : "flex justify-between"
+              ? "menu-grid grid"
+              : "flex justify-between",
           )}
         >
           <div className="flex justify-start lg:hidden">
-            <MagnifyingGlassIcon className="w-6 h-6 text-black" />
+            <MagnifyingGlassIcon className="h-6 w-6 text-black" />
           </div>
           {navPrimary ? (
             <ul
               className={twMerge(
-                "gap-2 flex-1 [grid-area:primaryMenu] ",
-                "hidden lg:flex justify-start",
-                logoLeft ? "order-last justify-end" : null
+                "flex-1 gap-2 [grid-area:primaryMenu] ",
+                "hidden justify-start lg:flex",
+                logoLeft ? "order-last justify-end" : null,
               )}
             >
               {navPrimary?.map((item, i) => (
@@ -59,7 +59,7 @@ const Header = ({
             href="/"
             className={twMerge(
               "[grid-area:logo] [&_svg]:fill-primary-200",
-              logoLeft ? "order-first" : null
+              logoLeft ? "order-first" : null,
             )}
           >
             {logo ? logo : <span>{companyName}</span>}
@@ -71,7 +71,7 @@ const Header = ({
               <ul
                 className={twMerge(
                   "gap-2 [grid-area:secondaryMenu]",
-                  "hidden items-center lg:flex"
+                  "hidden items-center lg:flex",
                 )}
               >
                 {navSecondary?.map((item, i) => (
@@ -83,22 +83,22 @@ const Header = ({
             ) : null}
 
             <div className="flex justify-end lg:hidden">
-              <Bars3BottomRightIcon className="w-6 h-6 text-black" />
+              <Bars3BottomRightIcon className="h-6 w-6 text-black" />
             </div>
           </div>
         </nav>
       </Container>
 
-      <div className="block mt-4 lg:hidden">
+      <div className="mt-4 block lg:hidden">
         <Container className="px-0">
           <Button intent="primary" linkUrl="/">
-            <SunIcon className="w-6 h-6" />
+            <SunIcon className="h-6 w-6" />
             Start a GoFundMe
           </Button>
         </Container>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,43 +1,43 @@
-import { cva } from "class-variance-authority"
+import { cva } from "class-variance-authority";
 // import { twMerge } from "tailwind-merge"
-import "../../../app/globals.css"
-import Link from "next/link"
-import { buttonIntents, buttonSizes } from "@/constants/storiesData"
-import classNames from "classnames"
+import "../../../app/globals.css";
+import Link from "next/link";
+import { buttonIntents, buttonSizes } from "@/constants/storiesData";
+import classNames from "classnames";
 
 export type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
-  intent?: (typeof buttonIntents)[number]
+  intent?: (typeof buttonIntents)[number];
 
-  className?: string
-  linkUrl?: string
-  reverseIcon?: boolean
-  shadow?: boolean
+  className?: string;
+  linkUrl?: string;
+  reverseIcon?: boolean;
+  shadow?: boolean;
   /**
    * How large should the button be?
    */
-  size?: (typeof buttonSizes)[number]
+  size?: (typeof buttonSizes)[number];
   /**
    * Button contents
    */
-  children?: React.ReactNode
-  label?: string
+  children?: React.ReactNode;
+  label?: string;
   /**
    * Optional click handler
    */
-  onClick?: () => void
-}
+  onClick?: () => void;
+};
 
 export type NavItem = {
-  label: ButtonProps["label"]
-  linkUrl?: ButtonProps["linkUrl"]
-  intent?: ButtonProps["intent"]
-  reverseIcon?: ButtonProps["reverseIcon"]
-  className?: ButtonProps["className"]
-  icon?: React.ReactNode
-}
+  label: ButtonProps["label"];
+  linkUrl?: ButtonProps["linkUrl"];
+  intent?: ButtonProps["intent"];
+  reverseIcon?: ButtonProps["reverseIcon"];
+  className?: ButtonProps["className"];
+  icon?: React.ReactNode;
+};
 
 const button = cva(
   "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-4 py-[12px] hover:shadow-btn",
@@ -94,8 +94,8 @@ const button = cva(
         false: null,
       },
     },
-  }
-)
+  },
+);
 
 /**
  * Primary UI component for user interaction
@@ -111,13 +111,13 @@ export const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  const content = children ? children : label
+  const content = children ? children : label;
 
   return linkUrl !== "" ? (
     <Link
       href={linkUrl}
       className={classNames(
-        button({ intent, size, shadow, reverseIcon, className })
+        button({ intent, size, shadow, reverseIcon, className }),
       )}
       {...props}
     >
@@ -126,11 +126,11 @@ export const Button = ({
   ) : (
     <button
       className={classNames(
-        button({ intent, size, shadow, reverseIcon, className })
+        button({ intent, size, shadow, reverseIcon, className }),
       )}
       {...props}
     >
       {content}
     </button>
-  )
-}
+  );
+};

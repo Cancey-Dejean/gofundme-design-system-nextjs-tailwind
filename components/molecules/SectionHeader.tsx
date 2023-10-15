@@ -1,5 +1,5 @@
-import { SectionHeaderProps } from "@/types"
-import Text from "../atoms/Text/Text"
+import { SectionHeaderProps } from "@/types";
+import Text from "../atoms/Text/Text";
 
 const SectionHeader = ({
   topText = "Headline goes here",
@@ -15,7 +15,7 @@ const SectionHeader = ({
         {title}
       </Text>
     </div>
-  )
-}
+  );
+};
 
-export default SectionHeader
+export default SectionHeader;

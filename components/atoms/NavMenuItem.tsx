@@ -1,5 +1,5 @@
-import React from "react"
-import { Button, NavItem } from "./Button/Button"
+import React from "react";
+import { Button, NavItem } from "./Button/Button";
 
 const NavMenuItem = ({ item }: { item: NavItem }) => {
   return (
@@ -13,7 +13,7 @@ const NavMenuItem = ({ item }: { item: NavItem }) => {
       {item.icon ? <span>{item.icon}</span> : null}
       {item.label}
     </Button>
-  )
-}
+  );
+};
 
-export default NavMenuItem
+export default NavMenuItem;
