@@ -21,6 +21,7 @@ const FeaturedTopics = (props: Props) => {
               tagName={card.tagName}
               title={card.title}
               link={card.link}
+              imgSrc={card.imgSrc}
             />
           ))}
         </div>

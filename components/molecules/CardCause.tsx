@@ -3,15 +3,16 @@ import { Button } from "../atoms/Button/Button";
 import Text from "../atoms/Text/Text";
 import { AngleRightSmallIcon } from "../atoms/Icons/Icons";
 import { CardCauseProps } from "@/types";
+import { featuredArticle } from "@/constants/images";
 
 const CardCause = ({
   featured = false,
   imgSrc,
-  tagName,
-  title,
-  excerpt,
-  btnText,
-  link,
+  tagName = "Tag Name",
+  title = "Title",
+  excerpt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, nihil.",
+  btnText = "Read More",
+  link = "/",
 }: CardCauseProps) => {
   return (
     <div
@@ -28,7 +29,7 @@ const CardCause = ({
           featured ? "flex-1 pt-52" : "pt-56",
         )}
         style={{
-          backgroundImage: `url(${imgSrc})`,
+          backgroundImage: `url(${imgSrc || featuredArticle})`,
         }}
       >
         <span className="absolute left-4 top-4 min-h-[24px] rounded-xl bg-violet-100 px-2 text-[14px] font-bold">
@@ -51,28 +52,32 @@ const CardCause = ({
           {title}
         </Text>
 
-        <div className="min-h-[56px]">
-          <p
-            className={classNames(
-              " text-neutral-300",
-              featured ? "text-body" : "text-[14px]",
-            )}
-          >
-            {excerpt}
-          </p>
-        </div>
+        {excerpt && (
+          <div className="min-h-[56px]">
+            <p
+              className={classNames(
+                " text-neutral-300",
+                featured ? "text-body" : "text-[14px]",
+              )}
+            >
+              {excerpt}
+            </p>
+          </div>
+        )}
 
-        <div className="mt-auto ">
-          <Button
-            className="w-full hover:bg-white hover:shadow-none"
-            intent="text"
-            size="small"
-            linkUrl={link}
-            shadow={false}
-          >
-            {btnText} <AngleRightSmallIcon className="h-3 w-3" />
-          </Button>
-        </div>
+        {btnText !== "" && (
+          <div className="mt-auto ">
+            <Button
+              className="w-full hover:bg-white hover:shadow-none"
+              intent="text"
+              size="small"
+              linkUrl={link}
+              shadow={false}
+            >
+              {btnText} <AngleRightSmallIcon className="h-3 w-3" />
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
