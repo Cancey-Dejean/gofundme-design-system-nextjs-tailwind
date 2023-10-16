@@ -3,6 +3,7 @@ import { Container } from "../atoms/Container";
 import { Button } from "../atoms/Button/Button";
 import { heroDefault } from "@/constants/images";
 import Text from "../atoms/Text/Text";
+import { SunIcon } from "../atoms/Icons/Icons";
 
 const Hero = ({
   heroWidth = 1920,
@@ -11,9 +12,8 @@ const Hero = ({
   imgAlt = "Hero image",
 }) => {
   return (
-    <section className="relative h-full lg:max-h-[90vh] lg:min-h-[500px]">
+    <section className="relative h-full p-0 lg:max-h-[90vh] lg:min-h-[500px]">
       <Image
-        // src="/images/hero.jpg"
         src={imgSrc}
         width={heroWidth}
         height={heroHeight}
@@ -28,6 +28,10 @@ const Hero = ({
 
         <div className="mt-8">
           <Button className="" intent="secondary" linkUrl="/">
+            <SunIcon
+              className="h-[22px] w-[22px]"
+              pathFill="var(--color-primary-200)"
+            />
             Start a GoFundMe
           </Button>
         </div>

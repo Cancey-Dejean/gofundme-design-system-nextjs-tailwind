@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react";
 import {
   TextHeadingLevels,
   TextIntents,
   TextSizes,
-} from "../../../constants/storiesData"
-import Text from "./Text"
+} from "../../../constants/storiesData";
+import Text from "./Text";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -37,18 +37,17 @@ const meta = {
       options: TextSizes,
     },
   },
-} satisfies Meta<typeof Text>
+} satisfies Meta<typeof Text>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Typography: Story = {
-  render: (args) => {
-    return (
-      <div className="flex flex-col gap-3">
-        <Text {...args} />
-      </div>
-    )
+  args: {
+    children: "Heading goes here",
   },
-}
+  render: (args) => {
+    return <Text {...args} />;
+  },
+};

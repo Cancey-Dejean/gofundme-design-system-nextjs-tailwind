@@ -3,14 +3,7 @@ import CircleNumber from "../atoms/CircleNumber";
 import { StepArchOneIcon } from "../atoms/Icons/Icons";
 import Text from "../atoms/Text/Text";
 import classNames from "classnames";
-
-type CardStepProps = {
-  number?: number;
-  title?: string;
-  description?: string;
-  stepImgDesktop?: React.ReactNode;
-  stepImgMobile?: React.ReactNode;
-};
+import { CardStepProps } from "@/types";
 
 const CardStep = ({
   number = 1,
@@ -20,9 +13,8 @@ const CardStep = ({
   stepImgMobile,
 }: CardStepProps) => {
   return (
-    <li className="flex-1">
-      <div className="mb-4 grid gap-4 lg:mb-10 lg:[grid-template-columns:40px_1fr]">
-        {/* <div className="mb-10 flex items-start"> */}
+    <li className="flex flex-1 flex-row gap-4 lg:flex-col  lg:gap-0">
+      <div className="grid gap-4 lg:mb-10 lg:mb-4 lg:[grid-template-columns:40px_1fr]">
         {number ? <CircleNumber number={number} /> : null}
 
         {stepImgDesktop ? (

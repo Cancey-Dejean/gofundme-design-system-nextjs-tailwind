@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -27,18 +27,20 @@ const config: Config = {
           300: "var(--color-neutral-grey-300)",
         },
         violet: {
-          50: "#ebe9f0",
-          100: "#c2bbd0",
-          200: "#a49aba",
-          300: "#7b6c9a",
-          400: "#615086",
-          500: "#3a2468",
-          600: "#35215f",
-          700: "#291a4a",
-          800: "#201439",
-          900: "#180f2c",
+          // 50: "#ebe9f0",
+          100: "var(--color-violet-100)",
+          200: "var(--color-violet-200)",
+          // 150: "#c2bbd0",
+          // 200: "#a49aba",
+          // 300: "#7b6c9a",
+          // 400: "#615086",
+          // 500: "#3a2468",
+          // 600: "#35215f",
+          // 700: "#291a4a",
+          // 800: "#201439",
+          // 900: "#180f2c",
         },
-        navy: "#01485C",
+        navy: "var(--color-navy-100)",
       },
       fontSize: {
         "display-one": ["var(--text-display-one)", "1.1"],
@@ -60,5 +62,5 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

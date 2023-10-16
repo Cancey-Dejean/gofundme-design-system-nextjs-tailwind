@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Circular";
   src: url("../public/fonts/CircularWebRegular.woff2") format("woff2");
@@ -22,10 +26,6 @@
   font-display: swap;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   :root {
     --color-bkg: 210deg 40% 98%;
@@ -46,6 +46,11 @@
     --color-neutral-grey-200: #c8c8c8;
     --color-neutral-grey-300: #767676;
 
+    --color-violet-100: #f0eaf4;
+    --color-violet-200: #3a2468;
+
+    --color-navy-100: #01485c;
+
     /* Font-size: 48px/60px */
     --text-display-one: clamp(3rem, 2.8328rem + 0.7643vw, 3.75rem);
     /* Font-size: 40px */
@@ -63,7 +68,6 @@
       rgba(8, 24, 68, 1) 87.6%
     );
 
-    --border-radius-16: 16px;
     --border-radius-56: 56px;
 
     --shadow-btn: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -85,7 +89,10 @@
   }
 
   a {
-    @apply inline-block;
+    display: inline-block;
+  }
+  section {
+    @apply py-14;
   }
 }
 

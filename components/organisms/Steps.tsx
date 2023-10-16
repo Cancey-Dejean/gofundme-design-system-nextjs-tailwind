@@ -4,6 +4,7 @@ import {
   StepArchOneIconMobile,
   StepArchThreeIcon,
   StepArchTwoIcon,
+  StepArchTwoIconMobile,
 } from "../atoms/Icons/Icons";
 import Text from "../atoms/Text/Text";
 import CardStep from "../molecules/CardStep";
@@ -13,7 +14,7 @@ type Props = {};
 
 const Steps = (props: Props) => {
   return (
-    <section className="py-14">
+    <section>
       <Container>
         <div className="max-w-[541px]">
           <SectionHeader
@@ -22,7 +23,7 @@ const Steps = (props: Props) => {
           />
         </div>
 
-        <ol className="flex flex-col items-start gap-4 pt-4 lg:flex-row">
+        <ol className="flex flex-col items-start gap-4 lg:flex-row lg:pt-4">
           <CardStep
             number={1}
             stepImgDesktop={<StepArchOneIcon className="-mt-4" />}
@@ -33,15 +34,15 @@ const Steps = (props: Props) => {
 
           <CardStep
             number={2}
-            stepImgDesktop={<StepArchTwoIcon className="relative top-8 ml-4" />}
-            stepImgMobile={<StepArchOneIconMobile className="ml-5" />}
+            stepImgDesktop={<StepArchTwoIcon className="relative top-8" />}
+            stepImgMobile={<StepArchTwoIconMobile className="ml-4" />}
             title="Tell your story"
             description="We'll guide you with tips along the way."
           />
 
           <CardStep
             number={3}
-            stepImgDesktop={<StepArchThreeIcon className="-ml-2 -mt-4" />}
+            stepImgDesktop={<StepArchThreeIcon className="-ml-6 -mt-4" />}
             title="Share with friends and family"
             description="People out there want to help you."
           />

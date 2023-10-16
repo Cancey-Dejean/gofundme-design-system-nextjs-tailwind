@@ -4,6 +4,7 @@ import "../../../app/globals.css";
 import Link from "next/link";
 import { buttonIntents, buttonSizes } from "@/constants/storiesData";
 import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 
 export type ButtonProps = {
   /**
@@ -31,6 +32,7 @@ export type ButtonProps = {
 };
 
 export type NavItem = {
+  size?: ButtonProps["size"];
   label: ButtonProps["label"];
   linkUrl?: ButtonProps["linkUrl"];
   intent?: ButtonProps["intent"];
@@ -40,7 +42,7 @@ export type NavItem = {
 };
 
 const button = cva(
-  "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-4 py-[12px] hover:shadow-btn",
+  "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-4 py-3 hover:shadow-btn",
   {
     variants: {
       intent: {
@@ -60,24 +62,25 @@ const button = cva(
         "border-primary": [
           "bg-transparent hover:bg-primary-100",
           "text-primary-200",
-          "border-primary-200",
+          "!border-primary-200",
           "hover:shadow-none",
         ],
         text: [
-          "bg-transparent hover:bg-gray-300",
+          "bg-transparent hover:bg-gray-300/30",
           "text-black dark:text-white",
           "text-[14px]",
           "!pl-0 hover:!pl-[16px]",
           "rounded-[8px]",
-          "hover:bg-opacity-30 hover:shadow-none",
+          // " hover:shadow-none",
         ],
         navText: [
           "bg-transparent hover:bg-gray-300",
           "text-black",
           "text-base",
           "font-normal",
-          "rounded-[10px]",
+          "!rounded-[10px]",
           "hover:bg-opacity-30 hover:shadow-none",
+          "!px-2",
         ],
       },
       size: {
@@ -116,7 +119,7 @@ export const Button = ({
   return linkUrl !== "" ? (
     <Link
       href={linkUrl}
-      className={classNames(
+      className={twMerge(
         button({ intent, size, shadow, reverseIcon, className }),
       )}
       {...props}

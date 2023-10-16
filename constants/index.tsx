@@ -1,24 +1,22 @@
 import {
-  StepArchOneIcon,
-  StepArchThreeIcon,
-  StepArchTwoIcon,
-} from "@/components/atoms/Icons/Icons"
-import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/20/solid";
 
-export const companyName: string = "Company Name"
+export const companyName: string = "Company Name";
 
 export const navPrimary = [
   {
     label: "Search",
     linkUrl: "",
-    icon: <MagnifyingGlassIcon className="w-5 h-5 text-black" />,
+    icon: <MagnifyingGlassIcon className="h-5 w-5 text-black" />,
     reverseIcon: false,
     intent: "navText",
   },
   {
     label: "For individuals",
     linkUrl: "",
-    icon: <ChevronDownIcon className="w-5 h-6" />,
+    icon: <ChevronDownIcon className="h-6 w-5" />,
     reverseIcon: true,
     intent: "navText",
   },
@@ -29,7 +27,7 @@ export const navPrimary = [
     reverseIcon: false,
     intent: "navText",
   },
-]
+];
 
 export const navSecondary = [
   {
@@ -54,4 +52,44 @@ export const navSecondary = [
     intent: "border-primary",
     className: "px-4",
   },
-]
+];
+
+export const featuredCards = [
+  {
+    featured: true,
+    imgSrc: "/images/hero.jpg",
+    tagName: "Giving Season",
+    title: "Fundraise for your favorite nonprofit",
+    excerpt:
+      "This giving season, you can give back to a nonprofit you care about by starting a fundraiser on GoFundMe",
+    btnText: "Get Started",
+    link: "/",
+  },
+  {
+    featured: false,
+    imgSrc: "/images/hero.jpg",
+    tagName: "Urgent cause",
+    title: "Fundraising FAQs: Israel/Gaza",
+    excerpt: "",
+    btnText: "Donate Now",
+    link: "/",
+  },
+  {
+    featured: false,
+    imgSrc: "/images/hero.jpg",
+    tagName: "Urgent cause",
+    title: "Maui wildfires: how to help",
+    excerpt: "",
+    btnText: "Donate Now",
+    link: "/",
+  },
+  {
+    featured: false,
+    imgSrc: "/images/hero.jpg",
+    tagName: "Giving Season",
+    title: "Fund the future of education",
+    excerpt: "",
+    btnText: "Donate Now",
+    link: "/",
+  },
+];

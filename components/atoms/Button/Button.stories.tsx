@@ -1,9 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { Button } from "./Button"
-import { AngleRightSmallIcon } from "../Icons/Icons"
-import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
-import { buttonIntents, buttonSizes } from "../../../constants/storiesData"
-import { SunIcon } from "@heroicons/react/24/outline"
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "./Button";
+import { AngleRightSmallIcon } from "../Icons/Icons";
+import {
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/20/solid";
+import { buttonIntents, buttonSizes } from "../../../constants/storiesData";
+import { SunIcon } from "@heroicons/react/24/outline";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -19,7 +22,7 @@ const meta = {
     label: "Button",
     shadow: false,
     onClick: () => {
-      console.log("clicked")
+      console.log("clicked");
     },
   },
   parameters: {
@@ -39,23 +42,23 @@ const meta = {
       options: buttonSizes,
     },
   },
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Button>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   render: (args) => {
-    return <Button label="Primary" {...args} />
+    return <Button label="Primary" {...args} />;
   },
-}
+};
 
 export const PrimaryGroup: Story = {
   render: (args) => {
     return (
       <div className="flex flex-col gap-8">
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" label="Primary">
             Primary
           </Button>
@@ -67,22 +70,22 @@ export const PrimaryGroup: Story = {
           </Button>
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
 
           <Button {...args} size="base">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
           <Button {...args} size="large">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
         </div>
       </div>
-    )
+    );
   },
-}
+};
 
 export const Secondary: Story = {
   render: (args) => {
@@ -90,15 +93,15 @@ export const Secondary: Story = {
       <Button {...args} intent="secondary" shadow>
         Button
       </Button>
-    )
+    );
   },
-}
+};
 
 export const SecondaryGroup: Story = {
   render: (args) => {
     return (
       <div className="flex flex-col gap-8">
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="secondary">
             Button
           </Button>
@@ -110,22 +113,22 @@ export const SecondaryGroup: Story = {
           </Button>
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="secondary">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
 
           <Button {...args} size="base" intent="secondary">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
           <Button {...args} size="large" intent="secondary">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
         </div>
       </div>
-    )
+    );
   },
-}
+};
 
 export const Tertiary: Story = {
   render: (args) => {
@@ -133,15 +136,15 @@ export const Tertiary: Story = {
       <Button {...args} intent="tertiary">
         Button
       </Button>
-    )
+    );
   },
-}
+};
 
 export const TertiaryGroup: Story = {
   render: (args) => {
     return (
       <div className="flex flex-col gap-8">
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="tertiary">
             Button
           </Button>
@@ -153,22 +156,22 @@ export const TertiaryGroup: Story = {
           </Button>
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="tertiary">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
 
           <Button {...args} size="base" intent="tertiary">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
           <Button {...args} size="large" intent="tertiary">
-            <SunIcon className="w-6 h-6" /> Button
+            <SunIcon className="h-6 w-6" /> Button
           </Button>
         </div>
       </div>
-    )
+    );
   },
-}
+};
 
 export const Text: Story = {
   render: (args) => {
@@ -176,15 +179,15 @@ export const Text: Story = {
       <Button {...args} intent="text">
         Text
       </Button>
-    )
+    );
   },
-}
+};
 
 export const TextGroup: Story = {
   render: (args) => {
     return (
       <div className="flex flex-col gap-8">
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="text">
             Button
           </Button>
@@ -196,7 +199,7 @@ export const TextGroup: Story = {
           </Button>
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="text">
             Button <AngleRightSmallIcon className="!w-[16px]" />
           </Button>
@@ -209,9 +212,9 @@ export const TextGroup: Story = {
           </Button>
         </div>
       </div>
-    )
+    );
   },
-}
+};
 
 export const NavText: Story = {
   render: (args) => {
@@ -219,15 +222,15 @@ export const NavText: Story = {
       <Button {...args} intent="navText">
         NavText
       </Button>
-    )
+    );
   },
-}
+};
 
 export const NavTextGroup: Story = {
   render: (args) => {
     return (
       <div className="flex flex-col gap-8">
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <Button {...args} size="small" intent="navText">
             Button
           </Button>
@@ -239,6 +242,6 @@ export const NavTextGroup: Story = {
           </Button>
         </div>
       </div>
-    )
+    );
   },
-}
+};
