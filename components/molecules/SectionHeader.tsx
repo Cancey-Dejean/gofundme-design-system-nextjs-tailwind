@@ -1,12 +1,15 @@
 import { SectionHeaderProps } from "@/types";
 import Text from "../atoms/Text/Text";
+import { twMerge } from "tailwind-merge";
 
 const SectionHeader = ({
   topText = "Headline goes here",
   title = "Section Title",
+  headerStyles = "",
+  titleStyles = "",
 }: SectionHeaderProps) => {
   return (
-    <div className="mb-10 lg:mb-14">
+    <div className={twMerge(`mb-10 lg:mb-14`, headerStyles)}>
       {topText !== "" ? (
         <Text
           as="p"
@@ -18,7 +21,12 @@ const SectionHeader = ({
         </Text>
       ) : null}
 
-      <Text as="h2" intent="semibold" size="display-two">
+      <Text
+        as="h2"
+        intent="semibold"
+        size="display-two"
+        className={titleStyles}
+      >
         {title}
       </Text>
     </div>

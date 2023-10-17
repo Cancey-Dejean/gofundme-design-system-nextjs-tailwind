@@ -1,11 +1,11 @@
-import { AngleRightSmallIcon, CheckGearIcon } from "../atoms/Icons/Icons";
+import { AngleRightSmallIcon2, CheckGearIcon } from "../atoms/Icons/Icons";
 import { Button } from "../atoms/Button/Button";
 import { Container } from "../atoms/Container";
 import Text from "../atoms/Text/Text";
 
 const Trusted = () => {
   return (
-    <section className="flex items-center justify-center p-0">
+    <section className="flex items-center justify-center bg-primary-400 py-20">
       <Container className="px-0">
         <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-400 p-20">
           <div className="mb-4 flex items-center gap-2">
@@ -45,13 +45,14 @@ const Trusted = () => {
 
           <div className="mt-8">
             <Button
-              className=" hover:bg-white hover:shadow-none"
+              className="text-primary-500 hover:bg-white hover:shadow-none"
               intent="text"
               size="small"
               linkUrl="/"
               shadow={false}
             >
-              Explore Trust & Safety <AngleRightSmallIcon className="h-3 w-3" />
+              Explore Trust & Safety
+              <AngleRightSmallIcon2 className="h-3 w-3 " />
             </Button>
           </div>
         </div>

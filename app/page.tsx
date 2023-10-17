@@ -1,5 +1,5 @@
-import Impact from "@/components/molecules/Impact";
-import Trusted from "@/components/molecules/Trusted";
+import Impact from "@/components/organisms/Impact";
+import Trusted from "@/components/organisms/Trusted";
 import FeaturedTopics from "@/components/organisms/FeaturedTopics";
 import Hero from "@/components/organisms/Hero";
 import Steps from "@/components/organisms/Steps";

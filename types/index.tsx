@@ -11,6 +11,8 @@ export type HeaderProps = {
 export type SectionHeaderProps = {
   topText?: string;
   title?: string;
+  titleStyles?: string;
+  headerStyles?: string;
 };
 
 export type CardStepProps = {

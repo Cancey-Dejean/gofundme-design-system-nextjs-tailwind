@@ -145,6 +145,25 @@ const AngleRightSmallIcon = ({ className, pathFill }: IconProps) => {
     </svg>
   );
 };
+const AngleRightSmallIcon2 = ({ className, pathFill }: IconProps) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 8 8"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="8"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.81689 7.59863C2.05102 7.81933 2.43061 7.81933 2.66473 7.59863L6.0197 4.43554C6.03388 4.42443 6.04766 4.41259 6.06096 4.40002C6.2372 4.23388 6.28034 3.99022 6.19123 3.78564C6.16231 3.71838 6.11847 3.65539 6.06096 3.6007L1.81689 7.59863ZM6.05953 3.59863C6.05338 3.59277 6.04712 3.58715 6.04077 3.58166L2.66616 0.400015C2.43203 0.179316 2.05244 0.179316 1.81832 0.400022C1.5842 0.620727 1.5842 0.978638 1.81833 1.19934L4.78741 3.99865L1.8169 6.79931C1.58277 7.02001 1.58277 7.37792 1.81689 7.59863"
+        fill={pathFill || "currentColor"}
+      ></path>
+    </svg>
+  );
+};
 
 const Transcend = ({ className }: IconProps) => {
   return (
@@ -344,6 +363,7 @@ export {
   StepArchTwoIcon,
   StepArchThreeIcon,
   AngleRightSmallIcon,
+  AngleRightSmallIcon2,
   Transcend,
   LanguageIcon,
   CheckGearIcon,
