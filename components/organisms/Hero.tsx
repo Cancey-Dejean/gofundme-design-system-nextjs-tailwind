@@ -19,6 +19,7 @@ const Hero = ({
         height={heroHeight}
         alt={imgAlt}
         className="h-full w-full object-cover"
+        priority={true}
       />
       <Container className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center">
         <Text as="h1" size="display-one" intent="bold" className="text-navy">

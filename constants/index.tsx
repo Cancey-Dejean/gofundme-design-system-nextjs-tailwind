@@ -4,6 +4,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 export const companyName: string = "Company Name";
+export const MAX_EXCERPT_LENGTH = 93;
 
 export const navPrimary = [
   {
@@ -112,5 +113,38 @@ export const impactCards = [
     title: "Charity",
     imgAlt: "Charity",
     link: "/",
+  },
+];
+
+export const communityCards = [
+  {
+    imgSrc: "/images/nonprofitfundraisingbanner.png",
+    tagName: "",
+    title: "Fundraise for your favorite nonprofit",
+    excerpt:
+      "This giving season, you can give back to a nonprofit you care about by starting a fundraiser on GoFundMe",
+    link: "/",
+    raisedAmount: 63717,
+    numOfDonors: 569,
+  },
+  {
+    imgSrc: "/images/gofundmerfeaturedimage.png",
+    tagName: "",
+    title: "Fundraising FAQs: Israel/Gaza",
+    excerpt:
+      "This giving season, you can give back to a nonprofit you care about by starting a fundraiser on GoFundMe",
+    link: "/",
+    raisedAmount: 7273,
+    numOfDonors: 130,
+  },
+  {
+    imgSrc: "/images/gofundme-maui-fires-homepagebanner.webp",
+    tagName: "",
+    title: "Maui wildfires: how to help",
+    excerpt:
+      "This giving season, you can give back to a nonprofit you care about by starting a fundraiser on GoFundMe",
+    link: "/",
+    raisedAmount: 18895,
+    numOfDonors: 163,
   },
 ];

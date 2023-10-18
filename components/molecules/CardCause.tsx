@@ -4,6 +4,8 @@ import Text from "../atoms/Text/Text";
 import { AngleRightSmallIcon } from "../atoms/Icons/Icons";
 import { CardCauseProps } from "@/types";
 import { featuredArticle } from "@/constants/images";
+import { formatExcerpt } from "@/utils";
+import { MAX_EXCERPT_LENGTH } from "@/constants";
 
 const CardCause = ({
   featured = false,
@@ -14,6 +16,7 @@ const CardCause = ({
   btnText = "Read More",
   link = "/",
 }: CardCauseProps) => {
+  const formattedExcerpt = formatExcerpt(excerpt, MAX_EXCERPT_LENGTH);
   return (
     <div
       className={classNames(
@@ -33,9 +36,11 @@ const CardCause = ({
           backgroundImage: `url(${imgSrc || featuredArticle})`,
         }}
       >
-        <span className="absolute left-4 top-4 min-h-[24px] rounded-xl bg-violet-100 px-2 text-[14px] font-bold">
-          {tagName}
-        </span>
+        {tagName !== "" ? (
+          <span className="absolute left-4 top-4 min-h-[24px] rounded-xl bg-violet-100 px-2 text-[14px] font-bold">
+            {tagName}
+          </span>
+        ) : null}
       </div>
 
       <div
@@ -53,8 +58,8 @@ const CardCause = ({
           {title}
         </Text>
 
-        {excerpt && (
-          <div className="min-h-[56px]">
+        {formattedExcerpt && (
+          <div className="h-14">
             <p
               className={classNames(
                 " text-neutral-300",

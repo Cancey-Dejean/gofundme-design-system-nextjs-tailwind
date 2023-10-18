@@ -32,3 +32,14 @@ export type CardCauseProps = {
   btnText?: string;
   link?: string;
 };
+
+export type CardDonateProps = {
+  imgSrc?: string;
+  tagName?: string;
+  title?: string;
+  excerpt?: string;
+  btnText?: string;
+  link?: string;
+  raisedAmount?: number;
+  numOfDonors?: number;
+};

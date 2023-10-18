@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 const designSystemItems = [
   {
@@ -14,23 +14,20 @@ const designSystemItems = [
     name: "Components",
     href: "http://localhost:6006",
   },
-]
+];
 
 export default function DesignHome() {
   return (
-    <main className="flex-1 flex items-center flex-col justify-center gap-10">
+    <main className="flex flex-1 flex-col items-center justify-center gap-10">
       <h1>Design System</h1>
 
-      <div className="flex gap-4 container">
-        {designSystemItems.map((item) => (
-          <div
-            key={item.name}
-            className="flex-1 flex items center justify-center"
-          >
-            <Link href={item.href}>{item.name}</Link>
+      <div className="container flex gap-4">
+        {designSystemItems.map(({ name, href }) => (
+          <div key={name} className="items center flex flex-1 justify-center">
+            <Link href={href}>{name}</Link>
           </div>
         ))}
       </div>
     </main>
-  )
+  );
 }

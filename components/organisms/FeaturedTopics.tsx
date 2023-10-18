@@ -12,18 +12,20 @@ const FeaturedTopics = (props: Props) => {
         <SectionHeader topText="Where you can help " title="Featured topics" />
 
         <div className="grid grid-cols-3 gap-6">
-          {featuredCards.map((card, i) => (
-            <CardCause
-              featured={card.featured}
-              btnText={card.btnText}
-              key={i}
-              excerpt={card.excerpt}
-              tagName={card.tagName}
-              title={card.title}
-              link={card.link}
-              imgSrc={card.imgSrc}
-            />
-          ))}
+          {featuredCards.map(
+            ({ featured, btnText, title, excerpt, tagName, link, imgSrc }) => (
+              <CardCause
+                featured={featured}
+                btnText={btnText}
+                key={title}
+                excerpt={excerpt}
+                tagName={tagName}
+                title={title}
+                link={link}
+                imgSrc={imgSrc}
+              />
+            ),
+          )}
         </div>
       </Container>
     </section>

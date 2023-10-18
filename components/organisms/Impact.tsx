@@ -18,13 +18,13 @@ const Impact = () => {
 
         <div className="w-full">
           <div className="mx-auto grid  gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {impactCards.map((card) => (
+            {impactCards.map(({ imgSrc, imgAlt, title, link }) => (
               <CardImpact
-                imgSrc={card.imgSrc}
-                key={card.title}
-                link={card.link}
-                title={card.title}
-                imgAlt={card.imgAlt}
+                imgSrc={imgSrc}
+                key={title}
+                link={link}
+                title={title}
+                imgAlt={imgAlt}
               />
             ))}
 
