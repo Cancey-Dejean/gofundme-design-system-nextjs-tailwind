@@ -3,6 +3,7 @@ import Trusted from "@/components/organisms/Trusted";
 import FeaturedTopics from "@/components/organisms/FeaturedTopics";
 import Hero from "@/components/organisms/Hero";
 import Steps from "@/components/organisms/Steps";
+import Community from "@/components/organisms/Community";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedTopics />
       <Trusted />
       <Impact />
+      <Community />
     </main>
   );
 }

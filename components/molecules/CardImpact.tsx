@@ -11,27 +11,37 @@ import { featuredArticle } from "@/constants/images";
 import Link from "next/link";
 import Image from "next/image";
 
-type CardImpactProps = {};
+type CardImpactProps = {
+  imgSrc?: string;
+  imgAlt?: string;
+  title?: string;
+  link?: string;
+};
 
-const CardImpact = ({}: CardImpactProps) => {
+const CardImpact = ({
+  imgSrc = "",
+  imgAlt = "",
+  title = "",
+  link = "/",
+}: CardImpactProps) => {
   return (
-    <div className="flex flex-row items-center rounded-2xl bg-neutral-100 max-lg:last:col-span-2 max-sm:last:col-span-1 md:min-h-[369px] md:flex-col">
+    <div className="block-link flex flex-row items-center rounded-2xl border-2 border-transparent bg-neutral-100 transition-all duration-[.3s] ease-in-out hover:border-primary-300 max-lg:last:col-span-2 max-sm:last:col-span-1 md:min-h-[369px] md:flex-col">
       <div className="md:mx-8 md:mt-8">
         <Image
-          src="/images/start-yourself@2x.png"
+          src={imgSrc}
           width={158}
           height={158}
           className="h-[79px] w-[79px] object-contain md:h-[158px] md:w-[158px]"
-          alt=""
+          alt={imgAlt}
         />
       </div>
       <div className="md:mt-8">
         <Text as="h3" intent="semibold" size="heading-two">
-          Yourself
+          {title}
         </Text>
       </div>
 
-      <Link href="/" className="ml-auto mr-5 md:mx-auto md:mb-8 md:mt-auto">
+      <Link href={link} className=" ml-auto mr-5 md:mx-auto md:mb-8 md:mt-auto">
         <div className="hidden md:block">
           <ArrowCircle />
         </div>

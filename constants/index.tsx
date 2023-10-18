@@ -93,3 +93,24 @@ export const featuredCards = [
     link: "/",
   },
 ];
+
+export const impactCards = [
+  {
+    imgSrc: "/images/start-yourself@2x.png",
+    title: "Yourself",
+    imgAlt: "Yourself",
+    link: "/",
+  },
+  {
+    imgSrc: "/images/start-friends-Family@2x.png",
+    title: "Friends & family",
+    imgAlt: "Friends & family",
+    link: "/",
+  },
+  {
+    imgSrc: "/images/start-charity@2x.png",
+    title: "Charity",
+    imgAlt: "Charity",
+    link: "/",
+  },
+];

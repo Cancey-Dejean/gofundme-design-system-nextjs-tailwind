@@ -17,6 +17,7 @@ const CardCause = ({
   return (
     <div
       className={classNames(
+        "block-link",
         "flex overflow-hidden rounded-2xl",
         featured
           ? "min-h-[312px] flex-row [grid-template-columns:repeat(2,minmax(0,1fr))] first:col-span-3"
@@ -39,8 +40,8 @@ const CardCause = ({
 
       <div
         className={classNames(
-          "flex h-full  flex-col items-start bg-neutral-100",
-          featured ? "flex-1 px-10 pb-8 pt-10" : " p-6",
+          "flex h-full flex-col items-start bg-neutral-100",
+          featured ? "flex-1 px-10 pb-8 pt-10" : "p-6",
         )}
       >
         <Text
@@ -66,7 +67,7 @@ const CardCause = ({
         )}
 
         {btnText !== "" && (
-          <div className="mt-auto ">
+          <div className="mt-auto">
             <Button
               className="w-full hover:bg-white hover:shadow-none"
               intent="text"
