@@ -86,6 +86,10 @@
     @apply flex h-screen flex-col font-body font-normal dark:bg-black;
   }
 
+  main {
+    @apply flex flex-1 flex-col;
+  }
+
   a {
     display: inline-block;
   }

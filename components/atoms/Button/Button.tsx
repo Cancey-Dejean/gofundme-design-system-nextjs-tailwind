@@ -56,7 +56,7 @@ const button = cva(
         tertiary: [
           "bg-transparent hover:bg-gray-300 hover:bg-opacity-30 dark:hover:bg-white",
           "text-black dark:text-white dark:hover:text-black",
-          "border-neutral-200 dark:border-white",
+          "!border-neutral-200 dark:border-white",
           "hover:shadow-none",
         ],
         "border-primary": [

@@ -2,28 +2,28 @@ import {
   TextHeadingLevels,
   TextIntents,
   TextSizes,
-} from "@/constants/storiesData"
-import { cva } from "class-variance-authority"
-import classNames from "classnames"
+} from "@/constants/storiesData";
+import { cva } from "class-variance-authority";
+import classNames from "classnames";
 
 export type TextProps = {
-  as: (typeof TextHeadingLevels)[number]
+  as: (typeof TextHeadingLevels)[number];
   /**
    * Is this the principal call to action on the page?
    */
-  intent?: (typeof TextIntents)[number]
+  intent?: (typeof TextIntents)[number];
 
-  className?: string
+  className?: string;
   /**
    * How large should the button be?
    */
-  size?: (typeof TextSizes)[number]
+  size?: (typeof TextSizes)[number];
   /**
    * Button contents
    */
-  children: React.ReactNode
+  children: React.ReactNode;
   // label?: string
-}
+};
 
 const heading = cva("", {
   variants: {
@@ -33,14 +33,14 @@ const heading = cva("", {
       bold: ["font-bold"],
     },
     size: {
-      "display-one": ["text-display-one"],
-      "display-two": ["text-display-two"],
-      "heading-one": ["text-heading-one"],
-      "heading-two": ["text-heading-two"],
+      "display-one": ["text-display-one tracking-[-.02em]"],
+      "display-two": ["text-display-two  tracking-[-.02em]"],
+      "heading-one": ["text-heading-one  tracking-[-.02em]"],
+      "heading-two": ["text-heading-two  tracking-[-.02em]"],
       body: ["text-body"],
     },
   },
-})
+});
 
 const Text = ({
   intent = "normal",
@@ -49,12 +49,12 @@ const Text = ({
   children = "Heading goes here",
   className = "",
 }: TextProps) => {
-  const Element = as
+  const Element = as;
   return (
     <Element className={classNames(heading({ intent, size, className }))}>
       {children}
     </Element>
-  )
-}
+  );
+};
 
-export default Text
+export default Text;
