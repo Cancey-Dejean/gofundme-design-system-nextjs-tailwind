@@ -148,3 +148,105 @@ export const communityCards = [
     numOfDonors: 163,
   },
 ];
+
+export const FOOTER_LINKS = [
+  {
+    title: "Fundraise for",
+    links: [
+      {
+        label: "Medical",
+        url: "/",
+      },
+      {
+        label: "Emergency",
+        url: "/",
+      },
+      {
+        label: "Memorial",
+        url: "/",
+      },
+      {
+        label: "Education",
+        url: "/",
+      },
+      {
+        label: "Nonprofit",
+        url: "/",
+      },
+      {
+        label: "Support COVID-19 fundraisers",
+        url: "/",
+      },
+      {
+        label: "Crisis Relief",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Learn more",
+    links: [
+      {
+        label: "How GoFundMe Works",
+        url: "/",
+      },
+      {
+        label: "Why GoFundMe",
+        url: "/",
+      },
+      {
+        label: "Common questions",
+        url: "/",
+      },
+      {
+        label: "Success stories",
+        url: "/",
+      },
+      {
+        label: "Supported countries",
+        url: "/",
+      },
+      {
+        label: "Charity fundraising",
+        url: "/",
+      },
+      {
+        label: "Pricing",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        label: "Help center",
+        url: "/",
+      },
+      {
+        label: "Blog",
+        url: "/",
+      },
+      {
+        label: "GoFundMe Stories",
+        url: "/",
+      },
+      {
+        label: "Press center",
+        url: "/",
+      },
+      {
+        label: "Careers",
+        url: "/",
+      },
+      {
+        label: "About",
+        url: "/",
+      },
+      {
+        label: "More resources",
+        url: "/",
+      },
+    ],
+  },
+];

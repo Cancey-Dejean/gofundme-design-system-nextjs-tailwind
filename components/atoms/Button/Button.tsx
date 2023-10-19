@@ -84,7 +84,7 @@ const button = cva(
         ],
       },
       size: {
-        small: ["h-[34px]", "py-1"],
+        small: ["h-[34px]", "!py-1"],
         base: ["h-[48px]"],
         large: ["h-[56px]", "py-[8px]"],
       },
