@@ -35,6 +35,7 @@ const Community = () => {
                 link={link}
                 raisedAmount={raisedAmount}
                 numOfDonors={numOfDonors}
+                key={title}
               />
             ),
           )}

@@ -2,7 +2,13 @@ import React from "react";
 import { Container } from "../atoms/Container";
 import Link from "next/link";
 import { GoFundMe } from "../atoms/Logos/Logos";
-import { FOOTER_LINKS, companyName } from "@/constants";
+import {
+  footerLinks,
+  companyName,
+  socialLinks,
+  legalLinks,
+  appStores,
+} from "@/constants";
 import { Button } from "../atoms/Button/Button";
 import Image from "next/image";
 
@@ -22,7 +28,7 @@ const Footer = (props: Props) => {
             </Link>
           </div>
 
-          {FOOTER_LINKS.map((columns) => (
+          {footerLinks.map((columns) => (
             <FooterColumn title={columns.title} key={columns.title}>
               <ul className="flex flex-col">
                 {columns.links.map(({ label, url }) => (
@@ -31,6 +37,7 @@ const Footer = (props: Props) => {
                     size="small"
                     linkUrl={url}
                     className="justify-start"
+                    key={label}
                   >
                     {label}
                   </Button>
@@ -48,7 +55,7 @@ const Footer = (props: Props) => {
               intent="tertiary"
               size="small"
               linkUrl="/"
-              className="!p-2 font-normal"
+              className="rounded-lg !p-2 text-[14px] font-normal"
             >
               <Image
                 src="/images/us-flag.png"
@@ -63,13 +70,55 @@ const Footer = (props: Props) => {
             </Button>
           </div>
 
-          <ul className="socials">Socials</ul>
+          <ul className="socials">
+            {socialLinks.map(({ label, url, icon }) => (
+              <li key={label}>
+                <Link href={url}>
+                  {icon ? (
+                    <>
+                      <span className="sr-only">{label}</span>
+                      <span>{icon}</span>
+                    </>
+                  ) : (
+                    <span>{label}</span>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <div className="legal">
-            Copyright <ul>Socials</ul>
+            &copy; 2010-{new Date().getFullYear()} {companyName}
+            <ul className="flex items-center gap-2 text-black">
+              {legalLinks.map(({ label, url }) => (
+                <li key={label}>
+                  <Button
+                    intent="navText"
+                    size="small"
+                    linkUrl={url}
+                    className="justify-start"
+                    key={label}
+                  >
+                    {label}
+                  </Button>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="stores">App stores</div>
+          <div className="stores">
+            {appStores.map(({ label, url, imgSrc }) => (
+              <Link href={url} key={label} target="_blank">
+                <Image
+                  src={imgSrc}
+                  height={34}
+                  width={117}
+                  className="h-auto w-auto object-contain "
+                  alt={label}
+                />
+              </Link>
+            ))}
+          </div>
         </div>
       </Container>
     </footer>

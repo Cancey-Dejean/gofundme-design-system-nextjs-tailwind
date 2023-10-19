@@ -45,7 +45,7 @@ const GetStarted = (props: Props) => {
               width={356}
               height={356}
               alt="Flower"
-              className="mx-auto pt-6"
+              className="mx-auto h-auto w-auto pt-6"
             />
           </div>
         </div>

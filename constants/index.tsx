@@ -1,9 +1,17 @@
 import {
+  ApplePodcast,
+  FacebookIcon,
+  InstagramIcon,
+  MediumIcon,
+  TwitterIcon,
+  YouTubeIcon,
+} from "../components/atoms/Icons/Icons";
+import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 
-export const companyName: string = "Company Name";
+export const companyName: string = "GoFundMe";
 export const MAX_EXCERPT_LENGTH = 93;
 
 export const navPrimary = [
@@ -149,7 +157,7 @@ export const communityCards = [
   },
 ];
 
-export const FOOTER_LINKS = [
+export const footerLinks = [
   {
     title: "Fundraise for",
     links: [
@@ -248,5 +256,70 @@ export const FOOTER_LINKS = [
         url: "/",
       },
     ],
+  },
+];
+
+export const socialLinks = [
+  {
+    label: "Facebook",
+    url: "/",
+    icon: <FacebookIcon />,
+  },
+  {
+    label: "Youtube",
+    url: "/",
+    icon: <YouTubeIcon />,
+  },
+  {
+    label: "Twitter",
+    url: "/",
+    icon: <TwitterIcon />,
+  },
+  {
+    label: "Instagram",
+    url: "/",
+    icon: <InstagramIcon />,
+  },
+  {
+    label: "Medium",
+    url: "/",
+    icon: <MediumIcon />,
+  },
+  {
+    label: "Apple Podcasts",
+    url: "/",
+    icon: <ApplePodcast />,
+  },
+];
+
+export const legalLinks = [
+  {
+    label: "Terms",
+    url: "/",
+  },
+  {
+    label: "Privacy Notice",
+    url: "/",
+  },
+  {
+    label: "Legal",
+    url: "/",
+  },
+  {
+    label: "Accessibility Statement",
+    url: "/",
+  },
+];
+
+export const appStores = [
+  {
+    label: "Google Play",
+    url: "https://play.google.com/",
+    imgSrc: "/images/play-store.png",
+  },
+  {
+    label: "App Store",
+    url: "https://apps.apple.com/",
+    imgSrc: "/images/app-store.png",
   },
 ];
