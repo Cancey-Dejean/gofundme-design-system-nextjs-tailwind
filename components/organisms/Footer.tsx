@@ -4,6 +4,7 @@ import Link from "next/link";
 import { GoFundMe } from "../atoms/Logos/Logos";
 import { FOOTER_LINKS, companyName } from "@/constants";
 import { Button } from "../atoms/Button/Button";
+import Image from "next/image";
 
 type Props = {};
 
@@ -40,7 +41,37 @@ const Footer = (props: Props) => {
         </Container>
       </div>
 
-      <Container className="py-12">Footer Bottom</Container>
+      <Container className="py-12">
+        <div className="footer-bottom-grid">
+          <div className="locale">
+            <Button
+              intent="tertiary"
+              size="small"
+              linkUrl="/"
+              className="!p-2 font-normal"
+            >
+              <Image
+                src="/images/us-flag.png"
+                alt="United States Logo"
+                width={16}
+                height={16}
+                className="h-4 w-4 rounded-full"
+              />
+              United States
+              <span className="text-neutral-200">·</span>
+              English
+            </Button>
+          </div>
+
+          <ul className="socials">Socials</ul>
+
+          <div className="legal">
+            Copyright <ul>Socials</ul>
+          </div>
+
+          <div className="stores">App stores</div>
+        </div>
+      </Container>
     </footer>
   );
 };
