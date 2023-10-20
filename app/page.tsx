@@ -13,9 +13,9 @@ export default function Home() {
       <Steps />
       <FeaturedTopics />
       <Trusted />
-      <Impact />
+      <Impact className="pb-0 pt-14 md:py-[104px]" />
       <Community />
-      <GetStarted />
+      <GetStarted className="max-sm:pt-0" />
     </main>
   );
 }

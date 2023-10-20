@@ -34,9 +34,9 @@ const heading = cva("", {
     },
     size: {
       "display-one": ["text-display-one tracking-[-.02em]"],
-      "display-two": ["text-display-two  tracking-[-.02em]"],
-      "heading-one": ["text-heading-one  tracking-[-.02em]"],
-      "heading-two": ["text-heading-two  tracking-[-.02em]"],
+      "display-two": ["text-display-two tracking-[-.02em]"],
+      "heading-one": ["text-heading-one tracking-[-.02em]"],
+      "heading-two": ["text-heading-two tracking-[-.02em]"],
       body: ["text-body"],
     },
   },

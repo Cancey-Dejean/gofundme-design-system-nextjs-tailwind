@@ -12,7 +12,7 @@ const Hero = ({
   imgAlt = "Hero image",
 }) => {
   return (
-    <section className="relative h-full p-0 lg:max-h-[90vh] lg:min-h-[500px]">
+    <section className="relative h-full max-h-[90vh] min-h-[500px] p-0">
       <Image
         src={imgSrc}
         width={heroWidth}

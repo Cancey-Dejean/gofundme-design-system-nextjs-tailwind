@@ -7,7 +7,7 @@ const Trusted = () => {
   return (
     <section className="flex items-center justify-center bg-primary-400 py-20">
       <Container className="px-0">
-        <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-400 p-20">
+        <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-400 px-8 pt-0 md:p-20">
           <div className="mb-4 flex items-center gap-2">
             <CheckGearIcon />
             <Text
@@ -22,7 +22,7 @@ const Trusted = () => {
 
           <Text
             as="h2"
-            className="mb-2 leading-[1] text-white"
+            className="mb-2 leading-[1] text-white max-md:!text-[40px]"
             intent="bold"
             size="heading-one"
           >

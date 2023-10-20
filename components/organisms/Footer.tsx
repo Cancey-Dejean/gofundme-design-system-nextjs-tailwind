@@ -18,12 +18,11 @@ const Footer = (props: Props) => {
   return (
     <footer>
       <div className="border-y border-y-neutral-200 py-12">
-        <Container className="grid grid-cols-4 items-start gap-4">
+        <Container className="grid grid-cols-1 items-start gap-4 md:grid-cols-4">
           <div>
             <Link href="/">
               <h2 className="text-primary-200">
                 <GoFundMe fill={"currentColor"} />
-                {companyName}
               </h2>
             </Link>
           </div>
@@ -87,9 +86,9 @@ const Footer = (props: Props) => {
             ))}
           </ul>
 
-          <div className="legal">
+          <div className="legal flex flex-col gap-2 text-neutral-300 md:flex-row md:items-center">
             &copy; 2010-{new Date().getFullYear()} {companyName}
-            <ul className="flex items-center gap-2 text-black">
+            <ul className="flex flex-col gap-2 text-black sm:flex-row sm:items-center">
               {legalLinks.map(({ label, url }) => (
                 <li key={label}>
                   <Button

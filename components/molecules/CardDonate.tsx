@@ -6,9 +6,11 @@ import { CardDonateProps } from "@/types";
 import { featuredArticle } from "@/constants/images";
 import { formatExcerpt } from "@/utils";
 import { MAX_EXCERPT_LENGTH } from "@/constants";
+import Link from "next/link";
 
 const CardDonate = ({
   imgSrc,
+  link = "/",
   tagName = "Tag Name",
   title = "Title",
   excerpt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, nihil.",
@@ -43,11 +45,11 @@ const CardDonate = ({
 
       <div className={classNames("flex h-full flex-col items-start px-2 py-4")}>
         <Text as="h3" intent="bold" size="body" className="mb-2">
-          {title}
+          <Link href={link}>{title}</Link>
         </Text>
 
         {formattedExcerpt && (
-          <div className="h-14">
+          <div className="md:h-14">
             <p className={classNames(" text-[14px] text-neutral-300")}>
               {formattedExcerpt}
             </p>

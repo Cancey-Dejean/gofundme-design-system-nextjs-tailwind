@@ -118,12 +118,9 @@
   }
 
   .footer-bottom-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    grid-template:
-      "locale socials"
-      "legal stores";
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
     & .locale {
       display: flex;
@@ -131,30 +128,44 @@
     }
     & .socials {
       max-width: 216px;
-      margin-left: auto;
-      display: flex;
-      justify-content: flex-end;
-      grid-area: socials;
 
-      & li {
-        &:not(:last-child) {
-          margin-right: 1.5rem;
-        }
-      }
+      display: flex;
+      gap: 1.5rem;
+
+      grid-area: socials;
     }
     & .legal {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
       grid-area: legal;
-      color: var(--color-neutral-grey-300);
     }
     & .stores {
       grid-area: stores;
       max-width: 216px;
       display: flex;
       gap: 0.5rem;
-      margin-left: auto;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template:
+      "locale socials"
+      "legal stores";
+  }
+
+  .socials {
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  .stores {
+    margin-left: auto;
+  }
+
+  .legal {
+    flex-direction: row;
   }
 }

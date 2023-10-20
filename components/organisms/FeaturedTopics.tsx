@@ -11,7 +11,7 @@ const FeaturedTopics = (props: Props) => {
       <Container>
         <SectionHeader topText="Where you can help " title="Featured topics" />
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {featuredCards.map(
             ({ featured, btnText, title, excerpt, tagName, link, imgSrc }) => (
               <CardCause

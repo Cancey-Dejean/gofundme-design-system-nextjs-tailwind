@@ -2,16 +2,21 @@ import { impactCards } from "@/constants";
 import { Container } from "../atoms/Container";
 import CardImpact from "../molecules/CardImpact";
 import SectionHeader from "../molecules/SectionHeader";
+import { twMerge } from "tailwind-merge";
 
-const Impact = () => {
+type ImpactProps = {
+  className?: string;
+};
+
+const Impact = ({ className = "" }: ImpactProps) => {
   return (
-    <section className="py-[104px]">
+    <section className={twMerge(className)}>
       <Container className="flex flex-col items-start gap-8 max-md:max-w-[600px] md:flex-row lg:items-center">
         <div className="mx-auto ml-0 flex flex-col md:items-center">
           <SectionHeader
             topText="Make your impact"
             title="Fundraise for..."
-            titleStyles="text-[32px]"
+            titleStyles="text-[28px] text-[32px]"
             headerStyles="!mb-0"
           />
         </div>
