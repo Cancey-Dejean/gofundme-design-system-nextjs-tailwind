@@ -7,7 +7,7 @@ type ContainerProps = {
 
 export const Container = ({ children, className }: ContainerProps) => {
   return (
-    <div className={twMerge("mx-auto w-full max-w-[1152px] px-4", className)}>
+    <div className={twMerge("max-w-container mx-auto w-full px-4", className)}>
       {children}
     </div>
   );

@@ -13,9 +13,12 @@ const config: Config = {
       fontFamily: {
         body: "var(--font-body)",
       },
-
+      maxWidth: {
+        container: "var(--container-width)",
+      },
       colors: {
         black: "var(--color-black)",
+        white: "var(--color-white)",
         primary: {
           100: "var(--color-primary-100)",
           200: "var(--color-primary-200)",

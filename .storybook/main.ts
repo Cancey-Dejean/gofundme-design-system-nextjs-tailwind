@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/nextjs"
+import type { StorybookConfig } from "@storybook/nextjs";
 
 const config: StorybookConfig = {
   stories: [
@@ -12,7 +12,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
   ],
 
   framework: {
@@ -22,5 +22,5 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-}
-export default config
+};
+export default config;

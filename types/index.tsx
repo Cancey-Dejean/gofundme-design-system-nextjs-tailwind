@@ -6,6 +6,7 @@ export type HeaderProps = {
   reverseIcon?: NavItem[];
   navPrimary?: NavItem[];
   navSecondary?: NavItem[];
+  headerAnimation?: boolean;
 };
 
 export type SectionHeaderProps = {

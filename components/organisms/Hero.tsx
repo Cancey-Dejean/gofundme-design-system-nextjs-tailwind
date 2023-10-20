@@ -9,11 +9,12 @@ const Hero = ({
   heroWidth = 1920,
   heroHeight = 972,
   imgSrc = heroDefault,
+  imgSrcMobile = "",
   imgAlt = "Hero image",
 }) => {
   return (
-    <section className="relative h-full max-h-[90vh] min-h-[500px] p-0">
-      <Image
+    <section className="relative h-[100vh] min-h-[500px] p-0 md:h-[90vh]">
+      {/* <Image
         src={imgSrc}
         width={heroWidth}
         height={heroHeight}
@@ -21,6 +22,17 @@ const Hero = ({
         className="h-full w-full object-cover"
         priority={true}
       />
+      {imgSrcMobile && (
+        <Image
+          src="/images/full-illustration-mobile@2x.jpg"
+          width={heroWidth}
+          height={heroHeight}
+          alt={imgAlt}
+          className="h-full w-full object-cover"
+          priority={true}
+        />
+      )} */}
+
       <Container className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center">
         <Text as="h1" size="display-one" intent="bold" className="text-navy">
           Your home <br />

@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { Container } from "../../atoms/Container";
@@ -9,25 +11,47 @@ import {
   Bars3BottomRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
-import { SunIcon } from "@heroicons/react/24/outline";
+
 import {
   primaryMenuDefault,
   secondaryMenuDefault,
 } from "../../../constants/mockData";
+import { SunIcon } from "../../../components/atoms/Icons/Icons";
 
 const Header = ({
   navPrimary = primaryMenuDefault as Array<NavItem>,
   navSecondary = secondaryMenuDefault as Array<NavItem>,
   logo,
   logoLeft,
+  headerAnimation,
 }: HeaderProps) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
       className={twMerge(
-        "fixed left-0 top-0 z-50 w-full bg-white px-4 py-6 lg:bg-transparent",
+        "left-0 top-0 z-50 w-full bg-white px-4  transition-all duration-[.3s] ease-in-out lg:bg-transparent",
+        headerAnimation ? "fixed " : "sticky ",
+        scrolled ? " shadow-lg lg:bg-white lg:py-2" : "py-0 lg:py-6",
       )}
     >
-      <Container className="flex h-14 items-center rounded-[58px] bg-white max-lg:px-0 lg:h-16">
+      <Container className="relative flex h-14 items-center rounded-[58px] bg-white max-lg:px-0 lg:h-16">
         <nav
           className={twMerge(
             "w-full items-center ",
@@ -89,14 +113,19 @@ const Header = ({
         </nav>
       </Container>
 
-      <div className="mt-4 block lg:hidden">
-        <Container className="px-0">
-          <Button intent="primary" linkUrl="/">
-            <SunIcon className="h-6 w-6" />
-            Start a GoFundMe
-          </Button>
-        </Container>
-      </div>
+      {scrolled && (
+        <div className="mt-4 block pb-4 lg:hidden">
+          <Container className="px-0">
+            <Button intent="primary" linkUrl="/">
+              <SunIcon
+                className="h-[22px] w-[22px]"
+                pathFill="var(--color-white)"
+              />
+              Start a GoFundMe
+            </Button>
+          </Container>
+        </div>
+      )}
     </header>
   );
 };

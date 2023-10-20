@@ -36,6 +36,7 @@
     /* My Code */
     --font-body: "Circular";
 
+    --color-white: #ffffff;
     --color-black: #333333;
     --color-primary-100: #e6f6ef;
     --color-primary-200: #02a95c;
@@ -71,6 +72,8 @@
     --shadow-btn: 0 6px 14px rgba(0, 0, 0, 0.1);
 
     --transition-base: all 0.3s ease-in-out;
+
+    --container-width: 1152px;
   }
 
   @media (prefers-color-scheme: dark) {
