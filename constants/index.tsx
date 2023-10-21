@@ -11,7 +11,7 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 
-export const companyName: string = "GoFundMe";
+export const companyName: string = "Logo";
 export const MAX_EXCERPT_LENGTH = 93;
 
 export const navPrimary = [

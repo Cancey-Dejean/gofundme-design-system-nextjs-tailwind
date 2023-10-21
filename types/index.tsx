@@ -16,6 +16,26 @@ export type SectionHeaderProps = {
   headerStyles?: string;
 };
 
+export type HeroProps = {
+  headlineOneLine?: string;
+  headlineSecondLine?: string;
+  imgSrcDesktop?: string;
+  imgSrcMobile?: string;
+  imgAlt?: string;
+  btnText?: string;
+};
+
+export type StepsProps = {
+  topText?: string;
+  headline?: string;
+  cardOneTitle?: string;
+  cardOneDesc?: string;
+  cardTwoTitle?: string;
+  cardTwoDesc?: string;
+  cardThreeTitle?: string;
+  cardThreeDesc?: string;
+};
+
 export type CardStepProps = {
   number?: number;
   title?: string;

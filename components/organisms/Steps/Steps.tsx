@@ -1,26 +1,30 @@
-import { Container } from "../atoms/Container";
+import { StepsProps } from "@/types";
+import { Container } from "../../atoms/Container";
 import {
   StepArchOneIcon,
   StepArchOneIconMobile,
   StepArchThreeIcon,
   StepArchTwoIcon,
   StepArchTwoIconMobile,
-} from "../atoms/Icons/Icons";
-import Text from "../atoms/Text/Text";
-import CardStep from "../molecules/CardStep";
-import SectionHeader from "../molecules/SectionHeader";
+} from "../../atoms/Icons/Icons";
+import CardStep from "../../molecules/CardStep";
+import SectionHeader from "../../molecules/SectionHeader";
 
-type Props = {};
-
-const Steps = (props: Props) => {
+const Steps = ({
+  topText = "Text goes here",
+  headline = "Section Title",
+  cardOneTitle = "Card Title 1",
+  cardOneDesc = "Lorem ipsum dolor sit amet.",
+  cardTwoTitle = "Card Title 2",
+  cardTwoDesc = "Nullam nisl purus, venenatis et urna vel",
+  cardThreeTitle = "Card Title 3",
+  cardThreeDesc = "Aliquam eget fermentum enim quis tempus neque.",
+}: StepsProps) => {
   return (
     <section>
       <Container>
         <div className="max-w-[541px]">
-          <SectionHeader
-            topText="What to expect"
-            title="Fundraising on GoFundMe takes just a few minutes"
-          />
+          <SectionHeader topText={topText} title={headline} />
         </div>
 
         <ol className="flex flex-col items-start gap-4 lg:flex-row lg:pt-4">
@@ -28,23 +32,23 @@ const Steps = (props: Props) => {
             number={1}
             stepImgDesktop={<StepArchOneIcon className="-mt-4" />}
             stepImgMobile={<StepArchOneIconMobile className="ml-5" />}
-            title="Start with the basics"
-            description="Kick things off with your name and location."
+            title={cardOneTitle}
+            description={cardOneDesc}
           />
 
           <CardStep
             number={2}
             stepImgDesktop={<StepArchTwoIcon className="relative top-8" />}
             stepImgMobile={<StepArchTwoIconMobile className="ml-4" />}
-            title="Tell your story"
-            description="We'll guide you with tips along the way."
+            title={cardTwoTitle}
+            description={cardTwoDesc}
           />
 
           <CardStep
             number={3}
             stepImgDesktop={<StepArchThreeIcon className="-ml-6 -mt-4" />}
-            title="Share with friends and family"
-            description="People out there want to help you."
+            title={cardThreeTitle}
+            description={cardThreeDesc}
           />
         </ol>
       </Container>
