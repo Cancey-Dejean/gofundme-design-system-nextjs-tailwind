@@ -1,6 +1,6 @@
 import Impact from "@/components/organisms/Impact";
 import Trusted from "@/components/organisms/Trusted";
-import FeaturedTopics from "@/components/organisms/FeaturedTopics";
+import FeaturedTopics from "@/components/organisms/FeaturedTopics/FeaturedTopics";
 import Hero from "@/components/organisms/Hero/Hero";
 import Steps from "@/components/organisms/Steps/Steps";
 import Community from "@/components/organisms/Community";

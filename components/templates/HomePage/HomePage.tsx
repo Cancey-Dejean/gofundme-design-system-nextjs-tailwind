@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../../organisms/Hero/Hero";
 import Steps from "../../organisms/Steps/Steps";
-import FeaturedTopics from "../../../components/organisms/FeaturedTopics";
+import FeaturedTopics from "../../organisms/FeaturedTopics/FeaturedTopics";
 import Trusted from "../../../components/organisms/Trusted";
 import Impact from "../../../components/organisms/Impact";
 import Community from "../../../components/organisms/Community";
@@ -15,7 +15,7 @@ const HomePage = () => {
       <main className="flex-1">
         <Hero />
         <Steps />
-        {/* <FeaturedTopics /> */}
+        <FeaturedTopics />
         {/* <Trusted /> */}
         {/* <Impact className="pb-0 pt-14 md:py-[104px]" /> */}
         {/* <Community /> */}

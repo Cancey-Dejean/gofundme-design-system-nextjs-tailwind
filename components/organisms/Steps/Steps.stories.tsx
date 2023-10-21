@@ -4,7 +4,7 @@ import Steps from "./Steps";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   //   tags: ["autodocs"],
-  title: "Components/Steps",
+  title: "Templates/Steps",
   component: Steps,
   args: {},
   parameters: {

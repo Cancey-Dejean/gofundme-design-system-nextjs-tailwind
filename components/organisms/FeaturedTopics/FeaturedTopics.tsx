@@ -1,7 +1,7 @@
-import { featuredCards } from "@/constants";
-import { Container } from "../atoms/Container";
-import CardCause from "../molecules/CardCause";
-import SectionHeader from "../molecules/SectionHeader";
+import { featuredCards } from "../../../constants";
+import { Container } from "../../atoms/Container";
+import CardCause from "../../molecules/CardCause";
+import SectionHeader from "../../molecules/SectionHeader";
 
 type Props = {};
 
