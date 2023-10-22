@@ -1,18 +1,24 @@
-import { AngleRightSmallIcon2, CheckGearIcon } from "../atoms/Icons/Icons";
-import { Button } from "../atoms/Button/Button";
-import { Container } from "../atoms/Container";
-import Text from "../atoms/Text/Text";
-import CardDonate from "../molecules/CardDonate";
-import SectionHeader from "../molecules/SectionHeader";
-import { communityCards } from "@/constants";
+import { AngleRightSmallIcon2, CheckGearIcon } from "../../atoms/Icons/Icons";
+import { Button } from "../../atoms/Button/Button";
+import { Container } from "../../atoms/Container";
+import Text from "../../atoms/Text/Text";
+import CardDonate from "../../molecules/CardDonate";
+import SectionHeader from "../../molecules/SectionHeader";
+import { communityCards } from "../../../constants";
+import { communityCardsDefault } from "../../../constants/mockData";
+import { CommunityProps } from "../../../types";
 
-const Community = () => {
+const Community = ({
+  communityCards = communityCardsDefault,
+  topText,
+  title,
+}: CommunityProps) => {
   return (
-    <section className="">
+    <section>
       <Container>
         <SectionHeader
-          topText="Happening near you"
-          title="Fundraisers in your community"
+          topText={topText}
+          title={title}
           titleStyles="!text-[32px]"
         />
 

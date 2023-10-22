@@ -36,12 +36,31 @@ export type StepsProps = {
   cardThreeDesc?: string;
 };
 
+export type ImpactProps = {
+  className?: string;
+  topText?: SectionHeaderProps["topText"];
+  title?: SectionHeaderProps["title"];
+  impactCards?: CardImpactProps[];
+};
+
+export type FeaturedTopicsProps = {
+  featuredCards?: CardCauseProps[];
+  topText?: SectionHeaderProps["topText"];
+  title?: SectionHeaderProps["title"];
+};
+
 export type CardStepProps = {
   number?: number;
   title?: string;
   description?: string;
   stepImgDesktop?: React.ReactNode;
   stepImgMobile?: React.ReactNode;
+};
+
+export type CommunityProps = {
+  topText?: SectionHeaderProps["topText"];
+  title?: SectionHeaderProps["title"];
+  communityCards?: CardDonateProps[];
 };
 
 export type CardCauseProps = {
@@ -51,6 +70,13 @@ export type CardCauseProps = {
   title?: string;
   excerpt?: string;
   btnText?: string;
+  link?: string;
+};
+
+export type CardImpactProps = {
+  imgSrc?: string;
+  imgAlt?: string;
+  title?: string;
   link?: string;
 };
 

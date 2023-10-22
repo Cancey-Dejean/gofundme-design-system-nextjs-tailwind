@@ -9,7 +9,7 @@ import { HeroProps } from "@/types";
 const Hero = ({
   headlineOneLine = "Headline One Line",
   headlineSecondLine = "Second Line Goes Here",
-  imgSrcDesktop = heroDefault,
+  imgSrcDesktop = "http://dummyimage.com/1920x972.png/dddddd/ffffff",
   imgSrcMobile = heroDefault,
   imgAlt = "Hero image",
   btnText = "Button Text",

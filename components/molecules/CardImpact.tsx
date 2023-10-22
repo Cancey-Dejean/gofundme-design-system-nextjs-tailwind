@@ -6,22 +6,15 @@ import {
   AngleRightSmallIcon2,
   ArrowCircle,
 } from "../atoms/Icons/Icons";
-import { CardCauseProps } from "@/types";
+import { CardCauseProps, CardImpactProps } from "@/types";
 import { featuredArticle } from "@/constants/images";
 import Link from "next/link";
 import Image from "next/image";
 
-type CardImpactProps = {
-  imgSrc?: string;
-  imgAlt?: string;
-  title?: string;
-  link?: string;
-};
-
 const CardImpact = ({
-  imgSrc = "",
-  imgAlt = "",
-  title = "",
+  imgSrc = "http://dummyimage.com/158x158.png/ff4444/ffffff",
+  imgAlt = "Card Icon",
+  title = "Title",
   link = "/",
 }: CardImpactProps) => {
   return (

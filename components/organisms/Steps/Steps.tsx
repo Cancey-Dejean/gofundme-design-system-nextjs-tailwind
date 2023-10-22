@@ -18,7 +18,7 @@ const Steps = ({
   cardTwoTitle = "Card Title 2",
   cardTwoDesc = "Nullam nisl purus, venenatis et urna vel",
   cardThreeTitle = "Card Title 3",
-  cardThreeDesc = "Aliquam eget fermentum enim quis tempus neque.",
+  cardThreeDesc = "Aliquam eget fermentum enim quis tempus.",
 }: StepsProps) => {
   return (
     <section>

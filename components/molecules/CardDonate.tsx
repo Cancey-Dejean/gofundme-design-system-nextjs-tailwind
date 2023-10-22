@@ -1,15 +1,12 @@
 import classNames from "classnames";
-import { Button } from "../atoms/Button/Button";
 import Text from "../atoms/Text/Text";
-import { AngleRightSmallIcon } from "../atoms/Icons/Icons";
-import { CardDonateProps } from "@/types";
-import { featuredArticle } from "@/constants/images";
-import { formatExcerpt } from "@/utils";
-import { MAX_EXCERPT_LENGTH } from "@/constants";
+import { CardDonateProps } from "../../types";
+import { formatExcerpt } from "../../utils";
+import { MAX_EXCERPT_LENGTH } from "../../constants";
 import Link from "next/link";
 
 const CardDonate = ({
-  imgSrc,
+  imgSrc = "http://dummyimage.com/560x312.png/ff4444/ffffff",
   link = "/",
   tagName = "Tag Name",
   title = "Title",
@@ -32,7 +29,7 @@ const CardDonate = ({
         <div
           className={classNames("relative rounded-xl bg-cover bg-center pt-56")}
           style={{
-            backgroundImage: `url(${imgSrc || featuredArticle})`,
+            backgroundImage: `url(${imgSrc})`,
           }}
         >
           {tagName !== "" ? (

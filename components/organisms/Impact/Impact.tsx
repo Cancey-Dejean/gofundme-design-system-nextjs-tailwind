@@ -1,21 +1,23 @@
-import { impactCards } from "@/constants";
-import { Container } from "../atoms/Container";
-import CardImpact from "../molecules/CardImpact";
-import SectionHeader from "../molecules/SectionHeader";
+import { impactCardsDefault } from "../../../constants/mockData";
+import { Container } from "../../atoms/Container";
+import CardImpact from "../../molecules/CardImpact";
+import SectionHeader from "../../molecules/SectionHeader";
 import { twMerge } from "tailwind-merge";
+import { ImpactProps } from "../../../types";
 
-type ImpactProps = {
-  className?: string;
-};
-
-const Impact = ({ className = "" }: ImpactProps) => {
+const Impact = ({
+  className = "",
+  topText = "Text goes here",
+  title = "Headline goes here",
+  impactCards = impactCardsDefault,
+}: ImpactProps) => {
   return (
     <section className={twMerge(className)}>
       <Container className="flex flex-col items-start gap-8 max-md:max-w-[600px] md:flex-row lg:items-center">
         <div className="mx-auto ml-0 flex flex-col md:items-center">
           <SectionHeader
-            topText="Make your impact"
-            title="Fundraise for..."
+            topText={topText}
+            title={title}
             titleStyles="text-[28px] text-[32px]"
             headerStyles="!mb-0"
           />
@@ -32,9 +34,6 @@ const Impact = ({ className = "" }: ImpactProps) => {
                 imgAlt={imgAlt}
               />
             ))}
-
-            {/* <CardImpact />
-            <CardImpact /> */}
           </div>
         </div>
       </Container>

@@ -3,13 +3,12 @@ import { Button } from "../atoms/Button/Button";
 import Text from "../atoms/Text/Text";
 import { AngleRightSmallIcon } from "../atoms/Icons/Icons";
 import { CardCauseProps } from "../../types";
-import { featuredArticle } from "../../constants/images";
 import { formatExcerpt } from "../../utils";
 import { MAX_EXCERPT_LENGTH } from "../../constants";
 
 const CardCause = ({
   featured = false,
-  imgSrc,
+  imgSrc = "http://dummyimage.com/560x312.png/ff4444/ffffff",
   tagName = "Tag Name",
   title = "Title",
   excerpt = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, nihil.",
@@ -23,17 +22,17 @@ const CardCause = ({
         "block-link",
         "flex overflow-hidden rounded-2xl",
         featured
-          ? "min-h-[312px] flex-col md:flex-row lg:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:first:col-span-3"
+          ? "grid min-h-[312px] flex-col md:flex-row lg:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:first:col-span-3"
           : "min-h-[376px] flex-col",
       )}
     >
       <div
         className={classNames(
           "relative  bg-cover bg-center",
-          featured ? "flex-1 pt-52" : "pt-56",
+          featured ? "flex-1 pt-52" : "min-h-[224px] pt-56",
         )}
         style={{
-          backgroundImage: `url(${imgSrc || featuredArticle})`,
+          backgroundImage: `url(${imgSrc})`,
         }}
       >
         {tagName !== "" ? (
@@ -58,15 +57,14 @@ const CardCause = ({
           {title}
         </Text>
 
-        {formattedExcerpt && (
-          <div className="mb-4 md:h-14">
-            <p
-              className={classNames(
-                " text-neutral-300",
-                featured ? "text-body" : "text-[14px]",
-              )}
-            >
-              {excerpt}
+        {featured ? (
+          <p className={classNames(" text-[14px] text-neutral-300")}>
+            {excerpt}
+          </p>
+        ) : (
+          <div className="mb-2 md:h-14">
+            <p className={classNames(" text-[14px] text-neutral-300")}>
+              {formattedExcerpt}
             </p>
           </div>
         )}

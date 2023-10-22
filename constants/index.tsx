@@ -65,6 +65,7 @@ export const navSecondary = [
 
 export const featuredCards = [
   {
+    id: 1,
     featured: true,
     imgSrc: "/images/nonprofitfundraisingbanner.png",
     tagName: "Giving Season",
@@ -75,6 +76,7 @@ export const featuredCards = [
     link: "/",
   },
   {
+    id: 2,
     featured: false,
     imgSrc: "/images/gofundmerfeaturedimage.png",
     tagName: "Urgent cause",
@@ -84,6 +86,7 @@ export const featuredCards = [
     link: "/",
   },
   {
+    id: 3,
     featured: false,
     imgSrc: "/images/gofundme-maui-fires-homepagebanner.webp",
     tagName: "Urgent cause",
@@ -93,6 +96,7 @@ export const featuredCards = [
     link: "/",
   },
   {
+    id: 4,
     featured: false,
     imgSrc: "/images/running-preschool-kids-outside.png",
     tagName: "Help  teachers",
