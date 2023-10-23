@@ -1,3 +1,4 @@
+import exp from "constants";
 import {
   ApplePodcast,
   FacebookIcon,
@@ -325,5 +326,22 @@ export const appStores = [
     label: "App Store",
     url: "https://apps.apple.com/",
     imgSrc: "/images/app-store.png",
+  },
+];
+
+export const getStartedButtons = [
+  {
+    label: "Start a GoFundMe",
+    className: "min-w-[230px] bg-primary-300",
+    intent: "primary",
+    size: "large",
+    linkUrl: "/",
+  },
+  {
+    label: "How it works",
+    className: "min-w-[215px]",
+    intent: "tertiary",
+    size: "large",
+    linkUrl: "/",
   },
 ];

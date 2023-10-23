@@ -61,13 +61,13 @@ const CardCause = ({
           <p className={classNames(" text-[14px] text-neutral-300")}>
             {excerpt}
           </p>
-        ) : (
+        ) : formattedExcerpt !== "" ? (
           <div className="mb-2 md:h-14">
             <p className={classNames(" text-[14px] text-neutral-300")}>
               {formattedExcerpt}
             </p>
           </div>
-        )}
+        ) : null}
 
         {btnText !== "" && (
           <div className="mt-auto">

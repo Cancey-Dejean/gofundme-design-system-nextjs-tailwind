@@ -4,8 +4,13 @@ import FeaturedTopics from "@/components/organisms/FeaturedTopics/FeaturedTopics
 import Hero from "@/components/organisms/Hero/Hero";
 import Steps from "@/components/organisms/Steps/Steps";
 import Community from "@/components/organisms/Community/Community";
-import GetStarted from "@/components/organisms/GetStarted";
-import { communityCards, featuredCards, impactCards } from "@/constants";
+import GetStarted from "@/components/organisms/GetStarted/GetStarted";
+import {
+  communityCards,
+  featuredCards,
+  getStartedButtons,
+  impactCards,
+} from "@/constants";
 
 export default function Home() {
   return (
@@ -61,7 +66,12 @@ export default function Home() {
         communityCards={communityCards}
       />
 
-      <GetStarted className="max-sm:pt-0" />
+      <GetStarted
+        headline="Ready to get started? Join thousands of others today."
+        className="max-sm:pt-0"
+        imgSrc="/images/footer-flower-cta.png"
+        buttons={getStartedButtons}
+      />
     </main>
   );
 }

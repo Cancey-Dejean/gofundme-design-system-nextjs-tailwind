@@ -5,8 +5,9 @@ import FeaturedTopics from "../../organisms/FeaturedTopics/FeaturedTopics";
 import Trusted from "../../organisms/Trusted/Trusted";
 import Impact from "../../organisms/Impact/Impact";
 import Community from "../../organisms/Community/Community";
-import GetStarted from "../../../components/organisms/GetStarted";
+import GetStarted from "../../organisms/GetStarted/GetStarted";
 import Header from "../../../components/organisms/Header/Header";
+import Footer from "../../../components/organisms/Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -19,8 +20,9 @@ const HomePage = () => {
         <Trusted />
         <Impact className="pb-0 pt-14 md:py-[104px]" />
         <Community />
-        {/* <GetStarted className="max-sm:pt-0" /> */}
+        <GetStarted headline="Headline" className="max-sm:pt-0" />
       </main>
+      <Footer />
     </>
   );
 };

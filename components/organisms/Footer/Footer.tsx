@@ -1,15 +1,15 @@
 import React from "react";
-import { Container } from "../atoms/Container";
+import { Container } from "../../atoms/Container";
 import Link from "next/link";
-import { GoFundMe } from "../atoms/Logos/Logos";
+import { GoFundMe } from "../../atoms/Logos/Logos";
 import {
   footerLinks,
   companyName,
   socialLinks,
   legalLinks,
   appStores,
-} from "@/constants";
-import { Button } from "../atoms/Button/Button";
+} from "../../../constants";
+import { Button } from "../../atoms/Button/Button";
 import Image from "next/image";
 
 type Props = {};

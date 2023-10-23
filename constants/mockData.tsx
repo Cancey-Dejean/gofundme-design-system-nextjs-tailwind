@@ -28,8 +28,7 @@ export const featuredCardsDefault = [
     imgSrc: "http://dummyimage.com/560x312.png/cc0000/ffffff",
     tagName: "Giving Season",
     title: "Headline 2",
-    excerpt:
-      "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    excerpt: "",
     btnText: "Donate now",
     link: "/",
   },
@@ -39,8 +38,7 @@ export const featuredCardsDefault = [
     imgSrc: "http://dummyimage.com/560x312.png/dddddd/000000",
     tagName: "Giving Season",
     title: "Headline 3",
-    excerpt:
-      "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+    excerpt: "",
     btnText: "Get started",
     link: "/",
   },
@@ -50,8 +48,7 @@ export const featuredCardsDefault = [
     imgSrc: "http://dummyimage.com/560x312.png/5fa2dd/ffffff",
     tagName: "Help teachers",
     title: "Headline 4",
-    excerpt:
-      "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    excerpt: "",
     btnText: "Get started",
     link: "/",
   },

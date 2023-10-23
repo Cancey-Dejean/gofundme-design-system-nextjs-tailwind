@@ -7,7 +7,7 @@ import { GoFundMe } from "@/components/atoms/Logos/Logos";
 import Providers from "@/constants/provider";
 import ThemeButton from "@/components/utilities/ThemeButton";
 import { NavItem } from "@/components/atoms/Button/Button";
-import Footer from "@/components/organisms/Footer";
+import Footer from "../components/organisms/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

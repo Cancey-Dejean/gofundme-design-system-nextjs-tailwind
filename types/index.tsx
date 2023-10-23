@@ -1,4 +1,4 @@
-import { NavItem } from "@/components/atoms/Button/Button";
+import { ButtonProps, NavItem } from "@/components/atoms/Button/Button";
 
 export type HeaderProps = {
   logo?: React.ReactNode;
@@ -89,4 +89,11 @@ export type CardDonateProps = {
   link?: string;
   raisedAmount?: number;
   numOfDonors?: number;
+};
+
+export type GetStartedProps = {
+  className?: string;
+  imgSrc?: string;
+  headline: string;
+  buttons?: ButtonProps[];
 };
