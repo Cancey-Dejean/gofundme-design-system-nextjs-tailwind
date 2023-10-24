@@ -8,6 +8,10 @@ module.exports = {
         protocol: "http",
         hostname: "dummyimage.com",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+      },
     ],
   },
   nextConfig,

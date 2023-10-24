@@ -99,6 +99,10 @@ export type GetStartedProps = {
 };
 
 export type FooterProps = {
+  legalLinks?: {
+    label: string;
+    url: string;
+  }[];
   footerLinks: {
     title: string;
     links: {

@@ -8,7 +8,7 @@ import { GetStartedProps } from "@/types";
 
 const GetStarted = ({
   className,
-  imgSrc = "http://dummyimage.com/356x356.png/cc0000/ffffff",
+  imgSrc = "http://dummyimage.com/356x356.png/02a95c/ffffff",
   headline = "Headline",
   buttons = [
     {

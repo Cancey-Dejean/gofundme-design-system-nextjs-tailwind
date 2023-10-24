@@ -320,12 +320,14 @@ export const appStores = [
   {
     label: "Google Play",
     url: "https://play.google.com/",
-    imgSrc: "/images/play-store.png",
+    imgSrc:
+      "https://cdn.shopify.com/s/files/1/0630/5307/0560/files/play-store_11a99825-b2d0-4e5a-96a9-b9046d074c3a.png?v=1698184002",
   },
   {
     label: "App Store",
     url: "https://apps.apple.com/",
-    imgSrc: "/images/app-store.png",
+    imgSrc:
+      "https://cdn.shopify.com/s/files/1/0630/5307/0560/files/app-store_028fc1a3-fbd5-4997-9474-3923abae51ee.png?v=1698184002",
   },
 ];
 

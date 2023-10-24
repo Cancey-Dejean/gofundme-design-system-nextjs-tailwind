@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../../atoms/Container";
 import Link from "next/link";
 import { GoFundMe, Logo } from "../../atoms/Logos/Logos";
+
 import {
   companyName,
   socialLinks,
@@ -10,10 +11,16 @@ import {
 } from "../../../constants";
 import { Button } from "../../atoms/Button/Button";
 import Image from "next/image";
-import { footerLinksDefault } from "../../../constants/mockData";
+import {
+  footerLinksDefault,
+  legalLinksDefault,
+} from "../../../constants/mockData";
 import { FooterColumnProps, FooterProps } from "@/types";
 
-const Footer = ({ footerLinks = footerLinksDefault }: FooterProps) => {
+const Footer = ({
+  footerLinks = footerLinksDefault,
+  legalLinks = legalLinksDefault,
+}: FooterProps) => {
   return (
     <footer>
       <div className="border-y border-y-neutral-200 py-12">
@@ -36,7 +43,7 @@ const Footer = ({ footerLinks = footerLinksDefault }: FooterProps) => {
               className="rounded-lg !p-2 text-[14px] font-normal"
             >
               <Image
-                src="/images/us-flag.png"
+                src="https://cdn.shopify.com/s/files/1/0630/5307/0560/files/us-flag.png?v=1698183921"
                 alt="United States Logo"
                 width={16}
                 height={16}
