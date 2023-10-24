@@ -1,4 +1,12 @@
-const GoFundMe = ({ fill = "" }) => {
+import { companyName } from "../../../constants";
+import Link from "next/link";
+
+export type LogoProps = {
+  fill?: string;
+  logo?: React.ReactNode;
+};
+
+const GoFundMe = ({ fill = "var(--color-primary-200)" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +24,14 @@ const GoFundMe = ({ fill = "" }) => {
   );
 };
 
-export { GoFundMe };
+const Logo = ({ logo = false }: LogoProps) => {
+  return (
+    <Link href="/">
+      <h2 className="capitalize text-primary-200">
+        {logo ? logo : <span>{companyName}</span>}
+      </h2>
+    </Link>
+  );
+};
+
+export { GoFundMe, Logo };

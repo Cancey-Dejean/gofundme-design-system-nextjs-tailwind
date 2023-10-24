@@ -1,9 +1,8 @@
 import React from "react";
 import { Container } from "../../atoms/Container";
 import Link from "next/link";
-import { GoFundMe } from "../../atoms/Logos/Logos";
+import { GoFundMe, Logo } from "../../atoms/Logos/Logos";
 import {
-  footerLinks,
   companyName,
   socialLinks,
   legalLinks,
@@ -11,38 +10,18 @@ import {
 } from "../../../constants";
 import { Button } from "../../atoms/Button/Button";
 import Image from "next/image";
+import { footerLinksDefault } from "../../../constants/mockData";
+import { FooterColumnProps, FooterProps } from "@/types";
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = ({ footerLinks = footerLinksDefault }: FooterProps) => {
   return (
     <footer>
       <div className="border-y border-y-neutral-200 py-12">
         <Container className="grid grid-cols-1 items-start gap-4 md:grid-cols-4">
-          <div>
-            <Link href="/">
-              <h2 className="text-primary-200">
-                <GoFundMe fill={"currentColor"} />
-              </h2>
-            </Link>
-          </div>
+          <Logo />
 
-          {footerLinks.map((columns) => (
-            <FooterColumn title={columns.title} key={columns.title}>
-              <ul className="flex flex-col">
-                {columns.links.map(({ label, url }) => (
-                  <Button
-                    intent="navText"
-                    size="small"
-                    linkUrl={url}
-                    className="justify-start"
-                    key={label}
-                  >
-                    {label}
-                  </Button>
-                ))}
-              </ul>
-            </FooterColumn>
+          {footerLinks.map(({ title, links }) => (
+            <FooterColumn title={title} key={title} links={links} />
           ))}
         </Container>
       </div>
@@ -124,16 +103,23 @@ const Footer = (props: Props) => {
   );
 };
 
-type FooterColumnProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
-const FooterColumn = ({ title, children }: FooterColumnProps) => {
+const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
     <div className="flex flex-col">
       <h3 className="m-2 font-medium">{title}</h3>
-      {children}
+      <ul className="flex flex-col">
+        {links.map(({ label, url }) => (
+          <Button
+            intent="navText"
+            size="small"
+            linkUrl={url}
+            className="justify-start"
+            key={label}
+          >
+            {label}
+          </Button>
+        ))}
+      </ul>
     </div>
   );
 };

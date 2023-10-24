@@ -2,7 +2,7 @@ import NavBar from "@/components/organisms/Header/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { navPrimary, navSecondary } from "@/constants";
+import { footerLinks, navPrimary, navSecondary } from "@/constants";
 import { GoFundMe } from "@/components/atoms/Logos/Logos";
 import Providers from "@/constants/provider";
 import ThemeButton from "@/components/utilities/ThemeButton";
@@ -40,7 +40,7 @@ export default function RootLayout({
           {children}
 
           <ThemeButton />
-          <Footer />
+          <Footer footerLinks={footerLinks} />
         </Providers>
       </body>
     </html>

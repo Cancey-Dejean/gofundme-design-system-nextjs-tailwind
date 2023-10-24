@@ -97,3 +97,21 @@ export type GetStartedProps = {
   headline: string;
   buttons?: ButtonProps[];
 };
+
+export type FooterProps = {
+  footerLinks: {
+    title: string;
+    links: {
+      label: string;
+      url: string;
+    }[];
+  }[];
+};
+
+export type FooterColumnProps = {
+  title: string;
+  links: {
+    label: string;
+    url: string;
+  }[];
+};

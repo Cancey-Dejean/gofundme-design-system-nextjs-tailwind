@@ -29,7 +29,7 @@ const GetStarted = ({
 }: GetStartedProps) => (
   <section className={twMerge(className)}>
     <Container className="px-4 md:px-[74px] xl:px-0">
-      <div className="flex min-h-[426px] flex-col-reverse items-center rounded-2xl bg-neutral-100  p-4 pt-0 xl:flex-row xl:pl-[100px]">
+      <div className="flex min-h-[426px] flex-col-reverse items-center gap-[10px] rounded-2xl  bg-neutral-100 p-4 pt-0 xl:flex-row xl:pl-[100px]">
         <div className="ml:max-w-[510px]">
           <Text
             as="h2"
@@ -66,7 +66,7 @@ const GetStarted = ({
           </div>
         </div>
 
-        <div className="flex-1">
+        <div className="ml:max-w-[500px] mx-auto">
           <Image
             src={imgSrc}
             width={356}

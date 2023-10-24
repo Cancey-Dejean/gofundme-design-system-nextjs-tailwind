@@ -283,3 +283,45 @@ export const communityCardsDefault = [
     numOfDonors: 163,
   },
 ];
+
+export const footerLinksDefault = [
+  {
+    title: "Menu Title 1",
+    links: [
+      {
+        label: "Link 1",
+        url: "/",
+      },
+      {
+        label: "Link 2",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Menu Title 2",
+    links: [
+      {
+        label: "Link 1",
+        url: "/",
+      },
+      {
+        label: "Link 2",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Menu Title 3",
+    links: [
+      {
+        label: "Link 1",
+        url: "/",
+      },
+      {
+        label: "Link 2",
+        url: "/",
+      },
+    ],
+  },
+];

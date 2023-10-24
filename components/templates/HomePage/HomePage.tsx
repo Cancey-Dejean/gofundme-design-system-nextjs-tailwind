@@ -8,6 +8,7 @@ import Community from "../../organisms/Community/Community";
 import GetStarted from "../../organisms/GetStarted/GetStarted";
 import Header from "../../../components/organisms/Header/Header";
 import Footer from "../../../components/organisms/Footer/Footer";
+import { footerLinksDefault } from "../../../constants/mockData";
 
 const HomePage = () => {
   return (
@@ -22,7 +23,7 @@ const HomePage = () => {
         <Community />
         <GetStarted headline="Headline" className="max-sm:pt-0" />
       </main>
-      <Footer />
+      <Footer footerLinks={footerLinksDefault} />
     </>
   );
 };

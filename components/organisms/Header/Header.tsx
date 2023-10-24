@@ -17,6 +17,7 @@ import {
   secondaryMenuDefault,
 } from "../../../constants/mockData";
 import { SunIcon } from "../../../components/atoms/Icons/Icons";
+import { GoFundMe, Logo } from "../../../components/atoms/Logos/Logos";
 
 const Header = ({
   navPrimary = primaryMenuDefault as Array<NavItem>,
@@ -79,15 +80,14 @@ const Header = ({
             </ul>
           ) : null}
 
-          <Link
-            href="/"
+          <div
             className={twMerge(
               "[grid-area:logo] [&_svg]:fill-primary-200",
               logoLeft ? "order-first" : null,
             )}
           >
-            {logo ? logo : <span>{companyName}</span>}
-          </Link>
+            <Logo logo={logo} />
+          </div>
 
           {/* Optional */}
           <div className="flex justify-end gap-2">
