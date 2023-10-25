@@ -172,3 +172,8 @@
     flex-direction: row;
   }
 }
+
+/* Storybook Styles ONLY: DO NOT DELETE */
+.sbdocs-content {
+  @apply mx-auto max-w-[1600px];
+}
