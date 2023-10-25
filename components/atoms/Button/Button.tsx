@@ -46,11 +46,11 @@ const button = cva(
   {
     variants: {
       intent: {
-        primary: ["text-white", "bg-primary-200 hover:bg-primary-300"],
+        primary: ["text-white", "bg-primary-300 hover:bg-primary-200"],
         secondary: [
           "bg-white hover:bg-primary-100",
           "rounded-[28px]",
-          "text-[18px] text-primary-200",
+          "text-[18px] text-primary-300",
           "shadow-btn",
         ],
         tertiary: [

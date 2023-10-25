@@ -7,7 +7,7 @@ import {
   StepArchTwoIcon,
   StepArchTwoIconMobile,
 } from "../../atoms/Icons/Icons";
-import CardStep from "../../molecules/CardStep";
+import CardStep from "../../molecules/CardStep/CardStep";
 import SectionHeader from "../../molecules/SectionHeader";
 
 const Steps = ({

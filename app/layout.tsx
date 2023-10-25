@@ -40,7 +40,11 @@ export default function RootLayout({
           {children}
 
           <ThemeButton />
-          <Footer footerLinks={footerLinks} legalLinks={legalLinks} />
+          <Footer
+            footerLinks={footerLinks}
+            legalLinks={legalLinks}
+            logo={<GoFundMe />}
+          />
         </Providers>
       </body>
     </html>

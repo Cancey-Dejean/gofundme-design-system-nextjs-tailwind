@@ -1,10 +1,43 @@
 import classNames from "classnames";
-import Text from "../atoms/Text/Text";
-import { CardDonateProps } from "../../types";
-import { formatExcerpt } from "../../utils";
-import { MAX_EXCERPT_LENGTH } from "../../constants";
+import Text from "../../atoms/Text/Text";
+import { formatExcerpt } from "../../../utils";
+import { MAX_EXCERPT_LENGTH } from "../../../constants";
 import Link from "next/link";
 
+export type CardDonateProps = {
+  /**
+   * Description goes here
+   */
+  imgSrc?: string;
+  /**
+   * Description goes here
+   */
+  tagName?: string;
+  /**
+   * Description goes here
+   */
+  title?: string;
+  /**
+   * Description goes here
+   */
+  excerpt?: string;
+  /**
+   * Description goes here
+   */
+  link?: string;
+  /**
+   * Description goes here
+   */
+  raisedAmount?: number;
+  /**
+   * Description goes here
+   */
+  numOfDonors?: number;
+};
+
+/**
+ * Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, nihil.
+ */
 const CardDonate = ({
   imgSrc = "http://dummyimage.com/560x312.png/ff4444/ffffff",
   link = "/",
@@ -19,7 +52,7 @@ const CardDonate = ({
   return (
     <div
       className={classNames(
-        "block-link hover:bg-neutral-100",
+        "block-link hover:bg-neutral-100 lg:min-w-[350px]",
         "flex overflow-hidden rounded-2xl",
         "transition-colors duration-[.3s] ease-in-out",
         "min-h-[376px] flex-col",

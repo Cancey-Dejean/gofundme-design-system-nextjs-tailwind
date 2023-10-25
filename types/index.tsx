@@ -63,16 +63,6 @@ export type CommunityProps = {
   communityCards?: CardDonateProps[];
 };
 
-export type CardCauseProps = {
-  featured?: boolean;
-  imgSrc?: string;
-  tagName?: string;
-  title?: string;
-  excerpt?: string;
-  btnText?: string;
-  link?: string;
-};
-
 export type CardImpactProps = {
   imgSrc?: string;
   imgAlt?: string;
@@ -99,6 +89,7 @@ export type GetStartedProps = {
 };
 
 export type FooterProps = {
+  logo?: React.ReactNode;
   legalLinks?: {
     label: string;
     url: string;

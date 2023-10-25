@@ -1,6 +1,6 @@
 import { impactCardsDefault } from "../../../constants/mockData";
 import { Container } from "../../atoms/Container";
-import CardImpact from "../../molecules/CardImpact";
+import CardImpact from "../../molecules/CardImpact/CardImpact";
 import SectionHeader from "../../molecules/SectionHeader";
 import { twMerge } from "tailwind-merge";
 import { ImpactProps } from "../../../types";
@@ -18,13 +18,13 @@ const Impact = ({
           <SectionHeader
             topText={topText}
             title={title}
-            titleStyles="text-[28px] text-[32px]"
+            titleStyles="!text-[28px] md:!text-[32px]"
             headerStyles="!mb-0"
           />
         </div>
 
         <div className="w-full">
-          <div className="mx-auto grid  gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid grid-cols-1  gap-8 md:grid-cols-2 lg:grid-cols-3">
             {impactCards.map(({ imgSrc, imgAlt, title, link }) => (
               <CardImpact
                 imgSrc={imgSrc}

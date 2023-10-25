@@ -18,6 +18,7 @@ import {
 import { FooterColumnProps, FooterProps } from "@/types";
 
 const Footer = ({
+  logo,
   footerLinks = footerLinksDefault,
   legalLinks = legalLinksDefault,
 }: FooterProps) => {
@@ -25,7 +26,7 @@ const Footer = ({
     <footer>
       <div className="border-y border-y-neutral-200 py-12">
         <Container className="grid grid-cols-1 items-start gap-4 md:grid-cols-4">
-          <Logo />
+          <Logo logo={logo} />
 
           {footerLinks.map(({ title, links }) => (
             <FooterColumn title={title} key={title} links={links} />

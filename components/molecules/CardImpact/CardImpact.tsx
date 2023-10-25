@@ -1,11 +1,11 @@
 import classNames from "classnames";
-import { Button } from "../atoms/Button/Button";
-import Text from "../atoms/Text/Text";
+import { Button } from "../../atoms/Button/Button";
+import Text from "../../atoms/Text/Text";
 import {
   AngleRightSmallIcon,
   AngleRightSmallIcon2,
   ArrowCircle,
-} from "../atoms/Icons/Icons";
+} from "../../atoms/Icons/Icons";
 import { CardCauseProps, CardImpactProps } from "@/types";
 import { featuredArticle } from "@/constants/images";
 import Link from "next/link";
@@ -18,7 +18,7 @@ const CardImpact = ({
   link = "/",
 }: CardImpactProps) => {
   return (
-    <div className="block-link flex flex-row items-center rounded-2xl border-2 border-transparent bg-neutral-100 transition-all duration-[.3s] ease-in-out hover:border-primary-300 max-lg:last:col-span-2 max-sm:last:col-span-1 md:min-h-[369px] md:flex-col">
+    <div className="block-link flex min-w-[280px] flex-row items-center rounded-2xl border-2 border-transparent bg-neutral-100 transition-all duration-[.3s] ease-in-out hover:border-primary-300 max-lg:last:col-span-2 max-sm:last:col-span-1 md:min-h-[369px] md:flex-col">
       <div className="md:mx-8 md:mt-8">
         <Image
           src={imgSrc}

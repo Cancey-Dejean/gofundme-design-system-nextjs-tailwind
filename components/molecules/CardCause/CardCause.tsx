@@ -1,10 +1,41 @@
 import classNames from "classnames";
-import { Button } from "../atoms/Button/Button";
-import Text from "../atoms/Text/Text";
-import { AngleRightSmallIcon } from "../atoms/Icons/Icons";
-import { CardCauseProps } from "../../types";
-import { formatExcerpt } from "../../utils";
-import { MAX_EXCERPT_LENGTH } from "../../constants";
+import { Button } from "../../atoms/Button/Button";
+import Text from "../../atoms/Text/Text";
+import { AngleRightSmallIcon } from "../../atoms/Icons/Icons";
+// import { CardCauseProps } from "../../../types";
+import { formatExcerpt } from "../../../utils";
+import { MAX_EXCERPT_LENGTH } from "../../../constants";
+
+export type CardCauseProps = {
+  /**
+   * Description goes here
+   */
+  featured?: boolean;
+  /**
+   * Description goes here
+   */
+  imgSrc?: string;
+  /**
+   * Description goes here
+   */
+  tagName?: string;
+  /**
+   * Description goes here
+   */
+  title?: string;
+  /**
+   * Description goes here
+   */
+  excerpt?: string;
+  /**
+   * Description goes here
+   */
+  btnText?: string;
+  /**
+   * Description goes here
+   */
+  link?: string;
+};
 
 const CardCause = ({
   featured = false,
@@ -19,10 +50,10 @@ const CardCause = ({
   return (
     <div
       className={classNames(
-        "block-link",
+        "block-link lg:min-w-[350px]",
         "flex overflow-hidden rounded-2xl",
         featured
-          ? "grid min-h-[312px] flex-col md:flex-row lg:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:first:col-span-3"
+          ? "grid min-h-[312px] flex-col md:flex-row lg:!min-w-[958px] lg:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:first:col-span-3"
           : "min-h-[376px] flex-col",
       )}
     >

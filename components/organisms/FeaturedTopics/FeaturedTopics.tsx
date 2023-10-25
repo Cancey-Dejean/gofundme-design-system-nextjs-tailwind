@@ -1,6 +1,6 @@
 import { FeaturedTopicsProps } from "@/types";
 import { Container } from "../../atoms/Container";
-import CardCause from "../../molecules/CardCause";
+import CardCause from "../../molecules/CardCause/CardCause";
 import SectionHeader from "../../molecules/SectionHeader";
 import { featuredCardsDefault } from "../../../constants/mockData";
 
@@ -14,7 +14,7 @@ const FeaturedTopics = ({
       <Container>
         <SectionHeader topText={topText as string} title={title as string} />
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1  gap-6 lg:grid-cols-3">
           {featuredCards
             .slice(0, 4)
             .map(

@@ -1,9 +1,32 @@
 import { twMerge } from "tailwind-merge";
-import CircleNumber from "../atoms/CircleNumber";
-import { StepArchOneIcon } from "../atoms/Icons/Icons";
-import Text from "../atoms/Text/Text";
+import CircleNumber from "../../atoms/CircleNumber";
+import { StepArchOneIcon } from "../../atoms/Icons/Icons";
+import Text from "../../atoms/Text/Text";
 import classNames from "classnames";
-import { CardStepProps } from "@/types";
+// import { CardStepProps } from "@/types";
+
+export type CardStepProps = {
+  /**
+   * Description goes here
+   */
+  number?: number;
+  /**
+   * Description goes here
+   */
+  title?: string;
+  /**
+   * Description goes here
+   */
+  description?: string;
+  /**
+   * Description goes here
+   */
+  stepImgDesktop?: React.ReactNode;
+  /**
+   * Description goes here
+   */
+  stepImgMobile?: React.ReactNode;
+};
 
 const CardStep = ({
   number = 1,
@@ -14,7 +37,7 @@ const CardStep = ({
 }: CardStepProps) => {
   return (
     <li className="flex flex-1 flex-row gap-4 lg:flex-col  lg:gap-0">
-      <div className="grid gap-4 lg:mb-10 lg:mb-4 lg:[grid-template-columns:40px_1fr]">
+      <div className="grid gap-4 md:mb-4 lg:mb-10 lg:[grid-template-columns:40px_1fr]">
         {number ? <CircleNumber number={number} /> : null}
 
         {stepImgDesktop ? (

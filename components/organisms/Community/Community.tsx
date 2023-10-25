@@ -2,7 +2,7 @@ import { AngleRightSmallIcon2, CheckGearIcon } from "../../atoms/Icons/Icons";
 import { Button } from "../../atoms/Button/Button";
 import { Container } from "../../atoms/Container";
 import Text from "../../atoms/Text/Text";
-import CardDonate from "../../molecules/CardDonate";
+import CardDonate from "../../molecules/CardDonate/CardDonate";
 import SectionHeader from "../../molecules/SectionHeader";
 import { communityCards } from "../../../constants";
 import { communityCardsDefault } from "../../../constants/mockData";

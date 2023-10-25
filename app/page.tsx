@@ -54,7 +54,7 @@ export default function Home() {
       </Trusted>
 
       <Impact
-        className="pt-14 max-sm:pb-0 "
+        className="pt-14  max-sm:pb-0 "
         topText="Make your impact"
         title="Fundraise for..."
         impactCards={impactCards}
