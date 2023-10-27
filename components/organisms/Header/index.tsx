@@ -3,10 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { Container } from "../../atoms/Container";
-import { Button, NavItem } from "../../atoms/Button/Button";
-import { HeaderProps } from "@/types";
-import { companyName } from "../../../constants";
-import NavMenuItem from "../../atoms/NavMenuItem";
+import { Button } from "../../atoms/Button/Button";
+import NavMenuItem, { NavItem } from "../../atoms/NavMenuItem";
 import {
   Bars3BottomRightIcon,
   MagnifyingGlassIcon,
@@ -17,14 +15,37 @@ import {
   secondaryMenuDefault,
 } from "../../../constants/mockData";
 import { SunIcon } from "../../atoms/Icons/Icons";
-import { GoFundMe, Logo } from "../../atoms/Logos/Logos";
+import { Logo } from "../../atoms/Logos/Logos";
+
+export type HeaderProps = {
+  /**
+   * Description goes here
+   */
+  logo: React.ReactNode;
+  /**
+   * Description goes here
+   */
+  logoLeft?: boolean;
+  /**
+   * Description goes here
+   */
+  navPrimary?: Array<NavItem>;
+  /**
+   * Description goes here
+   */
+  navSecondary?: Array<NavItem>;
+  /**
+   * Description goes here
+   */
+  headerAnimation?: boolean;
+};
 
 const Header = ({
-  navPrimary = primaryMenuDefault as Array<NavItem>,
-  navSecondary = secondaryMenuDefault as Array<NavItem>,
-  logo,
-  logoLeft,
-  headerAnimation,
+  navPrimary = primaryMenuDefault,
+  navSecondary = secondaryMenuDefault,
+  logo = <Logo />,
+  logoLeft = false,
+  headerAnimation = true,
 }: HeaderProps) => {
   const [scrolled, setScrolled] = useState(false);
 

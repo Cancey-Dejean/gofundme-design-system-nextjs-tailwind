@@ -41,6 +41,9 @@ const meta = {
       control: { type: "select" },
       options: buttonSizes,
     },
+    children: {
+      control: false,
+    },
   },
 } satisfies Meta<typeof Button>;
 

@@ -7,37 +7,41 @@ import { twMerge } from "tailwind-merge";
 
 export type ButtonProps = {
   /**
-   * Is this the principal call to action on the page?
+   * Description goes here
    */
   intent?: (typeof buttonIntents)[number];
-
+  /**
+   * Description goes here
+   */
   className?: string;
+  /**
+   * Description goes here
+   */
   linkUrl?: string;
+  /**
+   * Description goes here
+   */
   reverseIcon?: boolean;
+  /**
+   * Description goes here
+   */
   shadow?: boolean;
   /**
-   * How large should the button be?
+   * Description goes here
    */
   size?: (typeof buttonSizes)[number];
   /**
-   * Button contents
+   * Description goes here
    */
   children?: React.ReactNode;
+  /**
+   * Description goes here
+   */
   label?: string;
   /**
-   * Optional click handler
+   * Description goes here
    */
   onClick?: () => void;
-};
-
-export type NavItem = {
-  size?: ButtonProps["size"];
-  label: ButtonProps["label"];
-  linkUrl?: ButtonProps["linkUrl"];
-  intent?: ButtonProps["intent"];
-  reverseIcon?: ButtonProps["reverseIcon"];
-  className?: ButtonProps["className"];
-  icon?: React.ReactNode;
 };
 
 const button = cva(

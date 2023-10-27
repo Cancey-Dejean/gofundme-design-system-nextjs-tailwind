@@ -33,7 +33,7 @@ export const navPrimary = [
   {
     label: "For charities",
     linkUrl: "/",
-    icon: false,
+    icon: null,
     reverseIcon: false,
     intent: "navText",
   },
@@ -43,21 +43,21 @@ export const navSecondary = [
   {
     label: "How it works",
     linkUrl: "/",
-    icon: false,
+    icon: null,
     reverseIcon: false,
     intent: "navText",
   },
   {
     label: "Sign in",
     linkUrl: "/",
-    icon: false,
+    icon: null,
     reverseIcon: false,
     intent: "navText",
   },
   {
     label: "Start a GoFundMe",
     linkUrl: "/",
-    icon: false,
+    icon: null,
     reverseIcon: false,
     intent: "border-primary",
     className: "px-4",

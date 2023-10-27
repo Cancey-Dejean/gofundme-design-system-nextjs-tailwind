@@ -1,6 +1,15 @@
 import React from "react";
-import { Button, NavItem } from "./Button/Button";
+import { Button, ButtonProps } from "./Button/Button";
 
+export type NavItem = {
+  size?: ButtonProps["size"];
+  label: ButtonProps["label"];
+  linkUrl?: ButtonProps["linkUrl"];
+  intent?: ButtonProps["intent"];
+  reverseIcon?: ButtonProps["reverseIcon"];
+  className?: ButtonProps["className"];
+  icon?: React.ReactNode;
+};
 const NavMenuItem = ({ item }: { item: NavItem }) => {
   return (
     <Button
