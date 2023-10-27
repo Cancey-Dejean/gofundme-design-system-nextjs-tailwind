@@ -15,7 +15,42 @@ import {
   footerLinksDefault,
   legalLinksDefault,
 } from "../../../constants/mockData";
-import { FooterColumnProps, FooterProps } from "@/types";
+
+export type FooterProps = {
+  /**
+   * Description goes here
+   */
+  logo?: React.ReactNode;
+  /**
+   * Description goes here
+   */
+  legalLinks?: legalLinksProps[];
+  /**
+   * Description goes here
+   */
+  footerLinks: FooterLinksProps[];
+};
+
+export type legalLinksProps = {
+  label: string;
+  url: string;
+};
+
+export type FooterLinksProps = {
+  title: string;
+  links: {
+    label: string;
+    url: string;
+  }[];
+};
+
+export type FooterColumnProps = {
+  title: string;
+  links: {
+    label: string;
+    url: string;
+  }[];
+};
 
 const Footer = ({
   logo,
@@ -113,7 +148,7 @@ const Footer = ({
 
 const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-1 flex-col">
       <h3 className="m-2 font-medium">{title}</h3>
       <ul className="flex flex-col">
         {links.map(({ label, url }) => (

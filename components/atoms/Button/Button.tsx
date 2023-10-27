@@ -1,6 +1,5 @@
 import { cva } from "class-variance-authority";
 // import { twMerge } from "tailwind-merge"
-import "../../../app/globals.css";
 import Link from "next/link";
 import { buttonIntents, buttonSizes } from "@/constants/storiesData";
 import classNames from "classnames";

@@ -1,10 +1,10 @@
-import Impact from "@/components/organisms/Impact/Impact";
-import Trusted from "@/components/organisms/Trusted/Trusted";
-import FeaturedTopics from "@/components/organisms/FeaturedTopics/FeaturedTopics";
-import Hero from "@/components/organisms/Hero/Hero";
-import Steps from "@/components/organisms/Steps/Steps";
-import Community from "@/components/organisms/Community/Community";
-import GetStarted from "@/components/organisms/GetStarted/GetStarted";
+import Impact from "@/components/organisms/Impact";
+import Trusted from "@/components/organisms/Trusted";
+import FeaturedTopics from "@/components/organisms/FeaturedTopics";
+import Hero from "@/components/organisms/Hero";
+import Steps from "@/components/organisms/Steps";
+import Community from "@/components/organisms/Community";
+import GetStarted from "@/components/organisms/GetStarted";
 import {
   communityCards,
   featuredCards,

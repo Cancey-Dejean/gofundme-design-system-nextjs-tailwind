@@ -24,7 +24,7 @@ const GoFundMe = ({ fill = "var(--color-primary-200)" }) => {
   );
 };
 
-const Logo = ({ logo = false }: LogoProps) => {
+const Logo = ({ logo }: LogoProps) => {
   return (
     <Link href="/">
       <h2 className="capitalize text-primary-200">

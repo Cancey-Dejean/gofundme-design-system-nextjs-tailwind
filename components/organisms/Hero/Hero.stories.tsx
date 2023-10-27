@@ -7,11 +7,11 @@ import {
 } from "@heroicons/react/20/solid";
 import { buttonIntents, buttonSizes } from "../../../constants/storiesData";
 import { SunIcon } from "@heroicons/react/24/outline";
-import Hero from "./Hero";
+import Hero from "./";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "Components/Hero",
+  title: "Sections/Hero",
   component: Hero,
   args: {},
   parameters: {

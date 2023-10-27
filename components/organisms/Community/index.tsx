@@ -1,17 +1,31 @@
-import { AngleRightSmallIcon2, CheckGearIcon } from "../../atoms/Icons/Icons";
-import { Button } from "../../atoms/Button/Button";
 import { Container } from "../../atoms/Container";
-import Text from "../../atoms/Text/Text";
-import CardDonate from "../../molecules/CardDonate/CardDonate";
-import SectionHeader from "../../molecules/SectionHeader";
-import { communityCards } from "../../../constants";
+import CardDonate, {
+  CardDonateProps,
+} from "../../molecules/CardDonate/CardDonate";
+import SectionHeader, {
+  SectionHeaderProps,
+} from "../../molecules/SectionHeader";
 import { communityCardsDefault } from "../../../constants/mockData";
-import { CommunityProps } from "../../../types";
+
+export type CommunityProps = {
+  /**
+   * Description goes here
+   */
+  topText?: SectionHeaderProps["topText"];
+  /**
+   * Description goes here
+   */
+  title?: SectionHeaderProps["title"];
+  /**
+   * Description goes here
+   */
+  communityCards?: Array<CardDonateProps>;
+};
 
 const Community = ({
+  topText = "Headline goes here",
+  title = "Section Title",
   communityCards = communityCardsDefault,
-  topText,
-  title,
 }: CommunityProps) => {
   return (
     <section>

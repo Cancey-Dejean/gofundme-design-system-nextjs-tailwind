@@ -219,7 +219,7 @@ export const TextGroup: Story = {
 export const NavText: Story = {
   render: (args) => {
     return (
-      <Button {...args} intent="navText">
+      <Button {...args} intent="navText" size="small">
         NavText
       </Button>
     );

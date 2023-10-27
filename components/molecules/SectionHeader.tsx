@@ -1,6 +1,12 @@
-import { SectionHeaderProps } from "@/types";
 import Text from "../atoms/Text/Text";
 import { twMerge } from "tailwind-merge";
+
+export type SectionHeaderProps = {
+  topText?: string;
+  title?: string;
+  titleStyles?: string;
+  headerStyles?: string;
+};
 
 const SectionHeader = ({
   topText = "Headline goes here",

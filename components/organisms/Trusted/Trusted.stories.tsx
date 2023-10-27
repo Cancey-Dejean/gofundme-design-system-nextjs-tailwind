@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Trusted from "./Trusted";
+import Trusted from "./";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   //   tags: ["autodocs"],
-  title: "Templates/Trusted",
+  title: "Sections/Trusted",
   component: Trusted,
   args: {},
   parameters: {

@@ -1,4 +1,4 @@
-import NavBar from "@/components/organisms/Header/Header";
+import NavBar from "@/components/organisms/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,7 +7,7 @@ import { GoFundMe } from "@/components/atoms/Logos/Logos";
 import Providers from "@/constants/provider";
 import ThemeButton from "@/components/utilities/ThemeButton";
 import { NavItem } from "@/components/atoms/Button/Button";
-import Footer from "../components/organisms/Footer/Footer";
+import Footer from "../components/organisms/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

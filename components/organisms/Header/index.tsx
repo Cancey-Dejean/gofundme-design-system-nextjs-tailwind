@@ -16,8 +16,8 @@ import {
   primaryMenuDefault,
   secondaryMenuDefault,
 } from "../../../constants/mockData";
-import { SunIcon } from "../../../components/atoms/Icons/Icons";
-import { GoFundMe, Logo } from "../../../components/atoms/Logos/Logos";
+import { SunIcon } from "../../atoms/Icons/Icons";
+import { GoFundMe, Logo } from "../../atoms/Logos/Logos";
 
 const Header = ({
   navPrimary = primaryMenuDefault as Array<NavItem>,

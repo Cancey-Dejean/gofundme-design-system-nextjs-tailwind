@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Impact from "./Impact";
+import Impact from "./";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   //   tags: ["autodocs"],
-  title: "Templates/Impact",
+  title: "Sections/Impact",
   component: Impact,
   args: {},
   parameters: {

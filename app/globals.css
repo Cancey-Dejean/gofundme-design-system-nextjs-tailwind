@@ -175,5 +175,5 @@
 
 /* Storybook Styles ONLY: DO NOT DELETE */
 .sbdocs-content {
-  @apply mx-auto max-w-[1600px];
+  @apply mx-auto !max-w-[1920px];
 }

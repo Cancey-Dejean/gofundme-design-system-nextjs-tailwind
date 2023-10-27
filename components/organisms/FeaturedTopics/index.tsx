@@ -1,18 +1,34 @@
-import { FeaturedTopicsProps } from "@/types";
 import { Container } from "../../atoms/Container";
-import CardCause from "../../molecules/CardCause/CardCause";
-import SectionHeader from "../../molecules/SectionHeader";
+import CardCause, { CardCauseProps } from "../../molecules/CardCause/CardCause";
+import SectionHeader, {
+  SectionHeaderProps,
+} from "../../molecules/SectionHeader";
 import { featuredCardsDefault } from "../../../constants/mockData";
+
+export type FeaturedTopicsProps = {
+  /**
+   * Description goes here
+   */
+  topText?: SectionHeaderProps["topText"];
+  /**
+   * Description goes here
+   */
+  title?: SectionHeaderProps["title"];
+  /**
+   * Description goes here
+   */
+  featuredCards?: CardCauseProps[];
+};
 
 const FeaturedTopics = ({
   featuredCards = featuredCardsDefault,
-  topText,
-  title,
+  topText = "Headline goes here",
+  title = "Section Title",
 }: FeaturedTopicsProps) => {
   return (
     <section>
       <Container>
-        <SectionHeader topText={topText as string} title={title as string} />
+        <SectionHeader topText={topText} title={title} />
 
         <div className="grid grid-cols-1  gap-6 lg:grid-cols-3">
           {featuredCards

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Steps from "./Steps";
+import Steps from "./";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   //   tags: ["autodocs"],
-  title: "Templates/Steps",
+  title: "Sections/Steps",
   component: Steps,
   args: {},
   parameters: {

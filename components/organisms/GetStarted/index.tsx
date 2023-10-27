@@ -4,10 +4,28 @@ import Text from "../../atoms/Text/Text";
 import { Button, ButtonProps } from "../../atoms/Button/Button";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
-import { GetStartedProps } from "@/types";
+
+export type GetStartedProps = {
+  /**
+   * Description goes here
+   */
+  className?: string;
+  /**
+   * Description goes here
+   */
+  imgSrc?: string;
+  /**
+   * Description goes here
+   */
+  headline: string;
+  /**
+   * Description goes here
+   */
+  buttons?: ButtonProps[];
+};
 
 const GetStarted = ({
-  className,
+  className = "",
   imgSrc = "http://dummyimage.com/356x356.png/02a95c/ffffff",
   headline = "Headline",
   buttons = [
