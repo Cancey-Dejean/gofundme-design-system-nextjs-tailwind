@@ -1,10 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { Container } from "../../atoms/Container";
 import { Button } from "../../atoms/Button/Button";
-import NavMenuItem, { NavItem } from "../../atoms/NavMenuItem";
+// import { NavItem } from "../../atoms/NavMenuItem";
 import {
   Bars3BottomRightIcon,
   MagnifyingGlassIcon,
@@ -15,13 +14,13 @@ import {
   secondaryMenuDefault,
 } from "../../../constants/mockData";
 import { SunIcon } from "../../atoms/Icons/Icons";
-import { Logo } from "../../atoms/Logos/Logos";
+import { GoFundMe, Logo } from "../../atoms/Logos/Logos";
 
 export type HeaderProps = {
   /**
    * Description goes here
    */
-  logo: React.ReactNode;
+  logo?: React.ReactNode;
   /**
    * Description goes here
    */
@@ -29,11 +28,11 @@ export type HeaderProps = {
   /**
    * Description goes here
    */
-  navPrimary?: Array<NavItem>;
+  navPrimary?: (typeof primaryMenuDefault)[number][];
   /**
    * Description goes here
    */
-  navSecondary?: Array<NavItem>;
+  navSecondary?: (typeof secondaryMenuDefault)[number][];
   /**
    * Description goes here
    */
@@ -43,7 +42,7 @@ export type HeaderProps = {
 const Header = ({
   navPrimary = primaryMenuDefault,
   navSecondary = secondaryMenuDefault,
-  logo = <Logo />,
+  logo = <GoFundMe />,
   logoLeft = false,
   headerAnimation = true,
 }: HeaderProps) => {
@@ -95,7 +94,15 @@ const Header = ({
             >
               {navPrimary?.map((item, i) => (
                 <li key={i}>
-                  <NavMenuItem item={item} />
+                  <Button
+                    intent={item.intent}
+                    size="small"
+                    linkUrl={item.linkUrl}
+                    className={item.className}
+                    reverseIcon={item.reverseIcon}
+                    icon={item.icon}
+                    label={item.label}
+                  />
                 </li>
               ))}
             </ul>
@@ -121,7 +128,15 @@ const Header = ({
               >
                 {navSecondary?.map((item, i) => (
                   <li key={i}>
-                    <NavMenuItem item={item} />
+                    <Button
+                      intent={item.intent}
+                      size="small"
+                      linkUrl={item.linkUrl}
+                      className={item.className}
+                      reverseIcon={item.reverseIcon}
+                      icon={item.icon}
+                      label={item.label}
+                    />
                   </li>
                 ))}
               </ul>

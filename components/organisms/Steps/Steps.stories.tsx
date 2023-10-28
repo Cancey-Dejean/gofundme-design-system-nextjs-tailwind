@@ -14,16 +14,7 @@ const meta = {
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
 
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    // intent: {
-    //   control: { type: "select" },
-    //   options: buttonIntents,
-    // },
-    // size: {
-    //   control: { type: "select" },
-    //   options: buttonSizes,
-    // },
-  },
+  argTypes: {},
 } satisfies Meta<typeof Steps>;
 
 export default meta;

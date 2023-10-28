@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Header from "./";
 import { GoFundMe } from "../../atoms/Logos/Logos";
-import { NavItem } from "@/components/atoms/Button/Button";
 import { navPrimary, navSecondary } from "../../../constants";
 import { primaryMenuDefault } from "@/constants/mockData";
 

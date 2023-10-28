@@ -119,9 +119,8 @@ const Footer = ({
                     linkUrl={url}
                     className="justify-start"
                     key={label}
-                  >
-                    {label}
-                  </Button>
+                    label={label}
+                  />
                 </li>
               ))}
             </ul>
@@ -158,9 +157,8 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => {
             linkUrl={url}
             className="justify-start"
             key={label}
-          >
-            {label}
-          </Button>
+            label={label}
+          />
         ))}
       </ul>
     </div>

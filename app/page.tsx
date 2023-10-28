@@ -11,6 +11,7 @@ import {
   getStartedButtons,
   impactCards,
 } from "@/constants";
+import { SunIcon } from "@/components/atoms/Icons/Icons";
 
 export default function Home() {
   return (

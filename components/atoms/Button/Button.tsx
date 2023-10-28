@@ -21,6 +21,10 @@ export type ButtonProps = {
   /**
    * Description goes here
    */
+  icon?: React.ReactNode | boolean;
+  /**
+   * Description goes here
+   */
   reverseIcon?: boolean;
   /**
    * Description goes here
@@ -31,9 +35,7 @@ export type ButtonProps = {
    */
   size?: (typeof buttonSizes)[number];
   /**
-   * Description goes here
-   */
-  children?: React.ReactNode;
+
   /**
    * Description goes here
    */
@@ -114,10 +116,10 @@ export const Button = ({
   linkUrl = "",
   shadow = false,
   reverseIcon = false,
-  children,
+  icon = null,
   ...props
 }: ButtonProps) => {
-  const content = children ? children : label;
+  const iconContent = icon ? <span>{icon}</span> : null;
 
   return linkUrl !== "" ? (
     <Link
@@ -127,7 +129,8 @@ export const Button = ({
       )}
       {...props}
     >
-      {content}
+      {iconContent}
+      {label}
     </Link>
   ) : (
     <button
@@ -136,7 +139,8 @@ export const Button = ({
       )}
       {...props}
     >
-      {content}
+      {iconContent}
+      {label}
     </button>
   );
 };

@@ -1,29 +1,58 @@
 import Image from "next/image";
 import { Container } from "../../atoms/Container";
-import { Button } from "../../atoms/Button/Button";
+import { Button, ButtonProps } from "../../atoms/Button/Button";
 import { heroDefault } from "../../../constants/images";
 import Text from "../../atoms/Text/Text";
 import { SunIcon } from "../../atoms/Icons/Icons";
-import { HeroProps } from "@/types";
+
+export type HeroProps = {
+  /**
+   * Description goes here
+   */
+  headlineOneLine?: string;
+  /**
+   * Description goes here
+   */
+  headlineSecondLine?: string;
+  /**
+   * Description goes here
+   */
+  imgSrcDesktop?: string;
+  /**
+   * Description goes here
+   */
+  imgSrcMobile?: string;
+  /**
+   * Description goes here
+   */
+  imgAlt?: string;
+  /**
+   * Description goes here
+   */
+  btnText?: string;
+  /**
+   * Description goes here
+   */
+  btnIcon?: ButtonProps["icon"];
+};
 
 const Hero = ({
   headlineOneLine = "Headline One Line",
   headlineSecondLine = "Second Line Goes Here",
   imgSrcDesktop = "http://dummyimage.com/1920x972.png/dddddd/ffffff",
-  imgSrcMobile = heroDefault,
+  imgSrcMobile = "http://dummyimage.com/750x1225.png/dddddd/ffffff",
   imgAlt = "Hero image",
   btnText = "Button Text",
+  btnIcon = <SunIcon className="h-[22px] w-[22px]" />,
 }: HeroProps) => {
-  const heroWidth = 1920;
-  const heroHeight = 972;
   return (
     <section className="relative h-[100vh] min-h-[500px] p-0 pt-14 md:h-[90vh] md:pt-0">
-      {imgSrcDesktop && (
+      {imgSrcDesktop && imgSrcMobile !== "" && (
         <div className="hidden h-full md:block">
           <Image
             src={imgSrcDesktop}
-            width={heroWidth}
-            height={heroHeight}
+            width={1920}
+            height={972}
             alt={imgAlt}
             className="h-full w-full object-cover"
             priority={true}
@@ -35,8 +64,8 @@ const Hero = ({
         <div className="block h-full md:hidden">
           <Image
             src={imgSrcMobile}
-            width={heroWidth}
-            height={heroHeight}
+            width={750}
+            height={1225}
             alt={imgAlt}
             className="h-full w-full object-cover"
             priority={true}
@@ -53,13 +82,22 @@ const Hero = ({
 
         {btnText && (
           <div className="mt-8">
-            <Button className="min-w-[208px]" intent="secondary" linkUrl="/">
+            {/* SunIcon */}
+            {/* <Button className="min-w-[208px]" intent="secondary" linkUrl="/">
               <SunIcon
                 className="h-[22px] w-[22px]"
                 pathFill="var(--color-primary-200)"
               />
               {btnText}
-            </Button>
+            </Button> */}
+
+            <Button
+              className="min-w-[208px]"
+              intent="secondary"
+              linkUrl="/"
+              label={btnText}
+              icon={btnIcon}
+            />
           </div>
         )}
       </Container>

@@ -10,6 +10,7 @@ import Header from "../../organisms/Header";
 import Footer from "../../organisms/Footer";
 import { footerLinksDefault } from "../../../constants/mockData";
 import { GoFundMe } from "../../../components/atoms/Logos/Logos";
+import { SunIcon } from "../../../components/atoms/Icons/Icons";
 
 const HomePage = () => {
   return (

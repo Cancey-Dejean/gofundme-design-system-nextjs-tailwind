@@ -18,6 +18,7 @@ const meta = {
     intent: "primary",
     reverseIcon: false,
     linkUrl: "",
+    icon: null,
     className: "",
     label: "Button",
     shadow: false,
@@ -41,7 +42,7 @@ const meta = {
       control: { type: "select" },
       options: buttonSizes,
     },
-    children: {
+    icon: {
       control: false,
     },
   },

@@ -5,7 +5,7 @@ type Props = {
 const CircleNumber = ({ number = 1 }: Props) => {
   return (
     <strong className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-200 text-heading-two text-white">
-      {number}
+      {number.toString().slice(0, 2)}
     </strong>
   );
 };
