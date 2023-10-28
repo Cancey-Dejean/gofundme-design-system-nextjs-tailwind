@@ -86,18 +86,27 @@ const CardDonate = ({
           </div>
         )}
 
-        <div className="mt-auto">
-          <Text
-            as="p"
-            size="body"
-            intent="bold"
-            className="flex items-center gap-2"
-          >
-            <span>${raisedAmount.toLocaleString()} raised</span>
-            <span className="text-neutral-200">·</span>
-            <span>{numOfDonors.toLocaleString()} donations</span>
-          </Text>
-        </div>
+        {raisedAmount < 1 && numOfDonors < 1 ? null : (
+          <div className="mt-auto">
+            <Text
+              as="p"
+              size="body"
+              intent="bold"
+              className="flex items-center gap-2"
+            >
+              {raisedAmount > 0 ? (
+                <span>${raisedAmount.toLocaleString()} raised</span>
+              ) : null}
+
+              {numOfDonors > 0 ? (
+                <>
+                  <span className="text-neutral-200">·</span>
+                  <span>{numOfDonors.toLocaleString()} donations</span>
+                </>
+              ) : null}
+            </Text>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Container } from "../../atoms/Container";
 import { Button, ButtonProps } from "../../atoms/Button/Button";
-import { heroDefault } from "../../../constants/images";
 import Text from "../../atoms/Text/Text";
 import { SunIcon } from "../../atoms/Icons/Icons";
 
@@ -42,7 +41,7 @@ const Hero = ({
   imgSrcDesktop = "http://dummyimage.com/1920x972.png/dddddd/ffffff",
   imgSrcMobile = "http://dummyimage.com/750x1225.png/dddddd/ffffff",
   imgAlt = "Hero image",
-  btnText = "Button Text",
+  btnText = "Button",
   btnIcon = <SunIcon className="h-[22px] w-[22px]" />,
 }: HeroProps) => {
   return (
@@ -82,21 +81,12 @@ const Hero = ({
 
         {btnText && (
           <div className="mt-8">
-            {/* SunIcon */}
-            {/* <Button className="min-w-[208px]" intent="secondary" linkUrl="/">
-              <SunIcon
-                className="h-[22px] w-[22px]"
-                pathFill="var(--color-primary-200)"
-              />
-              {btnText}
-            </Button> */}
-
             <Button
               className="min-w-[208px]"
               intent="secondary"
               linkUrl="/"
               label={btnText}
-              icon={btnIcon}
+              icon={btnIcon !== null ? btnIcon : null}
             />
           </div>
         )}

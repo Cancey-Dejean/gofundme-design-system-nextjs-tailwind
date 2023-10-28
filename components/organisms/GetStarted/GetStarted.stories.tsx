@@ -11,14 +11,14 @@ const meta = {
     headline: "Headline",
     buttons: [
       {
-        label: "Button 1",
+        label: "Button",
         className: "min-w-[230px] bg-primary-300",
         intent: "primary",
         size: "large",
         linkUrl: "/",
       },
       {
-        label: "Button 2",
+        label: "Button",
         className: "min-w-[215px]",
         intent: "tertiary",
         size: "large",

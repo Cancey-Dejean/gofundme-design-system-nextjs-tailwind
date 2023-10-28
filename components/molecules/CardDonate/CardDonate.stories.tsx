@@ -13,8 +13,8 @@ const meta = {
     title: "Title",
     excerpt:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, nihil.",
-    raisedAmount: 0,
-    numOfDonors: 0,
+    raisedAmount: 1,
+    numOfDonors: 1,
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

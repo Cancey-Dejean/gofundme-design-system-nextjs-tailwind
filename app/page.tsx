@@ -23,6 +23,7 @@ export default function Home() {
         imgSrcMobile="/images/full-illustration-mobile@2x.jpg"
         imgAlt="Hero image"
         btnText="Start a GoFundMe"
+        btnIcon={<SunIcon className="h-[22px] w-[22px]" />}
       />
       <Steps
         topText="What to expect"
@@ -40,7 +41,7 @@ export default function Home() {
         title="Featured topics"
       />
       <Trusted
-        IconText="Trust & Safety"
+        iconText="Trust & Safety"
         headline="We have your back."
         btnText="Explore Trust & Safety"
         btnLink="/"

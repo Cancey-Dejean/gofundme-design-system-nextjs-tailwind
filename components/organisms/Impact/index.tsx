@@ -1,9 +1,31 @@
 import { impactCardsDefault } from "../../../constants/mockData";
 import { Container } from "../../atoms/Container";
-import CardImpact from "../../molecules/CardImpact/CardImpact";
-import SectionHeader from "../../molecules/SectionHeader";
+import CardImpact, {
+  CardImpactProps,
+} from "../../molecules/CardImpact/CardImpact";
+import SectionHeader, {
+  SectionHeaderProps,
+} from "../../molecules/SectionHeader";
 import { twMerge } from "tailwind-merge";
-import { ImpactProps } from "../../../types";
+
+export type ImpactProps = {
+  /**
+   * Description goes here
+   */
+  className?: string;
+  /**
+   * Description goes here
+   */
+  topText?: SectionHeaderProps["topText"];
+  /**
+   * Description goes here
+   */
+  title?: SectionHeaderProps["title"];
+  /**
+   * Description goes here
+   */
+  impactCards?: CardImpactProps[];
+};
 
 const Impact = ({
   className = "",
@@ -14,12 +36,12 @@ const Impact = ({
   return (
     <section className={twMerge(className)}>
       <Container className="flex flex-col items-start gap-8 max-md:max-w-[600px] md:flex-row lg:items-center">
-        <div className="mx-auto ml-0 flex flex-col md:items-center">
+        <div className="mx-auto ml-0 flex  flex-col md:items-center">
           <SectionHeader
             topText={topText}
             title={title}
             titleStyles="!text-[28px] md:!text-[32px]"
-            headerStyles="!mb-0"
+            headerStyles="!mb-0 sm:max-w-[211px]"
           />
         </div>
 

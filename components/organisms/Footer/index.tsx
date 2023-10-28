@@ -72,11 +72,9 @@ const Footer = ({
       <Container className="py-12">
         <div className="footer-bottom-grid">
           <div className="locale">
-            <Button
-              intent="tertiary"
-              size="small"
-              linkUrl="/"
-              className="rounded-lg !p-2 text-[14px] font-normal"
+            <button
+              type="button"
+              className="flex h-[34px] items-center justify-center gap-[8px] rounded-lg border border-neutral-200 bg-transparent !p-2 px-4 py-3 text-[14px] font-normal text-black [transition:var(--transition-base)] hover:bg-gray-300 hover:bg-opacity-30  dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
             >
               <Image
                 src="https://cdn.shopify.com/s/files/1/0630/5307/0560/files/us-flag.png?v=1698183921"
@@ -88,7 +86,7 @@ const Footer = ({
               United States
               <span className="text-neutral-200">·</span>
               English
-            </Button>
+            </button>
           </div>
 
           <ul className="socials">

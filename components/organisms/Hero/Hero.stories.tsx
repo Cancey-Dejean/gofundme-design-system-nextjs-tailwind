@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Hero from "./";
+import { SunIcon } from "../../../components/atoms/Icons/Icons";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -11,7 +12,8 @@ const meta = {
     imgSrcDesktop: "http://dummyimage.com/1920x972.png/dddddd/ffffff",
     imgSrcMobile: "http://dummyimage.com/750x1225.png/dddddd/ffffff",
     imgAlt: "Hero image",
-    btnText: "Button Text",
+    btnText: "Button",
+    btnIcon: <SunIcon className="h-[22px] w-[22px]" />,
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

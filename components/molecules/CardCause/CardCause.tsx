@@ -108,9 +108,10 @@ const CardCause = ({
               size="small"
               linkUrl={link}
               shadow={false}
-            >
-              {btnText} <AngleRightSmallIcon className="h-3 w-3" />
-            </Button>
+              icon={<AngleRightSmallIcon className="h-3 w-3" />}
+              reverseIcon={true}
+              label={btnText}
+            />
           </div>
         )}
       </div>

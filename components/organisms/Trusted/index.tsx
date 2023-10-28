@@ -2,18 +2,32 @@ import { AngleRightSmallIcon2, CheckGearIcon } from "../../atoms/Icons/Icons";
 import { Button } from "../../atoms/Button/Button";
 import { Container } from "../../atoms/Container";
 import Text from "../../atoms/Text/Text";
-import { ReactNode } from "react";
 
 export type TrustedProps = {
-  IconText?: string;
+  /**
+   * Description goes here
+   */
+  iconText?: string;
+  /**
+   * Description goes here
+   */
   headline?: string;
-  children?: ReactNode;
+  /**
+   * Description goes here
+   */
+  children?: React.ReactNode;
+  /**
+   * Description goes here
+   */
   btnText?: string;
+  /**
+   * Description goes here
+   */
   btnLink?: string;
 };
 
 const Trusted = ({
-  IconText = "Text Goes Here",
+  iconText = "Text Goes Here",
   headline = "Headline",
   children = "Lorem ipsum dolor sit amet consectetur adipisicing elit rem in dolor sit amet consectetur.",
   btnText = "Button",
@@ -23,7 +37,7 @@ const Trusted = ({
     <section className="flex items-center justify-center bg-primary-400 py-20 lg:mt-14">
       <Container className="px-0">
         <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-400 px-8 pt-0 md:p-20">
-          {IconText && (
+          {iconText !== "" && (
             <div className="mb-4 flex items-center gap-2">
               <CheckGearIcon />
               <Text
@@ -32,7 +46,7 @@ const Trusted = ({
                 intent="bold"
                 size="heading-two"
               >
-                {IconText}
+                {iconText}
               </Text>
             </div>
           )}
@@ -63,10 +77,10 @@ const Trusted = ({
               size="small"
               linkUrl={btnLink}
               shadow={false}
-            >
-              {btnText}
-              <AngleRightSmallIcon2 className="h-3 w-3 " />
-            </Button>
+              icon={<AngleRightSmallIcon2 className="h-3 w-3 " />}
+              label={btnText}
+              reverseIcon={true}
+            />
           </div>
         </div>
       </Container>

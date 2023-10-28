@@ -1,4 +1,3 @@
-import { StepsProps } from "@/types";
 import { Container } from "../../atoms/Container";
 import {
   StepArchOneIcon,
@@ -9,6 +8,41 @@ import {
 } from "../../atoms/Icons/Icons";
 import CardStep from "../../molecules/CardStep/CardStep";
 import SectionHeader from "../../molecules/SectionHeader";
+
+export type StepsProps = {
+  /**
+   * Description goes here
+   */
+  topText?: string;
+  /**
+   * Description goes here
+   */
+  headline?: string;
+  /**
+   * Description goes here
+   */
+  cardOneTitle?: string;
+  /**
+   * Description goes here
+   */
+  cardOneDesc?: string;
+  /**
+   * Description goes here
+   */
+  cardTwoTitle?: string;
+  /**
+   * Description goes here
+   */
+  cardTwoDesc?: string;
+  /**
+   * Description goes here
+   */
+  cardThreeTitle?: string;
+  /**
+   * Description goes here
+   */
+  cardThreeDesc?: string;
+};
 
 const Steps = ({
   topText = "Text goes here",
