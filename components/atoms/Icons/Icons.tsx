@@ -145,6 +145,7 @@ const AngleRightSmallIcon = ({ className, pathFill }: IconProps) => {
     </svg>
   );
 };
+
 const AngleRightSmallIcon2 = ({ className, pathFill }: IconProps) => {
   return (
     <svg
