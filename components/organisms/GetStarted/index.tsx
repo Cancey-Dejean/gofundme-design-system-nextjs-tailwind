@@ -29,7 +29,7 @@ export type GetStartedProps = {
  */
 const GetStarted = ({
   className = "",
-  imgSrc = "http://dummyimage.com/356x356.png/02a95c/ffffff",
+  imgSrc = "https://dummyimage.com/356x356.png/02a95c/ffffff",
   headline = "Headline",
   buttons = [
     {

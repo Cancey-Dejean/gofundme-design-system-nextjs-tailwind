@@ -41,8 +41,8 @@ export type HeroProps = {
 const Hero = ({
   headlineOneLine = "Headline One Line",
   headlineSecondLine = "Second Line Goes Here",
-  imgSrcDesktop = "http://dummyimage.com/1920x972.png/dddddd/ffffff",
-  imgSrcMobile = "http://dummyimage.com/750x1225.png/dddddd/ffffff",
+  imgSrcDesktop = "https://dummyimage.com/1920x972.png/dddddd/ffffff",
+  imgSrcMobile = "https://dummyimage.com/750x1225.png/dddddd/ffffff",
   imgAlt = "Hero image",
   btnText = "Button",
   btnIcon = <SunIcon className="h-[22px] w-[22px]" />,

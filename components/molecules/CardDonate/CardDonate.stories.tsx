@@ -7,7 +7,7 @@ const meta = {
   title: "Components/Cards/CardDonate",
   component: CardDonate,
   args: {
-    imgSrc: "http://dummyimage.com/560x312.png/ff4444/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/ff4444/ffffff",
     link: "/",
     tagName: "Tag Name",
     title: "Title",

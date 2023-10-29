@@ -68,7 +68,7 @@ export const featuredCardsDefault = [
   {
     id: 1,
     featured: true,
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "Tag Name",
     title: "Headline 1",
     excerpt:
@@ -79,7 +79,7 @@ export const featuredCardsDefault = [
   {
     id: 2,
     featured: false,
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "Tag Name",
     title: "Headline 2",
     excerpt: "",
@@ -89,7 +89,7 @@ export const featuredCardsDefault = [
   {
     id: 3,
     featured: false,
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "Tag Name",
     title: "Headline 3",
     excerpt: "",
@@ -99,7 +99,7 @@ export const featuredCardsDefault = [
   {
     id: 4,
     featured: false,
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "Help teachers",
     title: "Headline 4",
     excerpt: "",
@@ -109,7 +109,7 @@ export const featuredCardsDefault = [
   {
     id: 5,
     featured: false,
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "Help teachers",
     title: "Mrs",
     excerpt:
@@ -121,19 +121,19 @@ export const featuredCardsDefault = [
 
 export const impactCardsDefault = [
   {
-    imgSrc: "http://dummyimage.com/158x158.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/158x158.png/02a95c/ffffff",
     title: "Title",
     imgAlt: "Title",
     link: "/",
   },
   {
-    imgSrc: "http://dummyimage.com/158x158.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/158x158.png/02a95c/ffffff",
     title: "Title",
     imgAlt: "Title",
     link: "/",
   },
   {
-    imgSrc: "http://dummyimage.com/158x158.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/158x158.png/02a95c/ffffff",
     title: "Title",
     imgAlt: "Title",
     link: "/",
@@ -142,7 +142,7 @@ export const impactCardsDefault = [
 
 export const communityCardsDefault = [
   {
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "",
     title: "Headline 1",
     excerpt:
@@ -152,7 +152,7 @@ export const communityCardsDefault = [
     numOfDonors: 569,
   },
   {
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "",
     title: "Headline 2",
     excerpt:
@@ -162,7 +162,7 @@ export const communityCardsDefault = [
     numOfDonors: 130,
   },
   {
-    imgSrc: "http://dummyimage.com/560x312.png/02a95c/ffffff",
+    imgSrc: "https://dummyimage.com/560x312.png/02a95c/ffffff",
     tagName: "",
     title: "Headline 3",
     excerpt:

@@ -39,7 +39,7 @@ export type CardDonateProps = {
  * Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, nihil.
  */
 const CardDonate = ({
-  imgSrc = "http://dummyimage.com/560x312.png/ff4444/ffffff",
+  imgSrc = "https://dummyimage.com/560x312.png/ff4444/ffffff",
   link = "/",
   tagName = "Tag Name",
   title = "Title",

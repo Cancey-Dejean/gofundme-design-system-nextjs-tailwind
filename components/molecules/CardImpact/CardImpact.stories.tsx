@@ -7,7 +7,7 @@ const meta = {
   title: "Components/Cards/CardImpact",
   component: CardImpact,
   args: {
-    imgSrc: "http://dummyimage.com/158x158.png/ff4444/ffffff",
+    imgSrc: "https://dummyimage.com/158x158.png/ff4444/ffffff",
     imgAlt: "Card Icon",
     title: "Title",
     link: "/",
