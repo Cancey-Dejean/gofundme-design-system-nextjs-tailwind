@@ -6,7 +6,6 @@ import { footerLinks, legalLinks, navPrimary, navSecondary } from "@/constants";
 import { GoFundMe } from "@/components/atoms/Logos/Logos";
 import Providers from "@/constants/provider";
 import ThemeButton from "@/components/utilities/ThemeButton";
-import { NavItem } from "@/components/atoms/Button/Button";
 import Footer from "../components/organisms/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
