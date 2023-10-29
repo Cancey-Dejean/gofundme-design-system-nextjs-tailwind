@@ -14,8 +14,6 @@ import {
 export const companyName: string = "GoFundMe";
 export const MAX_EXCERPT_LENGTH = 93;
 
-export const buttonSizes: "base" | "small" | "large" = "base";
-
 export const navPrimary = [
   {
     label: "Search",
@@ -23,6 +21,9 @@ export const navPrimary = [
     icon: <MagnifyingGlassIcon className="h-5 w-5 text-black" />,
     reverseIcon: false,
     intent: "navText",
+    className: "",
+    size: "small",
+    shadow: false,
   },
   {
     label: "For individuals",
@@ -30,13 +31,19 @@ export const navPrimary = [
     icon: <ChevronDownIcon className="h-6 w-5" />,
     reverseIcon: true,
     intent: "navText",
+    className: "",
+    size: "small",
+    shadow: false,
   },
   {
     label: "For charities",
     linkUrl: "/",
-    icon: null,
+    icon: "",
     reverseIcon: false,
     intent: "navText",
+    className: "",
+    size: "small",
+    shadow: false,
   },
 ];
 
@@ -44,24 +51,32 @@ export const navSecondary = [
   {
     label: "How it works",
     linkUrl: "/",
-    icon: null,
+    icon: "",
     reverseIcon: false,
     intent: "navText",
+    className: "",
+    size: "small",
+    shadow: false,
   },
   {
     label: "Sign in",
     linkUrl: "/",
-    icon: null,
+    icon: "",
     reverseIcon: false,
     intent: "navText",
+    className: "",
+    size: "small",
+    shadow: false,
   },
   {
     label: "Start a GoFundMe",
     linkUrl: "/",
-    icon: null,
+    icon: "",
     reverseIcon: false,
     intent: "border-primary",
     className: "px-4",
+    size: "small",
+    shadow: false,
   },
 ];
 

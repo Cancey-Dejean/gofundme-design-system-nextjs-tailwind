@@ -9,8 +9,8 @@ const meta = {
   component: Header,
   args: {
     logo: <GoFundMe />,
-    navPrimary: navPrimary,
-    navSecondary: navSecondary,
+    // navPrimary: navPrimary,
+    // navSecondary: navSecondary,
     logoLeft: false,
     headerAnimation: false,
   },

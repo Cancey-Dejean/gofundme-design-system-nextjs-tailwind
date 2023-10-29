@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { Button } from "../../atoms/Button/Button";
 import Text from "../../atoms/Text/Text";
 import { AngleRightSmallIcon } from "../../atoms/Icons/Icons";
-// import { CardCauseProps } from "../../../types";
 import { formatExcerpt } from "../../../utils";
 import { MAX_EXCERPT_LENGTH } from "../../../constants";
 

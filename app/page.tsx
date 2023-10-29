@@ -72,7 +72,6 @@ export default function Home() {
         headline="Ready to get started? Join thousands of others today."
         className="max-sm:pt-0"
         imgSrc="/images/footer-flower-cta.png"
-        buttons={getStartedButtons}
       />
     </main>
   );

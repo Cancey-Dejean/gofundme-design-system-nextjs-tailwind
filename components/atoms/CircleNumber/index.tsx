@@ -1,5 +1,5 @@
 type Props = {
-  number: number;
+  number?: number;
 };
 
 const CircleNumber = ({ number = 1 }: Props) => {

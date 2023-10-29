@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { Container } from "../../atoms/Container";
 import { Button } from "../../atoms/Button/Button";
-// import { NavItem } from "../../atoms/NavMenuItem";
+
 import {
   Bars3BottomRightIcon,
   MagnifyingGlassIcon,
@@ -92,10 +92,10 @@ const Header = ({
                 logoLeft ? "order-last justify-end" : null,
               )}
             >
-              {navPrimary?.map((item, i) => (
-                <li key={i}>
+              {navPrimary?.map((item) => (
+                <li key={item.label}>
                   <Button
-                    intent={item.intent}
+                    intent="navText"
                     size="small"
                     linkUrl={item.linkUrl}
                     className={item.className}
@@ -129,7 +129,7 @@ const Header = ({
                 {navSecondary?.map((item, i) => (
                   <li key={i}>
                     <Button
-                      intent={item.intent}
+                      intent={item.intent as any}
                       size="small"
                       linkUrl={item.linkUrl}
                       className={item.className}
@@ -152,13 +152,17 @@ const Header = ({
       {scrolled && (
         <div className="mt-4 block pb-4 lg:hidden">
           <Container className="px-0">
-            <Button intent="primary" linkUrl="/">
-              <SunIcon
-                className="h-[22px] w-[22px]"
-                pathFill="var(--color-white)"
-              />
-              Start a GoFundMe
-            </Button>
+            <Button
+              intent="primary"
+              linkUrl="/"
+              label="Start a GoFundMe"
+              icon={
+                <SunIcon
+                  className="h-[22px] w-[22px]"
+                  pathFill="var(--color-white)"
+                />
+              }
+            />
           </Container>
         </div>
       )}

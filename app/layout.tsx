@@ -32,8 +32,8 @@ export default function RootLayout({
         <Providers>
           <NavBar
             headerAnimation={true}
-            navPrimary={navPrimary}
-            navSecondary={navSecondary}
+            navPrimary={navPrimary as Array<any>}
+            navSecondary={navSecondary as Array<any>}
             logo={<GoFundMe />}
           />
 
