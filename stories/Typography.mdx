@@ -8,9 +8,8 @@ export const typography = {
   },
   weight: {
     regular: "400",
+    semibold: "500",
     bold: "700",
-    extrabold: "800",
-    black: "900",
   },
   size: {
     s1: 16,
@@ -28,7 +27,7 @@ export const SampleText =
 
 **Font:** Circular
 
-**Weights:** 400(normal), 500(medium), 700(bold)
+**Weights:** 400 (regular)
 
 <Typeset
   fontSizes={[
@@ -38,7 +37,37 @@ export const SampleText =
     Number(typography.size.l2),
     Number(typography.size.l3),
   ]}
-  fontWeight={typography.weight.black}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**Weights:** 500 (medium)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+    Number(typography.size.m1),
+    Number(typography.size.l1),
+    Number(typography.size.l2),
+    Number(typography.size.l3),
+  ]}
+  fontWeight={typography.weight.semibold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**Weights:** 700 (bold)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+    Number(typography.size.m1),
+    Number(typography.size.l1),
+    Number(typography.size.l2),
+    Number(typography.size.l3),
+  ]}
+  fontWeight={typography.weight.bold}
   sampleText={SampleText}
   fontFamily={typography.type.primary}
 />
