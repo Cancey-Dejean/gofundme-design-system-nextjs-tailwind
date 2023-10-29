@@ -44,6 +44,9 @@ export type StepsProps = {
   cardThreeDesc?: string;
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const Steps = ({
   topText = "Text goes here",
   headline = "Section Title",

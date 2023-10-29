@@ -1,28 +1,27 @@
-import {
-  TextHeadingLevels,
-  TextIntents,
-  TextSizes,
-} from "@/constants/storiesData";
 import { cva } from "class-variance-authority";
 import classNames from "classnames";
 
 export type TextProps = {
-  as: (typeof TextHeadingLevels)[number];
   /**
-   * Is this the principal call to action on the page?
+   * Description goes here
    */
-  intent?: (typeof TextIntents)[number];
-
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
+  /**
+   * Description goes here
+   */
+  intent?: "normal" | "semibold" | "bold";
+  /**
+   * Description goes here
+   */
   className?: string;
   /**
-   * How large should the button be?
+   * Description goes here
    */
-  size?: (typeof TextSizes)[number];
+  size?: "display-one" | "display-two" | "heading-one" | "heading-two" | "body";
   /**
-   * Button contents
+   * Description goes here
    */
   children: React.ReactNode;
-  // label?: string
 };
 
 const heading = cva("", {
@@ -42,6 +41,9 @@ const heading = cva("", {
   },
 });
 
+/**
+ * Primary UI component for user interaction
+ */
 const Text = ({
   intent = "normal",
   size = "heading-one",

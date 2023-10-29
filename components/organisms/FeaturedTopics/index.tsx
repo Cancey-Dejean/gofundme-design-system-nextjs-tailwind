@@ -20,6 +20,9 @@ export type FeaturedTopicsProps = {
   featuredCards?: CardCauseProps[];
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const FeaturedTopics = ({
   featuredCards = featuredCardsDefault,
   topText = "Headline goes here",

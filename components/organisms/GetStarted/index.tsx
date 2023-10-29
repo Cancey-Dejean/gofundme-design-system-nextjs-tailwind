@@ -24,6 +24,9 @@ export type GetStartedProps = {
   buttons?: ButtonProps[];
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const GetStarted = ({
   className = "",
   imgSrc = "http://dummyimage.com/356x356.png/02a95c/ffffff",

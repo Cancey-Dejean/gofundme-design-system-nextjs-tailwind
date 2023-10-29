@@ -1,15 +1,19 @@
-import { cva } from "class-variance-authority";
-// import { twMerge } from "tailwind-merge"
 import Link from "next/link";
-import { buttonIntents, buttonSizes } from "@/constants/storiesData";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
+import { cva } from "class-variance-authority";
 
 export type ButtonProps = {
   /**
    * Description goes here
    */
-  intent?: (typeof buttonIntents)[number];
+  intent?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "border-primary"
+    | "text"
+    | "navText";
   /**
    * Description goes here
    */
@@ -33,9 +37,7 @@ export type ButtonProps = {
   /**
    * Description goes here
    */
-  size?: (typeof buttonSizes)[number];
-  /**
-
+  size?: "base" | "small" | "large";
   /**
    * Description goes here
    */
@@ -76,7 +78,6 @@ const button = cva(
           "text-[14px]",
           "!pl-0 hover:!pl-[16px]",
           "rounded-[8px]",
-          // " hover:shadow-none",
         ],
         navText: [
           "bg-transparent hover:bg-gray-300",

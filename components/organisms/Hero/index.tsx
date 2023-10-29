@@ -35,6 +35,9 @@ export type HeroProps = {
   btnIcon?: ButtonProps["icon"];
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const Hero = ({
   headlineOneLine = "Headline One Line",
   headlineSecondLine = "Second Line Goes Here",

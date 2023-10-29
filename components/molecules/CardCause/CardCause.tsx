@@ -37,6 +37,9 @@ export type CardCauseProps = {
   link?: string;
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const CardCause = ({
   featured = false,
   imgSrc = "http://dummyimage.com/560x312.png/ff4444/ffffff",

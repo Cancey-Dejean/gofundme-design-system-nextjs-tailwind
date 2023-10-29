@@ -26,6 +26,9 @@ export type TrustedProps = {
   btnLink?: string;
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const Trusted = ({
   iconText = "Text Goes Here",
   headline = "Headline",

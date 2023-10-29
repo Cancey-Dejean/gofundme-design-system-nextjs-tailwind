@@ -1,4 +1,3 @@
-import exp from "constants";
 import {
   ApplePodcast,
   FacebookIcon,
@@ -14,6 +13,8 @@ import {
 
 export const companyName: string = "GoFundMe";
 export const MAX_EXCERPT_LENGTH = 93;
+
+export const buttonSizes: "base" | "small" | "large" = "base";
 
 export const navPrimary = [
   {

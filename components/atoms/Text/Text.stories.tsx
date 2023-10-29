@@ -9,7 +9,7 @@ import Text from "./Text";
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   tags: ["autodocs"],
-  title: "Design System/Typography",
+  title: "Components/Text",
   component: Text,
   args: {
     as: "h1",
