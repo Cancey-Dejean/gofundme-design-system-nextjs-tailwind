@@ -48,7 +48,7 @@
     --color-neutral-grey-300: #767676;
     --color-violet-100: #f0eaf4;
     --color-violet-200: #3a2468;
-    --color-navy-100: #01485c;
+    --color-navy-500: #01485c;
 
     /* Font-size: 48px/60px */
     --text-display-one: clamp(3rem, 2.8328rem + 0.7643vw, 3.75rem);
