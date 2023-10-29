@@ -70,7 +70,7 @@ const Hero = ({
             height={1225}
             alt={imgAlt}
             className="h-full w-full object-cover"
-            priority
+            priority={true}
           />
         </div>
       )}
