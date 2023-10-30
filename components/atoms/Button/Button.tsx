@@ -127,6 +127,11 @@ export const Button = ({
   icon = null,
   ...props
 }: ButtonProps) => {
+  const anchorId = label
+    .replace(" ", "-")
+    .replace("'", "")
+    .toLocaleLowerCase()
+    .trim();
   const iconContent = icon ? <span>{icon}</span> : null;
 
   return linkUrl !== "" ? (
@@ -143,6 +148,7 @@ export const Button = ({
     </Link>
   ) : (
     <button
+      id={anchorId}
       className={classNames(
         button({ intent, size, shadow, reverseIcon, className }),
       )}
