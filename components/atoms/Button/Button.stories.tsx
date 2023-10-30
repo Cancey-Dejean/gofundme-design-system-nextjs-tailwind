@@ -14,6 +14,7 @@ const meta = {
     icon: null,
     className: "",
     label: "Button",
+    ariaLabel: "Button",
     shadow: false,
     onClick: () => {
       console.log("clicked");

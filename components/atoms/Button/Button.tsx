@@ -2,6 +2,7 @@ import Link from "next/link";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 import { cva } from "class-variance-authority";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
 export type ButtonProps = {
   /**
@@ -45,8 +46,13 @@ export type ButtonProps = {
   /**
    * Description goes here
    */
+  ariaLabel?: string;
+  /**
+   * Description goes here
+   */
   onClick?: () => void;
-};
+} & AnchorHTMLAttributes<HTMLAnchorElement> &
+  ButtonHTMLAttributes<HTMLButtonElement>;
 
 const button = cva(
   "text-base flex items-center gap-[8px] justify-center border border-transparent font-bold [transition:var(--transition-base)] rounded-[96px] px-4 py-3 hover:shadow-btn",
@@ -117,6 +123,7 @@ export const Button = ({
   linkUrl = "",
   shadow = false,
   reverseIcon = false,
+  ariaLabel = label,
   icon = null,
   ...props
 }: ButtonProps) => {
@@ -128,6 +135,7 @@ export const Button = ({
       className={twMerge(
         button({ intent, size, shadow, reverseIcon, className }),
       )}
+      aria-label={label}
       {...props}
     >
       {iconContent}
@@ -138,6 +146,7 @@ export const Button = ({
       className={classNames(
         button({ intent, size, shadow, reverseIcon, className }),
       )}
+      aria-label={label}
       {...props}
     >
       {iconContent}
