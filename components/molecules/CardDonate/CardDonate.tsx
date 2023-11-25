@@ -53,6 +53,7 @@ const CardDonate = ({
     <div
       className={classNames(
         "block-link hover:bg-neutral-100 lg:min-w-[350px]",
+        "dark:bg-white",
         "flex overflow-hidden rounded-2xl",
         "transition-colors duration-[.3s] ease-in-out",
         "min-h-[376px] flex-col",
@@ -74,7 +75,12 @@ const CardDonate = ({
       </div>
 
       <div className={classNames("flex h-full flex-col items-start px-2 py-4")}>
-        <Text as="h3" intent="bold" size="body" className="mb-2">
+        <Text
+          as="h3"
+          intent="bold"
+          size="body"
+          className="mb-2   dark:text-black"
+        >
           <Link href={link}>{title}</Link>
         </Text>
 
@@ -92,7 +98,7 @@ const CardDonate = ({
               as="p"
               size="body"
               intent="bold"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2  dark:text-black"
             >
               {raisedAmount > 0 ? (
                 <span>${raisedAmount.toLocaleString()} raised</span>

@@ -76,7 +76,12 @@ const Hero = ({
       )}
 
       <Container className="absolute left-1/2 top-1/2 flex h-full -translate-x-1/2 -translate-y-1/2 flex-col items-center py-32 text-center lg:justify-center">
-        <Text as="h1" size="display-one" intent="bold" className="text-navy">
+        <Text
+          as="h1"
+          size="display-one"
+          intent="bold"
+          className="text-navy dark:text-navy"
+        >
           {headlineOneLine}
           <br />
           {headlineSecondLine}

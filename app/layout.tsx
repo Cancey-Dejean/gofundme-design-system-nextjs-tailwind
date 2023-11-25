@@ -1,4 +1,4 @@
-import NavBar from "@/components/organisms/Header";
+import Header from "@/components/organisms/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -30,7 +30,7 @@ export default function RootLayout({
     >
       <body>
         <Providers>
-          <NavBar
+          <Header
             headerAnimation={true}
             navPrimary={navPrimary as Array<any>}
             navSecondary={navSecondary as Array<any>}

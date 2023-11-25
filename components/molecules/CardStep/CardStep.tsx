@@ -57,7 +57,11 @@ const CardStep = ({
           ) : null}
 
           {description !== "" ? (
-            <Text as="p" size="body" className="text-neutral-300">
+            <Text
+              as="p"
+              size="body"
+              className="text-neutral-300  dark:text-white"
+            >
               {description}
             </Text>
           ) : null}

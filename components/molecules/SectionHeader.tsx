@@ -21,7 +21,7 @@ const SectionHeader = ({
           as="p"
           intent="bold"
           size="body"
-          className="mb-4 text-neutral-300"
+          className="mb-4 text-neutral-300 dark:text-white"
         >
           {topText}
         </Text>

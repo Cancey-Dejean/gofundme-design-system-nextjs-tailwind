@@ -69,7 +69,7 @@ const CardCause = ({
         }}
       >
         {tagName !== "" ? (
-          <span className="absolute left-4 top-4 min-h-[24px] rounded-xl bg-violet-100 px-2 text-[14px] font-bold">
+          <span className="absolute left-4 top-4 flex  min-h-[24px] items-center rounded-xl bg-violet-100 px-2 text-[14px] font-bold dark:text-black">
             {tagName}
           </span>
         ) : null}
@@ -85,7 +85,7 @@ const CardCause = ({
           as="h3"
           intent="bold"
           size={featured ? "heading-two" : "body"}
-          className="mb-2"
+          className="mb-2 dark:text-black"
         >
           {title}
         </Text>
@@ -96,7 +96,7 @@ const CardCause = ({
           </p>
         ) : formattedExcerpt !== "" ? (
           <div className="mb-2 md:h-14">
-            <p className={classNames(" text-[14px] text-neutral-300")}>
+            <p className={classNames("text-[14px] text-neutral-300")}>
               {formattedExcerpt}
             </p>
           </div>
@@ -105,7 +105,7 @@ const CardCause = ({
         {btnText !== "" && (
           <div className="mt-auto">
             <Button
-              className="w-full hover:bg-white hover:shadow-none"
+              className="w-full hover:bg-white hover:shadow-none dark:text-black"
               intent="text"
               size="small"
               linkUrl={link}

@@ -4,6 +4,8 @@ const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/**/*.mdx",
+    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -23,6 +25,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ["../public"], //👈 Configures the static asset folder in Storybook
+  staticDirs: ["../public", "../public/images"], //👈 Configures the static asset folder in Storybook
 };
 export default config;

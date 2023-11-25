@@ -75,7 +75,7 @@ const Trusted = ({
 
           <div className="mt-8">
             <Button
-              className="text-primary-500 hover:bg-white hover:shadow-none"
+              className="text-primary-500 hover:bg-white hover:shadow-none  dark:text-black"
               intent="text"
               size="small"
               linkUrl={btnLink}

@@ -1,15 +1,11 @@
 import {
-  ApplePodcast,
-  FacebookIcon,
-  InstagramIcon,
-  MediumIcon,
-  TwitterIcon,
-  YouTubeIcon,
-} from "../components/atoms/Icons/Icons";
-import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
+
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa6";
+import { SiApplepodcasts } from "react-icons/si";
 
 export const companyName: string = "GoFundMe";
 export const MAX_EXCERPT_LENGTH = 93;
@@ -284,32 +280,32 @@ export const socialLinks = [
   {
     label: "Facebook",
     url: "/",
-    icon: <FacebookIcon />,
+    icon: <FaFacebook className="dark:text-white" />,
   },
   {
     label: "Youtube",
     url: "/",
-    icon: <YouTubeIcon />,
+    icon: <FaYoutube className="dark:text-white" />,
   },
   {
     label: "Twitter",
     url: "/",
-    icon: <TwitterIcon />,
+    icon: <FaTwitter className="dark:text-white" />,
   },
   {
     label: "Instagram",
     url: "/",
-    icon: <InstagramIcon />,
+    icon: <FaInstagram className="dark:text-white" />,
   },
   {
     label: "Medium",
     url: "/",
-    icon: <MediumIcon />,
+    icon: <FaMedium className="dark:text-white" />,
   },
   {
     label: "Apple Podcasts",
     url: "/",
-    icon: <ApplePodcast />,
+    icon: <SiApplepodcasts className="dark:text-white" />,
   },
 ];
 
@@ -336,14 +332,12 @@ export const appStores = [
   {
     label: "Google Play",
     url: "https://play.google.com/",
-    imgSrc:
-      "https://cdn.shopify.com/s/files/1/0630/5307/0560/files/play-store_11a99825-b2d0-4e5a-96a9-b9046d074c3a.png?v=1698184002",
+    imgSrc: "/images/play-store.png",
   },
   {
     label: "App Store",
     url: "https://apps.apple.com/",
-    imgSrc:
-      "https://cdn.shopify.com/s/files/1/0630/5307/0560/files/app-store_028fc1a3-fbd5-4997-9474-3923abae51ee.png?v=1698184002",
+    imgSrc: "/images/app-store.png",
   },
 ];
 

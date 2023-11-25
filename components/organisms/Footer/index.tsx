@@ -77,7 +77,7 @@ const Footer = ({
               className="flex h-[34px] items-center justify-center gap-[8px] rounded-lg border border-neutral-200 bg-transparent !p-2 px-4 py-3 text-[14px] font-normal text-black [transition:var(--transition-base)] hover:bg-gray-300 hover:bg-opacity-30  dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
             >
               <Image
-                src="https://cdn.shopify.com/s/files/1/0630/5307/0560/files/us-flag.png?v=1698183921"
+                src="/images/us-flag.png"
                 alt="United States Logo"
                 width={16}
                 height={16}
@@ -106,7 +106,7 @@ const Footer = ({
             ))}
           </ul>
 
-          <div className="legal flex flex-col gap-2 text-neutral-300 md:flex-row md:items-center">
+          <div className="legal flex flex-col gap-2 text-neutral-300 dark:text-white md:flex-row  md:items-center">
             &copy; 2010-{new Date().getFullYear()} {companyName}
             <ul className="flex flex-col gap-2 text-black sm:flex-row sm:items-center">
               {legalLinks.map(({ label, url }) => (
@@ -115,7 +115,7 @@ const Footer = ({
                     intent="navText"
                     size="small"
                     linkUrl={url}
-                    className="justify-start"
+                    className="justify-start  dark:text-white"
                     key={label}
                     label={label}
                   />
@@ -153,7 +153,7 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => {
             intent="navText"
             size="small"
             linkUrl={url}
-            className="justify-start"
+            className="justify-start  dark:text-white"
             key={label}
             label={label}
           />

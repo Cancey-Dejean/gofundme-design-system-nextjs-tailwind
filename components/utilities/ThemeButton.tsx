@@ -20,13 +20,13 @@ const ThemeButton = ({}: Props) => {
       <button
         type="button"
         aria-label="Toggle Dark Mode"
-        className="flex items-center justify-center rounded-lg p-2 transition-colors"
+        className="flex items-center justify-center rounded-lg bg-primary-300 p-2 shadow-btn transition-colors"
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         {resolvedTheme === "dark" ? (
           <SunIcon className="h-5 w-5 text-white" />
         ) : (
-          <MoonIcon className="h-5 w-5 text-black" />
+          <MoonIcon className="h-5 w-5 text-white" />
         )}
       </button>
     </div>

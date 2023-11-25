@@ -56,7 +56,7 @@ const GetStarted = ({
             as="h2"
             intent="semibold"
             size="display-two"
-            className="my-4 text-center tracking-[-0.02em] max-sm:text-[32px] xl:m-0 xl:text-left"
+            className="my-4 text-center tracking-[-0.02em] dark:text-black max-sm:text-[32px] xl:m-0  xl:text-left"
           >
             {headline}
           </Text>

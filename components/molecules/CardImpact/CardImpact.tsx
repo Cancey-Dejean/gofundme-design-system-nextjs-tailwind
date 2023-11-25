@@ -47,7 +47,12 @@ const CardImpact = ({
         />
       </div>
       <div className="md:mt-8">
-        <Text as="h3" intent="semibold" size="heading-two">
+        <Text
+          as="h3"
+          intent="semibold"
+          size="heading-two"
+          className=" dark:text-black"
+        >
           {title}
         </Text>
       </div>
