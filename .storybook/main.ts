@@ -4,7 +4,6 @@ const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -12,7 +11,9 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@storybook/addon-designs",
     "@storybook/addon-mdx-gfm",
+    "@storybook/addon-storysource",
   ],
 
   framework: {
