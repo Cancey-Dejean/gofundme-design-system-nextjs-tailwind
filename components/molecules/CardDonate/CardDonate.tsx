@@ -84,13 +84,13 @@ const CardDonate = ({
           <Link href={link}>{title}</Link>
         </Text>
 
-        {formattedExcerpt && (
+        {formattedExcerpt ? (
           <div className="md:h-14">
             <p className={classNames(" text-[14px] text-neutral-300")}>
               {formattedExcerpt}
             </p>
           </div>
-        )}
+        ) : null}
 
         {raisedAmount < 1 && numOfDonors < 1 ? null : (
           <div className="mt-auto">

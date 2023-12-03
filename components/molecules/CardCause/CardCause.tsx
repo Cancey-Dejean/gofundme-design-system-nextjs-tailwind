@@ -102,7 +102,7 @@ const CardCause = ({
           </div>
         ) : null}
 
-        {btnText !== "" && (
+        {btnText !== "" ? (
           <div className="mt-auto">
             <Button
               className="w-full hover:bg-white hover:shadow-none dark:text-black"
@@ -115,7 +115,7 @@ const CardCause = ({
               label={btnText}
             />
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

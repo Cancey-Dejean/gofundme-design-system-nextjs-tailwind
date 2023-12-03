@@ -149,7 +149,7 @@ const Header = ({
         </nav>
       </Container>
 
-      {scrolled && (
+      {scrolled ? (
         <div className="mt-4 block pb-4 lg:hidden">
           <Container className="px-0">
             <Button
@@ -165,7 +165,7 @@ const Header = ({
             />
           </Container>
         </div>
-      )}
+      ) : null}
     </header>
   );
 };

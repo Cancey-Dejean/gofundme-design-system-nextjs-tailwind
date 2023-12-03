@@ -49,7 +49,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section className="relative h-[100vh] min-h-[500px] p-0 pt-14 md:h-[90vh] md:pt-0">
-      {imgSrcDesktop && imgSrcMobile !== "" && (
+      {imgSrcDesktop && imgSrcMobile !== "" ? (
         <div className="hidden h-full md:block">
           <Image
             src={imgSrcDesktop}
@@ -60,9 +60,9 @@ const Hero = ({
             priority={true}
           />
         </div>
-      )}
+      ) : null}
 
-      {imgSrcMobile && (
+      {imgSrcMobile ? (
         <div className="block h-full md:hidden">
           <Image
             src={imgSrcMobile}
@@ -73,7 +73,7 @@ const Hero = ({
             priority={true}
           />
         </div>
-      )}
+      ) : null}
 
       <Container className="absolute left-1/2 top-1/2 flex h-full -translate-x-1/2 -translate-y-1/2 flex-col items-center py-32 text-center lg:justify-center">
         <Text
@@ -87,7 +87,7 @@ const Hero = ({
           {headlineSecondLine}
         </Text>
 
-        {btnText && (
+        {btnText ? (
           <div className="mt-8">
             <Button
               className="min-w-[208px]"
@@ -97,7 +97,7 @@ const Hero = ({
               icon={btnIcon !== null ? btnIcon : null}
             />
           </div>
-        )}
+        ) : null}
       </Container>
     </section>
   );

@@ -40,7 +40,7 @@ const Trusted = ({
     <section className="flex items-center justify-center bg-primary-400 py-20 lg:mt-14">
       <Container className="px-0">
         <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-400 px-8 pt-0 md:p-20">
-          {iconText !== "" && (
+          {iconText !== "" ? (
             <div className="mb-4 flex items-center gap-2">
               <CheckGearIcon />
               <Text
@@ -52,9 +52,9 @@ const Trusted = ({
                 {iconText}
               </Text>
             </div>
-          )}
+          ) : null}
 
-          {headline && (
+          {headline ? (
             <Text
               as="h2"
               className="mb-2 leading-[1] text-white max-md:!text-[40px]"
@@ -63,7 +63,7 @@ const Trusted = ({
             >
               {headline}
             </Text>
-          )}
+          ) : null}
 
           <Text
             as="p"
@@ -75,12 +75,12 @@ const Trusted = ({
 
           <div className="mt-8">
             <Button
-              className="text-primary-500 hover:bg-white hover:shadow-none  dark:text-black"
+              className="text-primary-500 hover:bg-white hover:shadow-none dark:text-black"
               intent="text"
               size="small"
               linkUrl={btnLink}
               shadow={false}
-              icon={<AngleRightSmallIcon2 className="h-3 w-3 " />}
+              icon={<AngleRightSmallIcon2 className="h-3 w-3" />}
               label={btnText}
               reverseIcon={true}
             />
