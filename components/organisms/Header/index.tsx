@@ -57,12 +57,17 @@ const Header = ({
       }
     };
 
+    // Call the handleScroll function on page load
+    handleScroll();
+
+    // Listen for scroll events
     window.addEventListener("scroll", handleScroll);
 
+    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); // Empty dependency array means this effect runs once on mount and clean up on unmount
 
   return (
     <header
