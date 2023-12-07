@@ -91,12 +91,12 @@ const CardCause = ({
         </Text>
 
         {featured ? (
-          <p className={classNames(" text-[14px] text-neutral-300")}>
+          <p className={classNames(" text-[14px] text-black dark:text-black")}>
             {excerpt}
           </p>
         ) : formattedExcerpt !== "" ? (
           <div className="mb-2 md:h-14">
-            <p className={classNames("text-[14px] text-neutral-300")}>
+            <p className={classNames("text-[14px] text-black")}>
               {formattedExcerpt}
             </p>
           </div>

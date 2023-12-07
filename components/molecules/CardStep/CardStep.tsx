@@ -36,7 +36,7 @@ const CardStep = ({
   stepImgMobile,
 }: CardStepProps) => {
   return (
-    <li className="flex flex-1 flex-row gap-4 lg:flex-col  lg:gap-0">
+    <div className="flex flex-1 flex-row gap-4 lg:flex-col  lg:gap-0">
       <div className="grid gap-4 md:mb-4 lg:mb-10 lg:[grid-template-columns:40px_1fr]">
         {number ? <CircleNumber number={number} /> : null}
 
@@ -67,7 +67,7 @@ const CardStep = ({
           ) : null}
         </div>
       ) : null}
-    </li>
+    </div>
   );
 };
 

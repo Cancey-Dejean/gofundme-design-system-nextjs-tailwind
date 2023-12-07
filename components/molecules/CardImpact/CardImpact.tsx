@@ -26,6 +26,10 @@ export type CardImpactProps = {
   /**
    * Description goes here
    */
+  ariaLabel: string;
+  /**
+   * Description goes here
+   */
   link?: string;
 };
 
@@ -34,6 +38,7 @@ const CardImpact = ({
   imgAlt = "Card Icon",
   title = "Title",
   link = "/",
+  ariaLabel,
 }: CardImpactProps) => {
   return (
     <div className="block-link flex min-w-[280px] flex-row items-center rounded-2xl border-2 border-transparent bg-neutral-100 transition-all duration-[.3s] ease-in-out hover:border-primary-300 max-lg:last:col-span-2 max-sm:last:col-span-1 md:min-h-[369px] md:flex-col">
@@ -57,11 +62,10 @@ const CardImpact = ({
         </Text>
       </div>
 
-      <Link href={link} className=" ml-auto mr-5 md:mx-auto md:mb-8 md:mt-auto">
+      <Link href={link} className=" ml-auto mr-5 md:mx-auto md:mb-8 md:mt-auto" aria-label={ariaLabel}>
         <div className="hidden md:block">
           <ArrowCircle />
         </div>
-
         <div className="block md:hidden">
           <AngleRightSmallIcon2 className="h-3 w-3 " />
         </div>

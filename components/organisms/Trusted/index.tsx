@@ -1,30 +1,30 @@
-import { AngleRightSmallIcon2, CheckGearIcon } from "../../atoms/Icons/Icons";
-import { Button } from "../../atoms/Button/Button";
-import { Container } from "../../atoms/Container";
-import Text from "../../atoms/Text/Text";
+import { AngleRightSmallIcon2, CheckGearIcon } from "../../atoms/Icons/Icons"
+import { Button } from "../../atoms/Button/Button"
+import { Container } from "../../atoms/Container"
+import Text from "../../atoms/Text/Text"
 
 export type TrustedProps = {
   /**
    * Description goes here
    */
-  iconText?: string;
+  iconText?: string
   /**
    * Description goes here
    */
-  headline?: string;
+  headline?: string
   /**
    * Description goes here
    */
-  children?: React.ReactNode;
+  children?: React.ReactNode
   /**
    * Description goes here
    */
-  btnText?: string;
+  btnText?: string
   /**
    * Description goes here
    */
-  btnLink?: string;
-};
+  btnLink?: string
+}
 
 /**
  * Primary UI component for user interaction
@@ -37,9 +37,9 @@ const Trusted = ({
   btnLink = "/",
 }: TrustedProps) => {
   return (
-    <section className="flex items-center justify-center bg-primary-400 py-20 lg:mt-14">
+    <section className="flex items-center justify-center bg-primary-500 py-20 lg:mt-14">
       <Container className="px-0">
-        <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-400 px-8 pt-0 md:p-20">
+        <div className="mx-4 flex flex-col items-start rounded-2xl bg-primary-500 px-8 pt-0 md:p-20">
           {iconText !== "" ? (
             <div className="mb-4 flex items-center gap-2">
               <CheckGearIcon />
@@ -75,7 +75,7 @@ const Trusted = ({
 
           <div className="mt-8">
             <Button
-              className="text-primary-500 hover:bg-white hover:shadow-none dark:text-black"
+              className="text-white hover:bg-white hover:shadow-none dark:text-black"
               intent="text"
               size="small"
               linkUrl={btnLink}
@@ -88,7 +88,7 @@ const Trusted = ({
         </div>
       </Container>
     </section>
-  );
-};
+  )
+}
 
-export default Trusted;
+export default Trusted

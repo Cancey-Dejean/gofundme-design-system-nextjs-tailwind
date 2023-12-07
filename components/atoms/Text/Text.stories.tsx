@@ -14,6 +14,7 @@ const meta = {
     as: "h1",
     intent: "semibold",
     size: "heading-one",
+    className: "",
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

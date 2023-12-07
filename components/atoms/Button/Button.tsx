@@ -75,7 +75,7 @@ const button = cva(
         "border-primary": [
           "bg-transparent hover:bg-primary-100",
           "text-primary-200",
-          "!border-primary-200",
+          "border-primary-200",
           "hover:shadow-none",
         ],
         text: [

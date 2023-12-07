@@ -11,13 +11,12 @@ const meta = {
     imgAlt: "Card Icon",
     title: "Title",
     link: "/",
+    ariaLabel: "Title",
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
 } satisfies Meta<typeof CardImpact>;
@@ -31,31 +30,3 @@ export const Base: Story = {
     return <CardImpact {...args} />;
   },
 };
-
-// export const BaseWithNoExcerpt: Story = {
-//   render: (args) => {
-//     args = {
-//       excerpt: "",
-//     };
-//     return <CardImpact {...args} />;
-//   },
-// };
-
-// export const Featured: Story = {
-//   render: (args) => {
-//     args = {
-//       featured: true,
-//     };
-//     return <CardImpact {...args} />;
-//   },
-// };
-
-// export const FeaturedNoExcerpt: Story = {
-//   render: (args) => {
-//     args = {
-//       featured: true,
-//       excerpt: "",
-//     };
-//     return <CardCause {...args} />;
-//   },
-// };

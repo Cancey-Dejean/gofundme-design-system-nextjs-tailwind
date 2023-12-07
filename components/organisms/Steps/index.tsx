@@ -64,7 +64,7 @@ const Steps = ({
           <SectionHeader topText={topText} title={headline} />
         </div>
 
-        <ol className="flex flex-col items-start gap-4 lg:flex-row lg:pt-4">
+        <div className="flex flex-col items-start gap-4 lg:flex-row lg:pt-4">
           <CardStep
             number={1}
             stepImgDesktop={<StepArchOneIcon className="-mt-4" />}
@@ -87,7 +87,7 @@ const Steps = ({
             title={cardThreeTitle}
             description={cardThreeDesc}
           />
-        </ol>
+        </div>
       </Container>
     </section>
   );

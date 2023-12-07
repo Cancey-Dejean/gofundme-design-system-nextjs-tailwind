@@ -80,7 +80,7 @@ const Hero = ({
           as="h1"
           size="display-one"
           intent="bold"
-          className="text-navy dark:text-navy"
+          className="text-primary-500 dark:text-primary-500"
         >
           {headlineOneLine}
           <br />

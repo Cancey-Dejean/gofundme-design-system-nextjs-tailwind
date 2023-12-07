@@ -13,9 +13,8 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
-    "@storybook/addon-designs",
-    "@storybook/addon-mdx-gfm",
-    "@storybook/addon-storysource",
+    "@whitespace/storybook-addon-html",
+    "@storybook/addon-mdx-gfm"
   ],
 
   framework: {

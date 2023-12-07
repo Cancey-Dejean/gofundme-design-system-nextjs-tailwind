@@ -55,8 +55,8 @@ export const secondaryMenuDefault = [
   {
     label: "Link 6",
     linkUrl: "/",
-    intent: "border-primary",
-    className: "",
+    intent: "primary",
+    className: "px-4",
     size: "small",
     shadow: false,
     reverseIcon: false,
@@ -125,18 +125,21 @@ export const impactCardsDefault = [
     title: "Title",
     imgAlt: "Title",
     link: "/",
+    ariaLabel: "Title",
   },
   {
     imgSrc: "https://dummyimage.com/158x158.png/02a95c/ffffff",
     title: "Title",
     imgAlt: "Title",
     link: "/",
+    ariaLabel: "Title",
   },
   {
     imgSrc: "https://dummyimage.com/158x158.png/02a95c/ffffff",
     title: "Title",
     imgAlt: "Title",
     link: "/",
+    ariaLabel: "Title",
   },
 ];
 

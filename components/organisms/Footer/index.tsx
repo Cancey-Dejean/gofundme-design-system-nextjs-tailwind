@@ -149,14 +149,15 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => {
       <h3 className="m-2 font-medium">{title}</h3>
       <ul className="flex flex-col">
         {links.map(({ label, url }) => (
-          <Button
+          <li key={label}>
+            <Button
             intent="navText"
             size="small"
             linkUrl={url}
             className="justify-start  dark:text-white"
-            key={label}
             label={label}
           />
+          </li>
         ))}
       </ul>
     </div>

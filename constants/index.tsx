@@ -69,7 +69,7 @@ export const navSecondary = [
     linkUrl: "/",
     icon: "",
     reverseIcon: false,
-    intent: "border-primary",
+    intent: "primary",
     className: "px-4",
     size: "small",
     shadow: false,
@@ -126,18 +126,21 @@ export const impactCards = [
     title: "Yourself",
     imgAlt: "Yourself",
     link: "/",
+    ariaLabel: "Click here to link to the 'Yourself' page",
   },
   {
     imgSrc: "/images/start-friends-Family@2x.png",
     title: "Friends & family",
     imgAlt: "Friends & family",
     link: "/",
+    ariaLabel: "Click here to link to the 'Friends & family' page",
   },
   {
     imgSrc: "/images/start-charity@2x.png",
     title: "Charity",
     imgAlt: "Charity",
     link: "/",
+    ariaLabel: "Click here to link to the 'Charity' page",
   },
 ];
 
@@ -305,7 +308,7 @@ export const socialLinks = [
   {
     label: "Apple Podcasts",
     url: "/",
-    icon: <SiApplepodcasts className="dark:text-white" />,
+    icon: <SiApplepodcasts className="dark:text-white" title="Apple Podcasts" />,
   },
 ];
 

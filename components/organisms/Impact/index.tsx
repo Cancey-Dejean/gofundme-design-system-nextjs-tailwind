@@ -47,13 +47,14 @@ const Impact = ({
 
         <div className="w-full">
           <div className="mx-auto grid grid-cols-1  gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {impactCards.map(({ imgSrc, imgAlt, title, link }) => (
+            {impactCards.map(({ imgSrc, imgAlt, title, link, ariaLabel }) => (
               <CardImpact
                 imgSrc={imgSrc}
                 key={title}
                 link={link}
                 title={title}
                 imgAlt={imgAlt}
+                ariaLabel={ariaLabel}
               />
             ))}
           </div>
