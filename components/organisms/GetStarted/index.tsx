@@ -1,28 +1,28 @@
-import Image from "next/image";
-import { Container } from "../../atoms/Container";
-import Text from "../../atoms/Text/Text";
-import { Button, ButtonProps } from "../../atoms/Button/Button";
-import classNames from "classnames";
-import { twMerge } from "tailwind-merge";
+import Image from "next/image"
+import { Container } from "../../atoms/Container"
+import Text from "../../atoms/Text/Text"
+import { Button, ButtonProps } from "../../atoms/Button/Button"
+import classNames from "classnames"
+import { twMerge } from "tailwind-merge"
 
 export type GetStartedProps = {
   /**
    * Description goes here
    */
-  className?: string;
+  className?: string
   /**
    * Description goes here
    */
-  imgSrc?: string;
+  imgSrc?: string
   /**
    * Description goes here
    */
-  headline: string;
+  headline: string
   /**
    * Description goes here
    */
-  buttons?: ButtonProps[];
-};
+  buttons?: ButtonProps[]
+}
 
 /**
  * Primary UI component for user interaction
@@ -33,18 +33,18 @@ const GetStarted = ({
   headline = "Headline",
   buttons = [
     {
-      label: "Button",
+      label: "Get Started",
       className: "min-w-[230px] bg-primary-300",
       intent: "primary",
       size: "large",
-      linkUrl: "/",
+      linkUrl: "#get-started",
     },
     {
-      label: "Button",
+      label: "Learn More",
       className: "min-w-[215px]",
       intent: "tertiary",
       size: "large",
-      linkUrl: "/",
+      linkUrl: "#learn-more",
     },
   ],
 }: GetStartedProps) => (
@@ -82,7 +82,7 @@ const GetStarted = ({
                   reverseIcon={reverseIcon}
                   shadow={shadow}
                 />
-              ),
+              )
             )}
           </div>
         </div>
@@ -99,6 +99,6 @@ const GetStarted = ({
       </div>
     </Container>
   </section>
-);
+)
 
-export default GetStarted;
+export default GetStarted
